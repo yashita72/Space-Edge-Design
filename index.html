@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Edge Design | Premium Vintage-Inspired Interior Design</title>
-  <meta name="description" content="Award-winning interior design studio by Arjun Kapoor. Crafting warm, vintage-inspired editorial interiors that feel lived-in, layered, and timeless in Mumbai.">
+  <title>Space Edge Design - Home Interior Design & Renovation Service Company</title>
+  <meta name="description" content="India's Most Trusted Home Interior Design & Renovation Service Company. Get Expert Interior Designers to Create Modular Kitchens, Bedrooms, Living Rooms & More. Flat 10-year warranty. Book a Free Consultation.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,16 +14,17 @@
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-name">SPACE EDGE DESIGN</span>
-        <span class="nav-logo-tagline">Editorial Interiors</span>
+        <span class="nav-logo-tagline">Home Interiors</span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="portfolio.html" class="nav-link">Design Gallery</a></li>
+        <li><a href="about.html" class="nav-link">About Story</a></li>
+        <li><a href="services.html" class="nav-link">Service Packages</a></li>
+        <li><a href="reviews.html" class="nav-link">Client Reviews</a></li>
+        <li><a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="contact.html" class="nav-link nav-cta">Book Consultation</a></li>
+        <li><a href="#book-consult" class="nav-link nav-cta">Book Consultation</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
         <span></span>
@@ -37,34 +38,80 @@
   <div class="nav-mobile" id="mobileMenu">
     <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
     <a href="index.html" class="nav-link active">Home</a>
-    <a href="portfolio.html" class="nav-link">Portfolio</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="services.html" class="nav-link">Services</a>
-    <a href="reviews.html" class="nav-link">Reviews</a>
+    <a href="portfolio.html" class="nav-link">Design Gallery</a>
+    <a href="about.html" class="nav-link">About Story</a>
+    <a href="services.html" class="nav-link">Service Packages</a>
+    <a href="reviews.html" class="nav-link">Client Reviews</a>
+    <a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
+    <a href="#book-consult" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
   </div>
 
   <!-- --- HERO SECTION --- -->
   <header class="hero">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <div class="hero-eyebrow reveal">
-        <span class="hero-eyebrow-text">Award-Winning Interior Design</span>
+    <div class="container hero-content-grid">
+      <!-- Left Content -->
+      <div class="reveal">
+        <h1 class="hero-title">Your <span>dream home</span> interiors is just a click away</h1>
+        <p class="hero-desc">
+          Space Edge Design is India's leading home interior brand. We design and install beautiful, customized modular kitchens, wardrobes, and full home interiors with a flat 10-year warranty.
+        </p>
+        <div class="hero-metrics">
+          <div class="hero-metric-item">
+            <span class="hero-metric-val">45 Days</span>
+            <span class="hero-metric-label">Move-in Guarantee</span>
+          </div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val">10 Years</span>
+            <span class="hero-metric-label">Flat Warranty*</span>
+          </div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val">146+</span>
+            <span class="hero-metric-label">Quality Checks</span>
+          </div>
+        </div>
       </div>
-      <h1 class="hero-title reveal reveal-delay-1">Where Spaces Become <em>Stories</em>.</h1>
-      <p class="hero-subtitle reveal reveal-delay-2">
-        Crafting warm, editorial interiors that feel lived-in, layered, and timeless. Inspired by classic European design and mid-century aesthetics.
-      </p>
-      <div class="hero-actions reveal reveal-delay-3">
-        <a href="portfolio.html" class="btn btn-primary">View Our Work</a>
-        <a href="contact.html" class="btn btn-outline" style="color: var(--warm-white); border-color: var(--warm-white);">Book a Consultation</a>
+
+      <!-- Right Form Card -->
+      <div class="hero-form-card reveal reveal-delay-1" id="book-consult">
+        <h3 class="hero-form-title">Talk to a designer</h3>
+        <p class="hero-form-desc">Get free estimate and layout blueprint for your dream space.</p>
+        
+        <form class="form" id="heroInquiryForm">
+          <input type="text" class="hp-field" name="nickname" id="heroNickname">
+          
+          <div class="form-group">
+            <label for="hName">Name</label>
+            <input type="text" id="hName" required placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="hEmail">Email Address</label>
+            <input type="email" id="hEmail" required placeholder="e.g. yourname@gmail.com">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hPhone">Phone Number</label>
+              <input type="tel" id="hPhone" required placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="form-group">
+              <label for="hType">Requirement</label>
+              <select id="hType" required>
+                <option value="Full Home">Full Home Interiors</option>
+                <option value="Modular Kitchen">Modular Kitchen Only</option>
+                <option value="Room Refresh">Single Room Refresh</option>
+                <option value="Wardrobe">Wardrobe & Storage</option>
+                <option value="Commercial">Commercial / Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="heroFormMessage" class="form-submit-message"></div>
+
+          <button type="submit" id="heroSubmitBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Book Free Consultation</button>
+        </form>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </header>
 
@@ -72,92 +119,127 @@
   <section class="stats-bar">
     <div class="container stats-inner">
       <div class="stat-item reveal">
-        <div class="stat-number">12+</div>
-        <div class="stat-label">Years of Practice</div>
+        <div class="stat-number">20,000+</div>
+        <div class="stat-label">Happy Homes Designed</div>
       </div>
       <div class="stat-item reveal reveal-delay-1">
-        <div class="stat-number">85+</div>
-        <div class="stat-label">Projects Completed</div>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Design Experience Centers</div>
       </div>
       <div class="stat-item reveal reveal-delay-2">
-        <div class="stat-number">5.0</div>
-        <div class="stat-label">Average Rating</div>
+        <div class="stat-number">10 Years</div>
+        <div class="stat-label">Warranty Support</div>
       </div>
       <div class="stat-item reveal reveal-delay-3">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">Client Satisfaction</div>
+        <div class="stat-number">45 Days</div>
+        <div class="stat-label">Delivery Timeline</div>
       </div>
     </div>
   </section>
 
-  <!-- --- CURATED PROJECTS SECTION --- -->
+  <!-- --- SERVICES / ONE-STOP SHOP --- -->
   <section class="section">
     <div class="container">
-      <div class="section-header section-header-left reveal">
-        <span class="label label-brass">Selected Work</span>
-        <h2 class="display-md section-title">Featured Projects</h2>
-        <p class="section-subtitle">A collection of rooms and residences tailored to the character of the site and the stories of the people inside.</p>
+      <div class="section-header reveal">
+        <span class="label">One-Stop Shop</span>
+        <h2 class="section-title">End-to-End Home Interiors</h2>
+        <p class="section-subtitle">We design, source, coordinate, and install everything you need for your space.</p>
       </div>
 
-      <div class="projects-grid projects-grid-featured reveal">
-        <!-- Project 1 (Large Featured) -->
-        <div class="project-card project-card-tall" onclick="window.location.href='project-morel-residence.html'">
-          <img src="images/hero.png" alt="The Morel Residence Living Room">
-          <div class="project-card-info-always">
-            <span class="project-card-category">Full Home • Mumbai</span>
-            <h3 class="project-card-title">The Morel Residence</h3>
+      <div class="services-grid reveal">
+        <!-- Card 1 -->
+        <div class="service-card" onclick="location.href='services.html'">
+          <div class="service-icon">🍳</div>
+          <h3 class="service-name">Modular Kitchens</h3>
+          <p class="service-desc">Tailor-made layouts built with high-quality moisture-resistant panels, soft-close hardware, and stylish countertops.</p>
+          <span class="project-card-link">Learn More &rarr;</span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card" onclick="location.href='services.html'">
+          <div class="service-icon">🚪</div>
+          <h3 class="service-name">Wardrobes & Storage</h3>
+          <p class="service-desc">Custom swing or sliding wardrobes designed to fit your room layouts and solve clutter once and for all.</p>
+          <span class="project-card-link">Learn More &rarr;</span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card" onclick="location.href='services.html'">
+          <div class="service-icon">💡</div>
+          <h3 class="service-name">Lighting & False Ceiling</h3>
+          <p class="service-desc">Concealed ambient and task lighting configured inside premium moisture-resistant gypsum boards.</p>
+          <span class="project-card-link">Learn More &rarr;</span>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card" onclick="location.href='services.html'">
+          <div class="service-icon">🏗</div>
+          <h3 class="service-name">Civil & Flooring Work</h3>
+          <p class="service-desc">Demolition, masonry, premium tile laying, wood-herringbone flooring, and plumbing changes resolved safely.</p>
+          <span class="project-card-link">Learn More &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FEATURED PROJECTS GALLERY --- -->
+  <section class="section" style="background: var(--bg-gray);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Inspiration</span>
+        <h2 class="section-title">Step Inside Real Homes</h2>
+        <p class="section-subtitle">Explore real living rooms, kitchens, and bedrooms completed by our team.</p>
+      </div>
+
+      <div class="projects-grid reveal">
+        <!-- Project 1 -->
+        <div class="project-card" onclick="location.href='project-morel-residence.html'">
+          <div class="project-img-wrapper">
+            <img src="images/hero.png" alt="The Morel Residence Living Room">
           </div>
-          <div class="project-card-overlay">
-            <span class="project-card-category">Full Home</span>
-            <h3 class="project-card-title">The Morel Residence</h3>
-            <p class="project-card-desc">A colonial apartment turned into a warm retreat of brass, velvet, and custom botanical touches.</p>
-            <span class="project-card-link">View Project &rarr;</span>
+          <div class="project-info">
+            <span class="project-category">Full Home • South Mumbai</span>
+            <h3 class="project-title">The Morel Residence</h3>
+            <p class="project-desc">A spacious colonial apartment turned into a warm oasis of raw brass accents and olive green velvet couches.</p>
+            <span class="project-card-link">View Walkthrough &rarr;</span>
           </div>
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card" onclick="window.location.href='portfolio.html'">
-          <img src="images/project-kitchen.png" alt="The Fernandez Kitchen">
-          <div class="project-card-info-always">
-            <span class="project-card-category">Kitchen • Bandra</span>
-            <h3 class="project-card-title">The Fernandez Kitchen</h3>
+        <div class="project-card" onclick="location.href='portfolio.html'">
+          <div class="project-img-wrapper">
+            <img src="images/project-kitchen.png" alt="The Fernandez Kitchen">
           </div>
-          <div class="project-card-overlay">
-            <span class="project-card-category">Kitchen</span>
-            <h3 class="project-card-title">The Fernandez Kitchen</h3>
-            <p class="project-card-desc">Sage green cabinets and aged terracotta tile kitchen renovation built for cooking and gathering.</p>
-            <span class="project-card-link">View Project &rarr;</span>
+          <div class="project-info">
+            <span class="project-category">Kitchen • Bandra West</span>
+            <h3 class="project-title">The Fernandez Kitchen</h3>
+            <p class="project-desc">Sage green cabinets and aged terracotta backsplash custom built to maximize storage and morning light.</p>
+            <span class="project-card-link">View Gallery &rarr;</span>
           </div>
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card" onclick="window.location.href='portfolio.html'">
-          <img src="images/project-dining.png" alt="The Patel Dining Room">
-          <div class="project-card-info-always">
-            <span class="project-card-category">Dining Room • Powai</span>
-            <h3 class="project-card-title">The Patel Dining Room</h3>
+        <div class="project-card" onclick="location.href='portfolio.html'">
+          <div class="project-img-wrapper">
+            <img src="images/project-dining.png" alt="The Patel Dining Room">
           </div>
-          <div class="project-card-overlay">
-            <span class="project-card-category">Dining Room</span>
-            <h3 class="project-card-title">The Patel Dining Room</h3>
-            <p class="project-card-desc">An asymmetric grid gallery wall and custom walnut round table built for entertaining.</p>
-            <span class="project-card-link">View Project &rarr;</span>
+          <div class="project-info">
+            <span class="project-category">Dining Room • Powai</span>
+            <h3 class="project-title">The Patel Dining Room</h3>
+            <p class="project-desc">An eclectic dining room featuring a round walnut table, matching rattan chairs, and a custom gallery art wall.</p>
+            <span class="project-card-link">View Gallery &rarr;</span>
           </div>
         </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 4rem;" class="reveal">
-        <a href="portfolio.html" class="btn btn-outline">Explore Full Gallery</a>
       </div>
     </div>
   </section>
 
   <!-- --- TESTIMONIALS CAROUSEL --- -->
-  <section class="section testimonials-section">
-    <div class="container-sm">
+  <section class="section">
+    <div class="container">
       <div class="section-header reveal">
         <span class="label">Testimonials</span>
-        <h2 class="display-sm section-title">What Our Clients Say</h2>
+        <h2 class="section-title">What Our Customers Say</h2>
       </div>
 
       <div class="testimonials-carousel reveal">
@@ -165,61 +247,65 @@
           <!-- Slide 1 -->
           <div class="testimonial-card">
             <div class="testimonial-stars">
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
             </div>
-            <span class="testimonial-quote-mark">&ldquo;</span>
             <p class="testimonial-text">
-              "Arjun transformed our home from a collection of rooms into a coherent, beautiful story. He listened deeply, challenged us in the best way, and delivered something far beyond what we imagined. Every guest who visits asks who designed it. The pride we feel is immeasurable."
+              "Space Edge Design transformed our home from a collection of empty rooms into a coherent, beautiful story. They managed contractors, selected materials, and met the 45-day guarantee timeline exactly. Worth every rupee."
             </p>
             <div class="testimonial-author">Priya Morel</div>
-            <div class="testimonial-project">The Morel Residence, South Mumbai</div>
+            <div class="testimonial-project">Homeowner, South Mumbai</div>
           </div>
 
           <!-- Slide 2 -->
           <div class="testimonial-card">
             <div class="testimonial-stars">
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
             </div>
-            <span class="testimonial-quote-mark">&ldquo;</span>
             <p class="testimonial-text">
-              "Our kitchen was a nightmare — dark, small, and unloved. Arjun saw something in it we couldn't. Now it's the heart of our home. The sage green cabinets, the terracotta tiles, the brass taps — it's a space that makes cooking feel like a pleasure, not a chore."
+              "Our old kitchen was dark and small. Space Edge Design saw potential. The sage cabinets, white marble, and raw brass taps make cooking feel like a dream. Highly recommend their design specialists."
             </p>
             <div class="testimonial-author">Sofia Fernandez</div>
-            <div class="testimonial-project">The Fernandez Kitchen, Bandra</div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="testimonial-card">
-            <div class="testimonial-stars">
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-            </div>
-            <span class="testimonial-quote-mark">&ldquo;</span>
-            <p class="testimonial-text">
-              "As a writer, my environment is everything. I told Arjun I wanted a room that felt like a place where important things happen. He delivered exactly that. The olive walls, the shelves, the quality of the light — it's perfect. I finished my novel in this room."
-            </p>
-            <div class="testimonial-author">Rahul Bose</div>
-            <div class="testimonial-project">The Writer's Study, Colaba</div>
+            <div class="testimonial-project">Fernandez Kitchen, Bandra</div>
           </div>
         </div>
 
         <div class="carousel-controls">
           <button class="carousel-btn" id="prevBtn" aria-label="Previous Slide">&#8592;</button>
-          <div class="carousel-dots" id="carouselDots">
-            <!-- Dots added via JS -->
-          </div>
+          <div class="carousel-dots" id="carouselDots"></div>
           <button class="carousel-btn" id="nextBtn" aria-label="Next Slide">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FAQ SECTION --- -->
+  <section class="section" style="background: var(--bg-gray); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">FAQs</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-wrapper reveal">
+        <div class="faq-item">
+          <button class="faq-question">1. Why do I need an interior designer?</button>
+          <div class="faq-answer">
+            <p>An interior designer gauges your functional needs and tastes to configure your dream space properly. They assist in sourcing the right materials, designing spatial layouts, planning illumination coordinates, and coordinating builders to deliver a flawless result.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">2. Why is Space Edge Design perfect for your home interior design?</button>
+          <div class="faq-answer">
+            <p>We are a certified partner that delivers customized layouts with modular factory finishes, transparent timelines, flat 10-year warranty options, and zero contractor management overheads.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">3. What is the cost of home interiors?</button>
+          <div class="faq-answer">
+            <p>Pricing varies as per materials, size, and layout scope. Standard modular packages begin at: 1 BHK starting from ₹1.99 Lakhs, 2 BHK starting from ₹3.57 Lakhs, and 3 BHK starting from ₹4.23 Lakhs.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -228,9 +314,9 @@
   <!-- --- CTA BANNER --- -->
   <section class="cta-banner reveal">
     <div class="container">
-      <h2>Ready to transform your space?</h2>
-      <p>Let's design a home that echoes your story and lasts for generations.</p>
-      <a href="contact.html" class="btn btn-cta-light">Book a Consultation</a>
+      <h2>Your dream interiors is just a click away</h2>
+      <p>Turn your home into a dream home. Consult our experts.</p>
+      <a href="#book-consult" class="btn btn-secondary" style="background: var(--bg-white); color: var(--primary); font-size: 0.95rem;">Book Free Consultation</a>
     </div>
   </section>
 
@@ -239,45 +325,45 @@
     <div class="container footer-grid">
       <div>
         <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
-        <p class="footer-brand-desc">Curating warm, vintage-inspired editorial interiors tailored to modern living. Designed by Arjun Kapoor.</p>
+        <p class="footer-brand-desc">India's leading interior design brand, offering custom modular kitchens, wardrobes, and civil renovations. Handled by Arjun Kapoor.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="Pinterest">PI</a>
+          <a href="#" class="social-link" aria-label="YouTube">YT</a>
+        </div>
       </div>
       <div>
-        <h5 class="footer-col-title">Explore</h5>
+        <h5 class="footer-col-title">Offerings</h5>
         <ul class="footer-links">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-          <li><a href="about.html" class="footer-link">About Story</a></li>
-          <li><a href="services.html" class="footer-link">Services</a></li>
-          <li><a href="reviews.html" class="footer-link">Client Reviews</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="services.html" class="footer-link">Modular Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Full Home Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Room Refreshes</a></li>
+          <li><a href="services.html" class="footer-link">Art Styling</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Services</h5>
+        <h5 class="footer-col-title">Get Inspired</h5>
         <ul class="footer-links">
-          <li><a href="services.html" class="footer-link">Full Home Design</a></li>
-          <li><a href="services.html" class="footer-link">Room Refresh</a></li>
-          <li><a href="services.html" class="footer-link">Styling Only</a></li>
-          <li><a href="services.html" class="footer-link">Virtual Consultation</a></li>
+          <li><a href="portfolio.html" class="footer-link">Design Ideas</a></li>
+          <li><a href="portfolio.html" class="footer-link">Living Rooms</a></li>
+          <li><a href="portfolio.html" class="footer-link">Kitchen Layouts</a></li>
+          <li><a href="portfolio.html" class="footer-link">Bedrooms</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Studio</h5>
+        <h5 class="footer-col-title">Studio Hub</h5>
         <ul class="footer-links">
-          <li class="footer-link" style="color: rgba(250,247,242,0.65);">Fort, Mumbai, India</li>
-          <li class="footer-link"><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
-          <li class="footer-link"><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></li>
-          <li class="footer-link"><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.6;">Admin Portal</a></li>
+          <li class="footer-link" style="color: rgba(255,255,255,0.5);">Horniman Circle, Fort, Mumbai</li>
+          <li><a href="ghaziabad.html" class="footer-link" style="color: var(--primary-light); font-weight: 600;">Ghaziabad Studio</a></li>
+          <li><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
+          <li><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.65;">Admin Portal</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
       <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">IG</a>
-        <a href="#" class="social-link" aria-label="Pinterest">PI</a>
-        <a href="#" class="social-link" aria-label="Houzz">HZ</a>
-      </div>
+      <span class="footer-copy">Flat 10-year warranty* • 45-day move-in guarantee</span>
     </div>
   </footer>
 
@@ -286,24 +372,14 @@
     // 1. Navigation Scroll Class
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
+      if (window.scrollY > 40) {
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
       }
     });
 
-    // 2. Load animation triggers
-    window.addEventListener('DOMContentLoaded', () => {
-      const heroBg = document.getElementById('heroBg');
-      if (heroBg) {
-        setTimeout(() => {
-          heroBg.classList.add('loaded');
-        }, 150);
-      }
-    });
-
-    // 3. Mobile Hamburger Menu
+    // 2. Mobile Hamburger Menu
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileCloseBtn = document.getElementById('mobileCloseBtn');
@@ -316,7 +392,7 @@
       mobileMenu.classList.remove('open');
     });
 
-    // 4. Testimonials Carousel
+    // 3. Carousel Testimonials
     const track = document.getElementById('carouselTrack');
     const slides = Array.from(track.children);
     const prevBtn = document.getElementById('prevBtn');
@@ -324,16 +400,14 @@
     const dotsContainer = document.getElementById('carouselDots');
 
     let currentIndex = 0;
-    let autoSlideInterval;
 
-    // Create dots
-    slides.forEach((_, index) => {
+    slides.forEach((_, idx) => {
       const dot = document.createElement('button');
-      dot.classList.add('carousel-dot');
-      if (index === 0) dot.classList.add('active');
+      dot.className = 'carousel-dot';
+      if (idx === 0) dot.classList.add('active');
       dot.addEventListener('click', () => {
-        goToSlide(index);
-        resetAutoSlide();
+        currentIndex = idx;
+        updateCarousel();
       });
       dotsContainer.appendChild(dot);
     });
@@ -351,57 +425,97 @@
       });
     }
 
-    function goToSlide(index) {
-      if (index < 0) {
-        currentIndex = slides.length - 1;
-      } else if (index >= slides.length) {
-        currentIndex = 0;
-      } else {
-        currentIndex = index;
-      }
-      updateCarousel();
-    }
-
     prevBtn.addEventListener('click', () => {
-      goToSlide(currentIndex - 1);
-      resetAutoSlide();
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+      updateCarousel();
     });
 
     nextBtn.addEventListener('click', () => {
-      goToSlide(currentIndex + 1);
-      resetAutoSlide();
+      currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+      updateCarousel();
     });
 
-    function startAutoSlide() {
-      autoSlideInterval = setInterval(() => {
-        goToSlide(currentIndex + 1);
-      }, 5000);
-    }
+    // 4. Inquiry Logger
+    const heroInquiryForm = document.getElementById('heroInquiryForm');
+    const heroSubmitBtn = document.getElementById('heroSubmitBtn');
+    const heroFormMessage = document.getElementById('heroFormMessage');
 
-    function resetAutoSlide() {
-      clearInterval(autoSlideInterval);
-      startAutoSlide();
-    }
+    heroInquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    startAutoSlide();
+      if (document.getElementById('heroNickname').value) {
+        heroFormMessage.className = 'form-submit-message success';
+        heroFormMessage.innerText = 'Thank you for booking consultation!';
+        heroInquiryForm.reset();
+        return;
+      }
 
-    // 5. Intersection Observer for Scroll Reveals
+      const name = document.getElementById('hName').value;
+      const email = document.getElementById('hEmail').value;
+      const phone = document.getElementById('hPhone').value;
+      const type = document.getElementById('hType').value;
+
+      heroSubmitBtn.disabled = true;
+      heroSubmitBtn.innerText = 'Logging...';
+
+      setTimeout(() => {
+        const list = JSON.parse(localStorage.getItem('spaceEdgeInquiries') || '[]');
+        list.push({
+          id: 'inq_' + Date.now(),
+          name: name,
+          email: email,
+          phone: phone,
+          projectType: type + ' (Home Page)',
+          budget: 'N/A',
+          timeline: 'ASAP',
+          location: 'Mumbai',
+          message: `Consultation request from home page hero card. Requirement: ${type}.`,
+          date: new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
+          read: false
+        });
+        localStorage.setItem('spaceEdgeInquiries', JSON.stringify(list));
+
+        heroFormMessage.className = 'form-submit-message success';
+        heroFormMessage.innerText = `Consultation Booked! Thank you, ${name}. We will call you within 24 hours.`;
+        heroInquiryForm.reset();
+        
+        heroSubmitBtn.disabled = false;
+        heroSubmitBtn.innerText = 'Book Free Consultation';
+      }, 1000);
+    });
+
+    // 5. FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const q = item.querySelector('.faq-question');
+      const a = item.querySelector('.faq-answer');
+      q.addEventListener('click', () => {
+        const active = item.classList.contains('active');
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+        if (!active) {
+          item.classList.add('active');
+          a.style.maxHeight = a.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // 6. Scroll Reveals
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Trigger once
+          observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.15
     });
 
-    reveals.forEach(element => {
-      revealObserver.observe(element);
-    });
+    reveals.forEach(r => revealObserver.observe(r));
   </script>
 
 </body>
