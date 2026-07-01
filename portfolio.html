@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Space Edge Design</title>
+  <meta name="description" content="A curated gallery of interior design projects by Arjun Kapoor, showcasing warm neutrals, modern vintage styling, and tailored layouts.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- NAVIGATION --- -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-name">SPACE EDGE DESIGN</span>
+        <span class="nav-logo-tagline">Editorial Interiors</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Book Consultation</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- --- MOBILE NAV --- -->
+  <div class="nav-mobile" id="mobileMenu">
+    <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="portfolio.html" class="nav-link active">Portfolio</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="reviews.html" class="nav-link">Reviews</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
+  </div>
+
+  <!-- --- PAGE HERO --- -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-label">
+        <span class="label label-brass">Gallery</span>
+      </div>
+      <h1 class="display-lg">Our Work</h1>
+      <p>A curated selection of spaces transformed through craft, patience, and obsessive attention to detail.</p>
+    </div>
+  </header>
+
+  <!-- --- PORTFOLIO GALLERY SECTION --- -->
+  <section class="section">
+    <div class="container">
+      <!-- Filters -->
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="full-home">Full Home</button>
+        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" data-filter="dining">Dining Room</button>
+        <button class="filter-btn" data-filter="study">Home Study</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="masonry-grid reveal">
+        <!-- Item 1: Morel Residence (Full Home) -->
+        <div class="masonry-item" data-category="full-home">
+          <img src="images/hero.png" alt="The Morel Residence" onclick="openLightbox(this.src)">
+          <div class="masonry-item-overlay">
+            <span class="project-card-category">Full Home • South Mumbai</span>
+            <h3 class="project-card-title">The Morel Residence</h3>
+            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Item 2: Fernandez Kitchen (Kitchen) -->
+        <div class="masonry-item" data-category="kitchen">
+          <img src="images/project-kitchen.png" alt="The Fernandez Kitchen" onclick="openLightbox(this.src)">
+          <div class="masonry-item-overlay">
+            <span class="project-card-category">Kitchen • Bandra West</span>
+            <h3 class="project-card-title">The Fernandez Kitchen</h3>
+            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Item 3: Belvedere Master Suite (Bedroom) -->
+        <div class="masonry-item" data-category="bedroom">
+          <img src="images/project-bedroom.png" alt="Belvedere Master Suite" onclick="openLightbox(this.src)">
+          <div class="masonry-item-overlay">
+            <span class="project-card-category">Bedroom • Juhu</span>
+            <h3 class="project-card-title">Belvedere Master Suite</h3>
+            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Item 4: Patel Dining Room (Dining) -->
+        <div class="masonry-item" data-category="dining">
+          <img src="images/project-dining.png" alt="The Patel Dining Room" onclick="openLightbox(this.src)">
+          <div class="masonry-item-overlay">
+            <span class="project-card-category">Dining Room • Powai</span>
+            <h3 class="project-card-title">The Patel Dining Room</h3>
+            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Item 5: Writer's Study (Home Study) -->
+        <div class="masonry-item" data-category="study">
+          <img src="images/project-study.png" alt="The Writer's Study" onclick="openLightbox(this.src)">
+          <div class="masonry-item-overlay">
+            <span class="project-card-category">Home Study • Colaba</span>
+            <h3 class="project-card-title">The Writer's Study</h3>
+            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- LIGHTBOX --- -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+    <img id="lightboxImg" src="" alt="Lightbox View">
+  </div>
+
+  <!-- --- CTA BANNER --- -->
+  <section class="cta-banner reveal">
+    <div class="container">
+      <h2>Have a project in mind?</h2>
+      <p>Let's talk about how we can craft a beautiful space together.</p>
+      <a href="contact.html" class="btn btn-cta-light">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
+        <p class="footer-brand-desc">Curating warm, vintage-inspired editorial interiors tailored to modern living. Designed by Arjun Kapoor.</p>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Explore</h5>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+          <li><a href="about.html" class="footer-link">About Story</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="reviews.html" class="footer-link">Client Reviews</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="services.html" class="footer-link">Full Home Design</a></li>
+          <li><a href="services.html" class="footer-link">Room Refresh</a></li>
+          <li><a href="services.html" class="footer-link">Styling Only</a></li>
+          <li><a href="services.html" class="footer-link">Virtual Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Studio</h5>
+        <ul class="footer-links">
+          <li class="footer-link" style="color: rgba(250,247,242,0.65);">Fort, Mumbai, India</li>
+          <li class="footer-link"><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
+          <li class="footer-link"><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></li>
+          <li class="footer-link"><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.6;">Admin Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="Pinterest">PI</a>
+        <a href="#" class="social-link" aria-label="Houzz">HZ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- JAVASCRIPT --- -->
+  <script>
+    // 1. Navigation Scroll Class
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // 2. Mobile Hamburger Menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+    });
+
+    mobileCloseBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+
+    // 3. Filtering Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const masonryItems = document.querySelectorAll('.masonry-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Toggle active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        masonryItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // 4. Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // 5. Intersection Observer for Scroll Reveals
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    reveals.forEach(element => {
+      revealObserver.observe(element);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Space Edge Design</title>
+  <meta name="description" content="Get in touch with Space Edge Design. Send an inquiry for residential renovations, room designs, or consultations in Mumbai.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- NAVIGATION --- -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-name">SPACE EDGE DESIGN</span>
+        <span class="nav-logo-tagline">Editorial Interiors</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Book Consultation</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- --- MOBILE NAV --- -->
+  <div class="nav-mobile" id="mobileMenu">
+    <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="reviews.html" class="nav-link">Reviews</a>
+    <a href="contact.html" class="nav-link active">Contact</a>
+    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
+  </div>
+
+  <!-- --- CONTACT HERO --- -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-label">
+        <span class="label label-brass">Start a Chat</span>
+      </div>
+      <h1 class="display-lg">Start a Conversation</h1>
+      <p>Every great project begins with a simple conversation. Tell us about your space and what you dream it could be.</p>
+    </div>
+  </header>
+
+  <!-- --- CONTACT GRID SECTION --- -->
+  <section class="section">
+    <div class="container contact-grid">
+      <!-- Info Column -->
+      <div class="contact-info reveal">
+        <h3>Get in Touch</h3>
+        <p>Whether you're looking to design your home from scratch, refresh a single room, or book a quick design layout review, we'd love to chat.</p>
+
+        <!-- Details -->
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <div class="contact-detail-label">Studio Address</div>
+            <div class="contact-detail-value">Space Edge Design, 4th Floor, Horniman Circle, Fort, Mumbai — 400001</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📧</div>
+          <div>
+            <div class="contact-detail-label">Email Address</div>
+            <div class="contact-detail-value"><a href="mailto:hello@spaceedgedesign.in">hello@spaceedgedesign.in</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <div class="contact-detail-label">Phone Inquiry</div>
+            <div class="contact-detail-value"><a href="tel:+919876543210">+91 98765 43210</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">⏰</div>
+          <div>
+            <div class="contact-detail-label">Studio Hours</div>
+            <div class="contact-detail-value">Monday – Saturday, 10am – 7pm IST</div>
+          </div>
+        </div>
+
+        <div class="social-links" style="margin-top: 3rem;">
+          <a href="#" class="social-link">IG</a>
+          <a href="#" class="social-link">PI</a>
+          <a href="#" class="social-link">HZ</a>
+          <a href="#" class="social-link">LN</a>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div class="reveal reveal-delay-1">
+        <form class="form" id="inquiryForm">
+          <!-- Honeypot -->
+          <input type="text" class="hp-field" name="website" id="inquiryWebsite">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inquiryName">Name</label>
+              <input type="text" id="inquiryName" required placeholder="e.g. Elena Rostova">
+            </div>
+            <div class="form-group">
+              <label for="inquiryEmail">Email</label>
+              <input type="email" id="inquiryEmail" required placeholder="e.g. elena@example.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inquiryPhone">Phone Number</label>
+              <input type="tel" id="inquiryPhone" placeholder="e.g. +91 98200 12345">
+            </div>
+            <div class="form-group">
+              <label for="inquiryProject">Project Type</label>
+              <select id="inquiryProject" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Full Home">Full Home Design</option>
+                <option value="Room Refresh">Room Refresh</option>
+                <option value="Styling Only">Styling Only / Art Curation</option>
+                <option value="Virtual Consultation">Virtual Consultation</option>
+                <option value="Other">Other / Commercial</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inquiryBudget">Estimated Budget</label>
+              <select id="inquiryBudget" required>
+                <option value="" disabled selected>Select a range...</option>
+                <option value="Under ₹5L">Under ₹5 Lakhs</option>
+                <option value="₹5L–₹10L">₹5L – ₹10 Lakhs</option>
+                <option value="₹10L–₹20L">₹10L – ₹20 Lakhs</option>
+                <option value="₹20L–₹40L">₹20L – ₹40 Lakhs</option>
+                <option value="₹40L+">₹40 Lakhs +</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inquiryTimeline">Desired Timeline</label>
+              <select id="inquiryTimeline" required>
+                <option value="" disabled selected>Select timeline...</option>
+                <option value="ASAP">ASAP</option>
+                <option value="1–3 months">1 – 3 months</option>
+                <option value="3–6 months">3 – 6 months</option>
+                <option value="6–12 months">6 – 12 months</option>
+                <option value="12+ months">12+ months</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inquiryLocation">Project Location</label>
+            <input type="text" id="inquiryLocation" required placeholder="e.g. Worli, Mumbai">
+          </div>
+
+          <div class="form-group">
+            <label for="inquiryMessage">Tell Us About Your Space</label>
+            <textarea id="inquiryMessage" required placeholder="What do you love about it? What is currently not working? What is your dream vision for the final result..."></textarea>
+          </div>
+
+          <div id="submitMessage" class="form-submit-message"></div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary" style="margin-top: 1rem; align-self: flex-start;">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- BANNER ACCENT --- -->
+  <section class="section-sm" style="background: var(--parchment); text-align: center; border-top: 1px solid var(--border-lt); border-bottom: 1px solid var(--border-lt);">
+    <div class="container-sm">
+      <p class="serif-lg" style="color: var(--ink-muted); line-height: 1.5; font-size: 1.3rem;">
+        "The best room in the world is the one that feels like yours."
+      </p>
+      <span class="label" style="display: block; margin-top: 1rem; font-size: 0.65rem;">&mdash; Arjun Kapoor</span>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
+        <p class="footer-brand-desc">Curating warm, vintage-inspired editorial interiors tailored to modern living. Designed by Arjun Kapoor.</p>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Explore</h5>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+          <li><a href="about.html" class="footer-link">About Story</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="reviews.html" class="footer-link">Client Reviews</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="services.html" class="footer-link">Full Home Design</a></li>
+          <li><a href="services.html" class="footer-link">Room Refresh</a></li>
+          <li><a href="services.html" class="footer-link">Styling Only</a></li>
+          <li><a href="services.html" class="footer-link">Virtual Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Studio</h5>
+        <ul class="footer-links">
+          <li class="footer-link" style="color: rgba(250,247,242,0.65);">Fort, Mumbai, India</li>
+          <li class="footer-link"><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
+          <li class="footer-link"><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></li>
+          <li class="footer-link"><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.6;">Admin Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="Pinterest">PI</a>
+        <a href="#" class="social-link" aria-label="Houzz">HZ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- JAVASCRIPT --- -->
+  <script>
+    // 1. Navigation Scroll Class
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // 2. Mobile Hamburger Menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+    });
+
+    mobileCloseBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+
+    // 3. Form Validation and LocalStorage Logger
+    const inquiryForm = document.getElementById('inquiryForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitMessage = document.getElementById('submitMessage');
+
+    inquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Honeypot check
+      if (document.getElementById('inquiryWebsite').value) {
+        // Spam bot detected, show fake success
+        submitMessage.className = 'form-submit-message success';
+        submitMessage.innerText = 'Thank you! Your inquiry has been sent.';
+        inquiryForm.reset();
+        return;
+      }
+
+      const name = document.getElementById('inquiryName').value;
+      const email = document.getElementById('inquiryEmail').value;
+      const phone = document.getElementById('inquiryPhone').value;
+      const projectType = document.getElementById('inquiryProject').value;
+      const budget = document.getElementById('inquiryBudget').value;
+      const timeline = document.getElementById('inquiryTimeline').value;
+      const location = document.getElementById('inquiryLocation').value;
+      const message = document.getElementById('inquiryMessage').value;
+
+      // Disable button & show sending state
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
+
+      // Simulate network request (1.2s delay)
+      setTimeout(() => {
+        // Save to spaceEdgeInquiries list in LocalStorage
+        const existingInquiries = JSON.parse(localStorage.getItem('spaceEdgeInquiries') || '[]');
+        const newInquiry = {
+          id: 'inq_' + Date.now(),
+          name: name,
+          email: email,
+          phone: phone,
+          projectType: projectType,
+          budget: budget,
+          timeline: timeline,
+          location: location,
+          message: message,
+          date: new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
+          read: false
+        };
+        existingInquiries.push(newInquiry);
+        localStorage.setItem('spaceEdgeInquiries', JSON.stringify(existingInquiries));
+
+        // Display success state
+        submitMessage.className = 'form-submit-message success';
+        submitMessage.innerText = `Thank you, ${name}! We've received your inquiry. Arjun will review it and get back to you within 48 hours.`;
+        
+        // Reset form
+        inquiryForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Send Inquiry';
+        
+        // Scroll to message
+        submitMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 1200);
+    });
+
+    // 4. Intersection Observer for Scroll Reveals
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    reveals.forEach(element => {
+      revealObserver.observe(element);
+    });
+  </script>
+
+</body>
+</html>

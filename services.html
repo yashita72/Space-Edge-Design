@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Space Edge Design</title>
+  <meta name="description" content="Explore our interior design service packages from Full Design to Room Refresh, Styling, and Virtual Consultation by Arjun Kapoor.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* FAQ Specific Accordion Styles */
+    .faq-wrapper {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: var(--warm-white);
+      border: 1px solid var(--border-lt);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-question {
+      padding: 1.25rem 1.5rem;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .faq-question::after {
+      content: '+';
+      font-family: var(--font-body);
+      font-size: 1.2rem;
+      color: var(--warm-gray);
+      transition: transform var(--transition);
+    }
+    .faq-item.active .faq-question::after {
+      content: '−';
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+      padding: 0 1.5rem;
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- --- NAVIGATION --- -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-name">SPACE EDGE DESIGN</span>
+        <span class="nav-logo-tagline">Editorial Interiors</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Book Consultation</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- --- MOBILE NAV --- -->
+  <div class="nav-mobile" id="mobileMenu">
+    <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link active">Services</a>
+    <a href="reviews.html" class="nav-link">Reviews</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
+  </div>
+
+  <!-- --- SERVICES HERO --- -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-label">
+        <span class="label label-brass">Offerings</span>
+      </div>
+      <h1 class="display-lg">How We Work</h1>
+      <p>Four distinct ways to partner with Space Edge Design, scaled to the scope and ambition of your project.</p>
+    </div>
+  </header>
+
+  <!-- --- SERVICES PACKAGES SECTION --- -->
+  <section class="section">
+    <div class="container">
+      <div class="services-grid reveal">
+        <!-- Service 1: Full Design -->
+        <div class="service-card featured">
+          <span class="service-badge">Most Popular</span>
+          <span class="service-icon">🏠</span>
+          <h3 class="service-name">Full Home Design</h3>
+          <p class="service-desc">Our most comprehensive offering. We take your space from empty shell to fully realized home — concept to furniture placement, every detail resolved.</p>
+          <ul class="service-includes">
+            <li>Space planning & layout audits</li>
+            <li>Material, color & trim specs</li>
+            <li>Custom millwork design drawings</li>
+            <li>Furniture sourcing & procurement</li>
+            <li>Lighting plans & fixture audits</li>
+            <li>Project coordination & styling</li>
+          </ul>
+          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹20 Lakhs</div>
+          <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Request a Quote</a>
+        </div>
+
+        <!-- Service 2: Room Refresh -->
+        <div class="service-card">
+          <span class="service-icon">✨</span>
+          <h3 class="service-name">Room Refresh</h3>
+          <p class="service-desc">A focused transformation of a single room or two. Perfect for those who love their home but want one space elevated to its full potential.</p>
+          <ul class="service-includes">
+            <li>Single-room floor layouts</li>
+            <li>Material & paint color palette</li>
+            <li>Furniture & decor shopping lists</li>
+            <li>2 revisions & check-in calls</li>
+            <li>Final styling session on reveal day</li>
+          </ul>
+          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹5 Lakhs</div>
+          <a href="contact.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Request a Quote</a>
+        </div>
+
+        <!-- Service 3: Virtual Consultation -->
+        <div class="service-card">
+          <span class="service-icon">💻</span>
+          <h3 class="service-name">Virtual Consultation</h3>
+          <p class="service-desc">A 90-minute video call with Arjun, followed by a written design blueprint with actionable layout suggestions, color ideas, and shopping links.</p>
+          <ul class="service-includes">
+            <li>Pre-call spatial questionnaire</li>
+            <li>90-min interactive Zoom video call</li>
+            <li>Curated mood & color board</li>
+            <li>Recommended furniture shopping links</li>
+            <li>1 follow-up email Q&A wrap-up</li>
+          </ul>
+          <div class="service-price" style="margin-bottom: 1.5rem;">₹25,000</div>
+          <a href="contact.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Book Session</a>
+        </div>
+
+        <!-- Service 4: Styling Only -->
+        <div class="service-card">
+          <span class="service-icon">🌿</span>
+          <h3 class="service-name">Styling & Art Curation</h3>
+          <p class="service-desc">You have the furniture. You have the space. You just need the final 20% that makes it feel designed. Art selection, cushions, plants, rugs, and details.</p>
+          <ul class="service-includes">
+            <li>On-site audit & accessory budget</li>
+            <li>Styling board & art proposals</li>
+            <li>Accessory & plant procurement</li>
+            <li>Full-day styling & staging session</li>
+            <li>Photography-ready layouts</li>
+          </ul>
+          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹2 Lakhs</div>
+          <a href="contact.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- THE PROCESS SECTION --- -->
+  <section class="section" style="background: var(--parchment); border-top: 1px solid var(--border-lt); border-bottom: 1px solid var(--border-lt);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label label-brass">Workflow</span>
+        <h2 class="display-md section-title">The Process</h2>
+        <p class="section-subtitle">Every project — whatever its scope — moves through the same four stages.</p>
+      </div>
+
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <div class="process-step-number">01</div>
+          <h3 class="process-step-title">Discovery</h3>
+          <p class="process-step-desc">We align on budget, timeline, and aesthetic dreams through conversational spatial interviews.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-number">02</div>
+          <h3 class="process-step-title">Concept</h3>
+          <p class="process-step-desc">We develop detailed spatial plans, handpicked material palettes, and editorial mood boards.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-number">03</div>
+          <h3 class="process-step-title">Execution</h3>
+          <p class="process-step-desc">We manage procurement, coordinate custom carpenters and craftsmen, and track delivery.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-number">04</div>
+          <h3 class="process-step-title">Reveal</h3>
+          <p class="process-step-desc">The final styling layer is added on handover day. Welcome to your editorial retreat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FAQ SECTION --- -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label label-brass">Common Queries</span>
+        <h2 class="display-sm section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-wrapper reveal">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question">How long does a full home project take?</button>
+          <div class="faq-answer">
+            <p>Typically 4–8 months depending on scale, municipal permissions, and procurement timelines for custom pieces. Smaller room refreshes are usually wrapped up in 6–10 weeks.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">Do you work outside Mumbai?</button>
+          <div class="faq-answer">
+            <p>Yes — we take on select residential and commercial projects nationwide and have done projects in Bangalore, Goa, Delhi, and Dubai. Travel and on-site lodging fees for the team are billed separately.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">Can I source my own furniture and art?</button>
+          <div class="faq-answer">
+            <p>Absolutely. We will guide your selections and consult on fit, scale, and character consistency to ensure everything aligns, but you are free to purchase directly or use family heirlooms.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">Do you work with contractors or should I find my own?</button>
+          <div class="faq-answer">
+            <p>We work with a trusted circle of contractors, carpenters, and metalworkers in Mumbai who deliver exceptional craftsmanship. We are also happy to coordinate with your chosen contractors if preferred.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">What info do I need to supply to get started?</button>
+          <div class="faq-answer">
+            <p>Just a basic overview of your space (dimensions or floor plan if available), your rough investment target, and a sense of what is currently not working for you. We help clarify the rest during our first consult.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CTA BANNER --- -->
+  <section class="cta-banner reveal">
+    <div class="container">
+      <h2>Ready to begin?</h2>
+      <p>Let's map out your space and create something timeless.</p>
+      <a href="contact.html" class="btn btn-cta-light">Schedule a Chat</a>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
+        <p class="footer-brand-desc">Curating warm, vintage-inspired editorial interiors tailored to modern living. Designed by Arjun Kapoor.</p>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Explore</h5>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+          <li><a href="about.html" class="footer-link">About Story</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="reviews.html" class="footer-link">Client Reviews</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="services.html" class="footer-link">Full Home Design</a></li>
+          <li><a href="services.html" class="footer-link">Room Refresh</a></li>
+          <li><a href="services.html" class="footer-link">Styling Only</a></li>
+          <li><a href="services.html" class="footer-link">Virtual Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Studio</h5>
+        <ul class="footer-links">
+          <li class="footer-link" style="color: rgba(250,247,242,0.65);">Fort, Mumbai, India</li>
+          <li class="footer-link"><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
+          <li class="footer-link"><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></li>
+          <li class="footer-link"><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.6;">Admin Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="Pinterest">PI</a>
+        <a href="#" class="social-link" aria-label="Houzz">HZ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- JAVASCRIPT --- -->
+  <script>
+    // 1. Navigation Scroll Class
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // 2. Mobile Hamburger Menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+    });
+
+    mobileCloseBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+
+    // 3. FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close all first
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        // Toggle clicked
+        if (!isActive) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // 4. Intersection Observer for Scroll Reveals
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    reveals.forEach(element => {
+      revealObserver.observe(element);
+    });
+  </script>
+
+</body>
+</html>

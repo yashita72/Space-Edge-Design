@@ -1,0 +1,224 @@
+{
+  "projects": [
+    {
+      "id": "morel-residence",
+      "title": "The Morel Residence",
+      "category": "Full Home",
+      "style": "Modern Vintage",
+      "location": "South Mumbai",
+      "budget": "Premium",
+      "year": 2025,
+      "area": "3,200 sq ft",
+      "duration": "6 months",
+      "image": "images/hero.png",
+      "beforeImage": "images/project-kitchen.png",
+      "afterImage": "images/hero.png",
+      "gallery": ["images/hero.png", "images/project-dining.png", "images/project-bedroom.png"],
+      "excerpt": "A sweeping full-home transformation turning a dated colonial apartment into a curated retreat of brass, velvet, and botanical warmth.",
+      "brief": "The Morels had lived in this 1970s colonial building for two decades. Every room told a different story — none of them theirs. Our brief was to create a cohesive narrative through the entire home that honoured the building's bones while introducing a layered, editorial warmth. We stripped everything back to structure, rebuilt with intention, and furnished with restraint.",
+      "challenge": "The building's load-bearing walls couldn't be moved, creating an awkward traffic flow between the living and dining areas. We resolved this by designing a bespoke brass-and-cane screen that defines spaces without closing them off.",
+      "materials": [
+        {"name": "Velvet Olive", "color": "#6B7A4E"},
+        {"name": "Raw Brass", "color": "#B8933F"},
+        {"name": "Biscuit Lime Plaster", "color": "#E8DEC8"},
+        {"name": "Walnut Timber", "color": "#7B5E3A"},
+        {"name": "Terracotta Tile", "color": "#C2714F"}
+      ],
+      "clientQuote": "Arjun didn't just redesign our home — he gave us a place that finally feels like us. Every corner has something to discover.",
+      "clientName": "Priya & Karan Morel",
+      "featured": true,
+      "filter": ["full-home", "modern-vintage", "residential"]
+    },
+    {
+      "id": "the-kitchen-project",
+      "title": "The Fernandez Kitchen",
+      "category": "Kitchen",
+      "style": "Old-World European",
+      "location": "Bandra West",
+      "budget": "High",
+      "year": 2025,
+      "area": "480 sq ft",
+      "duration": "8 weeks",
+      "image": "images/project-kitchen.png",
+      "beforeImage": "images/project-study.png",
+      "afterImage": "images/project-kitchen.png",
+      "gallery": ["images/project-kitchen.png", "images/project-dining.png"],
+      "excerpt": "Sage green cabinetry, terracotta tile, and honest brass hardware — a kitchen that earns its place at the heart of the home.",
+      "brief": "A compact but ambitious kitchen renovation guided by one word: warmth. The Fernandez family cooks every day together. The kitchen needed to hold that.",
+      "challenge": "Low ceiling heights and a single small window demanded careful lighting strategy — layered task, ambient and accent lighting entirely replace natural light after 4pm.",
+      "materials": [
+        {"name": "Sage Green", "color": "#8FA066"},
+        {"name": "Cream Marble", "color": "#F0EAD6"},
+        {"name": "Terracotta", "color": "#C2714F"},
+        {"name": "Aged Brass", "color": "#B8933F"}
+      ],
+      "clientQuote": "We didn't know a kitchen could be this beautiful. We eat at home every night now.",
+      "clientName": "Sofia Fernandez",
+      "featured": true,
+      "filter": ["kitchen", "old-world", "residential"]
+    },
+    {
+      "id": "belvedere-bedroom",
+      "title": "Belvedere Master Suite",
+      "category": "Bedroom",
+      "style": "Romantic Vintage",
+      "location": "Juhu",
+      "budget": "Luxury",
+      "year": 2024,
+      "area": "620 sq ft",
+      "duration": "10 weeks",
+      "image": "images/project-bedroom.png",
+      "beforeImage": "images/project-dining.png",
+      "afterImage": "images/project-bedroom.png",
+      "gallery": ["images/project-bedroom.png", "images/hero.png"],
+      "excerpt": "Deep terracotta drapes, carved wood, and a bed that invites you to stay — a master suite that restores rather than just rests.",
+      "brief": "A master suite designed around the idea of ritual. Morning light through linen curtains. Evening warmth from brass sconces. Every texture chosen to be touched.",
+      "challenge": "The existing layout placed the walk-in wardrobe as a visual dead-end. We reconfigured it behind a full-height upholstered panel, creating a seamless wall of calm.",
+      "materials": [
+        {"name": "Deep Terracotta", "color": "#A85A38"},
+        {"name": "Ivory Linen", "color": "#F5EDD8"},
+        {"name": "Dark Walnut", "color": "#5C3D2E"},
+        {"name": "Antique Brass", "color": "#B8933F"}
+      ],
+      "clientQuote": "I finally have a bedroom I don't want to leave in the morning. That's everything.",
+      "clientName": "Asha Mehta",
+      "featured": false,
+      "filter": ["bedroom", "romantic", "residential"]
+    },
+    {
+      "id": "dining-gallery",
+      "title": "The Patel Dining Room",
+      "category": "Dining Room",
+      "style": "Eclectic Editorial",
+      "location": "Powai",
+      "budget": "Mid-High",
+      "year": 2024,
+      "area": "380 sq ft",
+      "duration": "6 weeks",
+      "image": "images/project-dining.png",
+      "beforeImage": "images/project-bedroom.png",
+      "afterImage": "images/project-dining.png",
+      "gallery": ["images/project-dining.png", "images/project-kitchen.png"],
+      "excerpt": "A gallery wall, a round walnut table, and the art of gathering — where every dinner becomes an occasion.",
+      "brief": "The Patels entertain constantly. Their old dining room was functional but forgettable. Now it's the reason people accept every invitation.",
+      "challenge": "An asymmetric room shape made standard furniture arrangements feel clumsy. A round table and radially arranged art wall resolved the geometry beautifully.",
+      "materials": [
+        {"name": "Walnut", "color": "#7B5E3A"},
+        {"name": "Warm Cream", "color": "#F5F0E8"},
+        {"name": "Dried Pampas", "color": "#D4C5A9"},
+        {"name": "Rattan", "color": "#C4A882"}
+      ],
+      "clientQuote": "Our dining room is now everyone's favourite room in the house. Including ours.",
+      "clientName": "Vikram & Sunita Patel",
+      "featured": true,
+      "filter": ["dining", "eclectic", "residential"]
+    },
+    {
+      "id": "writers-study",
+      "title": "The Writer's Study",
+      "category": "Home Study",
+      "style": "Dark Academia",
+      "location": "Colaba",
+      "budget": "Mid",
+      "year": 2024,
+      "area": "240 sq ft",
+      "duration": "5 weeks",
+      "image": "images/project-study.png",
+      "beforeImage": "images/project-kitchen.png",
+      "afterImage": "images/project-study.png",
+      "gallery": ["images/project-study.png", "images/project-bedroom.png"],
+      "excerpt": "Floor-to-ceiling bookshelves, olive walls, and a cognac leather chair — a study that makes you want to write one more page.",
+      "brief": "Our client, a novelist, wanted a room that felt like his books looked — layered, rich, slightly worn at the edges, and absolutely conducive to long hours of thought.",
+      "challenge": "The room had zero natural light. We designed the entire lighting scheme to simulate it: warm-toned LED strips hidden behind bookshelf moldings create a consistent amber glow.",
+      "materials": [
+        {"name": "Dark Olive", "color": "#4E5A37"},
+        {"name": "Cognac Leather", "color": "#8B4513"},
+        {"name": "Aged Brass", "color": "#B8933F"},
+        {"name": "Persian Red", "color": "#8B2020"}
+      ],
+      "clientQuote": "I finished my novel in this room. I don't think that's a coincidence.",
+      "clientName": "Rahul Bose",
+      "featured": false,
+      "filter": ["study", "dark-academia", "residential"]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "name": "Priya Morel",
+      "project": "The Morel Residence",
+      "rating": 5,
+      "text": "Arjun transformed our home from a collection of rooms into a coherent, beautiful story. He listened deeply, challenged us in the best way, and delivered something far beyond what we imagined. Every guest who visits asks who designed it. The pride we feel is immeasurable.",
+      "date": "March 2025",
+      "approved": true
+    },
+    {
+      "id": "r2",
+      "name": "Sofia Fernandez",
+      "project": "The Fernandez Kitchen",
+      "rating": 5,
+      "text": "Our kitchen was a nightmare — dark, small, and unloved. Arjun saw something in it we couldn't. Now it's the heart of our home. The sage green cabinets, the terracotta tiles, the brass taps — it's a space that makes cooking feel like a pleasure, not a chore.",
+      "date": "January 2025",
+      "approved": true
+    },
+    {
+      "id": "r3",
+      "name": "Asha Mehta",
+      "project": "Belvedere Master Suite",
+      "rating": 5,
+      "text": "I've worked with interior designers before but Arjun is in a different category. He understood my vision and elevated it. The bedroom he designed is so restorative — the colours, the textures, the light. I sleep better than I ever have. Worth every rupee.",
+      "date": "November 2024",
+      "approved": true
+    },
+    {
+      "id": "r4",
+      "name": "Vikram Patel",
+      "project": "The Patel Dining Room",
+      "rating": 5,
+      "text": "Arjun has this rare quality: he makes you trust the process completely. We were nervous about a round table and the gallery wall — he knew. Six months later, it's the room we're most proud of. Our dinner parties have gotten noticeably better.",
+      "date": "September 2024",
+      "approved": true
+    },
+    {
+      "id": "r5",
+      "name": "Rahul Bose",
+      "project": "The Writer's Study",
+      "rating": 5,
+      "text": "As a writer, my environment is everything. I told Arjun I wanted a room that felt like a place where important things happen. He delivered exactly that. The olive walls, the shelves, the quality of the light — it's perfect. I finished my novel in this room.",
+      "date": "August 2024",
+      "approved": true
+    },
+    {
+      "id": "r6",
+      "name": "Nandita Shah",
+      "project": "Living Room Refresh",
+      "rating": 4,
+      "text": "Great experience working with Arjun. He is professional, creative, and keeps you informed throughout. Our living room looks stunning and has received so many compliments. Minor timeline delays but the result absolutely makes up for it.",
+      "date": "June 2024",
+      "approved": true
+    },
+    {
+      "id": "r7",
+      "name": "Test User",
+      "project": "Kitchen Redesign",
+      "rating": 5,
+      "text": "This is a pending review awaiting approval.",
+      "date": "June 2026",
+      "approved": false
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "i1",
+      "name": "Deepika Nair",
+      "email": "deepika@example.com",
+      "phone": "+91 98765 43210",
+      "projectType": "Full Home",
+      "budget": "₹20L – ₹40L",
+      "timeline": "6–12 months",
+      "message": "I recently moved into a new 2BHK in Worli. Looking to do a full interior transformation in a warm, vintage style similar to your portfolio. Would love to discuss.",
+      "date": "2026-06-28",
+      "read": false
+    }
+  ]
+}

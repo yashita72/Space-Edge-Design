@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Space Edge Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Admin specific styling overrides */
+    .admin-wrapper {
+      display: none;
+    }
+    .admin-wrapper.active {
+      display: block;
+    }
+    .admin-login.hidden {
+      display: none;
+    }
+    /* Modal styles */
+    .admin-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 26, 23, 0.75);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .admin-modal.open {
+      display: flex;
+    }
+    .admin-modal-card {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border);
+    }
+    .admin-modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .table-container {
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+    .project-thumb {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+</head>
+<body style="padding-top: 0;">
+
+  <!-- ==========================================
+       1. LOGIN CONTAINER
+       ========================================== -->
+  <div class="admin-login" id="loginScreen">
+    <div class="admin-login-card">
+      <h2 style="text-align: center; margin-bottom: 0.5rem;">SPACE EDGE DESIGN</h2>
+      <p style="text-align: center; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); margin-bottom: 2.5rem;">Studio Administration</p>
+      
+      <form class="form" id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="adminPassword">Enter Studio Password</label>
+          <input type="password" id="adminPassword" required placeholder="••••••••">
+        </div>
+        <div id="loginError" class="form-submit-message error" style="margin-bottom: 1rem; display: none;">Incorrect password. Please try again.</div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Authenticate</button>
+      </form>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" style="font-size: 0.75rem; color: var(--warm-gray); text-decoration: underline;">Return to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2. DASHBOARD CONTAINER
+       ========================================== -->
+  <div class="admin-wrapper" id="adminDashboard">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="container admin-header-inner">
+        <h1>SPACE EDGE DESIGN &mdash; Admin Panel</h1>
+        <button onclick="handleLogout()" class="admin-action-btn admin-action-delete" style="padding: 0.5rem 1.25rem;">Sign Out</button>
+      </div>
+    </header>
+
+    <main class="container" style="padding-bottom: 4rem;">
+      <!-- Tab selectors -->
+      <div class="admin-tabs">
+        <button class="admin-tab active" onclick="switchTab('inquiries')">Inquiries <span id="inquiryCount">(0)</span></button>
+        <button class="admin-tab" onclick="switchTab('reviews')">Reviews <span id="reviewCount">(0)</span></button>
+        <button class="admin-tab" onclick="switchTab('projects')">Projects <span id="projectCount">(0)</span></button>
+      </div>
+
+      <!-- --- TAB 1: INQUIRIES CONTENT --- -->
+      <div class="admin-tab-content active" id="tab-inquiries">
+        <div class="section-header section-header-left" style="margin-bottom: 2rem;">
+          <h2 class="display-sm">Inquiry Logs</h2>
+          <p class="section-subtitle" style="margin-left: 0;">Prospective client requests submitted via the inquiry form.</p>
+        </div>
+
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Type</th>
+                <th>Budget / Timeline</th>
+                <th>Location</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inquiriesTableBody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- --- TAB 2: REVIEWS CONTENT --- -->
+      <div class="admin-tab-content" id="tab-reviews">
+        <div class="section-header section-header-left" style="margin-bottom: 2rem;">
+          <h2 class="display-sm">Review Moderation</h2>
+          <p class="section-subtitle" style="margin-left: 0;">Verify and approve testimonials before they are published to the main site.</p>
+        </div>
+
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Project</th>
+                <th>Rating</th>
+                <th>Review Text</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="reviewsTableBody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- --- TAB 3: PROJECTS CONTENT --- -->
+      <div class="admin-tab-content" id="tab-projects">
+        <div class="section-header section-header-left" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 class="display-sm">Project Catalog</h2>
+            <p class="section-subtitle" style="margin-left: 0;">Manage portfolio items shown in the filterable gallery.</p>
+          </div>
+          <button onclick="openProjectModal()" class="btn btn-brass" style="padding: 0.6rem 1.5rem;">Add New Project</button>
+        </div>
+
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Thumbnail</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Year</th>
+                <th>Featured</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="projectsTableBody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ==========================================
+       3. ADD PROJECT MODAL
+       ========================================== -->
+  <div class="admin-modal" id="projectModal">
+    <div class="admin-modal-card">
+      <h3 class="display-sm" style="margin-bottom: 1.5rem;">Add Portfolio Project</h3>
+      <form class="form" id="newProjectForm" onsubmit="saveProject(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projTitle">Project Title</label>
+            <input type="text" id="projTitle" required placeholder="e.g. The Juhu Villa">
+          </div>
+          <div class="form-group">
+            <label for="projCategory">Category</label>
+            <select id="projCategory" required>
+              <option value="Full Home">Full Home</option>
+              <option value="Kitchen">Kitchen</option>
+              <option value="Bedroom">Bedroom</option>
+              <option value="Dining Room">Dining Room</option>
+              <option value="Home Study">Home Study</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projLocation">Location</label>
+            <input type="text" id="projLocation" required placeholder="e.g. Juhu, Mumbai">
+          </div>
+          <div class="form-group">
+            <label for="projYear">Year</label>
+            <input type="number" id="projYear" required value="2026">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="projImage">Primary Image URL / Path</label>
+          <input type="text" id="projImage" required value="images/hero.png" placeholder="e.g. images/project-kitchen.png">
+        </div>
+
+        <div class="form-group">
+          <label for="projExcerpt">Short Summary</label>
+          <textarea id="projExcerpt" required placeholder="Describe the style, textures, and details of this transformation in 1-2 sentences..."></textarea>
+        </div>
+
+        <div class="admin-modal-actions">
+          <button type="button" onclick="closeProjectModal()" class="btn btn-outline" style="padding: 0.6rem 1.5rem;">Cancel</button>
+          <button type="submit" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Save Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       4. JAVASCRIPT DASHBOARD LOGIC
+       ========================================== -->
+  <script>
+    // Constants
+    const ADMIN_PASSWORD = "vintage2026";
+
+    // Seed Data
+    const seedInquiries = [
+      {
+        id: "inq_seed_1",
+        name: "Deepika Nair",
+        email: "deepika@example.com",
+        phone: "+91 98765 43210",
+        projectType: "Full Home",
+        budget: "₹20L – ₹40L",
+        timeline: "6–12 months",
+        location: "Worli, Mumbai",
+        message: "I recently moved into a new 2BHK in Worli. Looking to do a full interior transformation in a warm, vintage style similar to your portfolio. Would love to discuss.",
+        date: "28 Jun 2026",
+        read: false
+      }
+    ];
+
+    const seedReviews = [
+      { id: "rev_seed_1", name: "Priya Morel", project: "The Morel Residence", rating: 5, text: "Arjun transformed our home from a collection of rooms into a coherent, beautiful story...", date: "March 2025", approved: true },
+      { id: "rev_seed_2", name: "Sofia Fernandez", project: "The Fernandez Kitchen", rating: 5, text: "Our kitchen was a nightmare — dark, small, and unloved. Arjun saw something in it we couldn't...", date: "January 2025", approved: true },
+      { id: "rev_seed_3", name: "Asha Mehta", project: "Belvedere Master Suite", rating: 5, text: "I've worked with interior designers before but Arjun is in a different category...", date: "November 2024", approved: true },
+      { id: "rev_seed_4", name: "Vikram Patel", project: "The Patel Dining Room", rating: 5, text: "Arjun has this rare quality: he makes you trust the process completely...", date: "September 2024", approved: true },
+      { id: "rev_seed_5", name: "Rahul Bose", project: "The Writer's Study", rating: 5, text: "As a writer, my environment is everything. I told Arjun I wanted a room that felt like...", date: "August 2024", approved: true },
+      { id: "rev_seed_6", name: "Nandita Shah", project: "Living Room Refresh", rating: 4, text: "Great experience working with Arjun. He is professional, creative, and keeps you informed throughout...", date: "June 2024", approved: true }
+    ];
+
+    const seedProjects = [
+      { id: "proj_seed_1", title: "The Morel Residence", category: "Full Home", location: "South Mumbai", year: 2025, image: "images/hero.png", excerpt: "A sweeping full-home transformation...", featured: true },
+      { id: "proj_seed_2", title: "The Fernandez Kitchen", category: "Kitchen", location: "Bandra West", year: 2025, image: "images/project-kitchen.png", excerpt: "Sage green cabinets and aged terracotta tile...", featured: true },
+      { id: "proj_seed_3", title: "Belvedere Master Suite", category: "Bedroom", location: "Juhu", year: 2024, image: "images/project-bedroom.png", excerpt: "Deep terracotta drapes, carved wood, and linen...", featured: false },
+      { id: "proj_seed_4", title: "The Patel Dining Room", category: "Dining Room", location: "Powai", year: 2024, image: "images/project-dining.png", excerpt: "An asymmetric grid gallery wall...", featured: true },
+      { id: "proj_seed_5", title: "The Writer's Study", category: "Home Study", location: "Colaba", year: 2024, image: "images/project-study.png", excerpt: "Floor-to-ceiling bookshelves, olive walls...", featured: false }
+    ];
+
+    // Auth state check on load
+    document.addEventListener("DOMContentLoaded", () => {
+      if (sessionStorage.getItem("sedAdmin") === "true") {
+        showDashboard();
+      }
+    });
+
+    // 1. Auth Flow
+    function handleLogin(e) {
+      e.preventDefault();
+      const pwInput = document.getElementById("adminPassword");
+      const errDiv = document.getElementById("loginError");
+
+      if (pwInput.value === ADMIN_PASSWORD) {
+        sessionStorage.setItem("sedAdmin", "true");
+        errDiv.style.display = "none";
+        pwInput.value = "";
+        showDashboard();
+      } else {
+        errDiv.style.display = "block";
+        pwInput.value = "";
+      }
+    }
+
+    function handleLogout() {
+      sessionStorage.removeItem("sedAdmin");
+      document.getElementById("adminDashboard").classList.remove("active");
+      document.getElementById("loginScreen").classList.remove("hidden");
+    }
+
+    function showDashboard() {
+      document.getElementById("loginScreen").classList.add("hidden");
+      document.getElementById("adminDashboard").classList.add("active");
+      
+      // Initialize Data lists
+      initDashboardData();
+    }
+
+    // 2. Tab switcher
+    function switchTab(tabId) {
+      // Toggle tabs active class
+      const tabs = document.querySelectorAll(".admin-tab");
+      tabs.forEach(t => {
+        if (t.getAttribute("onclick").includes(tabId)) {
+          t.classList.add("active");
+        } else {
+          t.classList.remove("active");
+        }
+      });
+
+      // Toggle tab content panels
+      const contents = document.querySelectorAll(".admin-tab-content");
+      contents.forEach(c => {
+        if (c.id === `tab-${tabId}`) {
+          c.classList.add("active");
+        } else {
+          c.classList.remove("active");
+        }
+      });
+    }
+
+    // 3. Database operations
+    let inquiries = [];
+    let reviews = [];
+    let projects = [];
+
+    function initDashboardData() {
+      // INQUIRIES: Merge seed + localStorage
+      const storedInq = JSON.parse(localStorage.getItem("spaceEdgeInquiries") || "[]");
+      inquiries = [...seedInquiries, ...storedInq];
+
+      // REVIEWS: Merge seed + localStorage pending + approved lists
+      const storedPending = JSON.parse(localStorage.getItem("spaceEdgePendingReviews") || "[]");
+      const storedApproved = JSON.parse(localStorage.getItem("spaceEdgeApprovedReviews") || "[]");
+      
+      reviews = [...seedReviews, ...storedApproved, ...storedPending];
+
+      // PROJECTS: Merge seed + localStorage
+      const storedProjects = JSON.parse(localStorage.getItem("spaceEdgeProjects") || "[]");
+      projects = [...seedProjects, ...storedProjects];
+
+      // Render Tables & Badges
+      renderInquiries();
+      renderReviews();
+      renderProjects();
+      updateBadges();
+    }
+
+    function updateBadges() {
+      // Update counters in tabs
+      document.getElementById("inquiryCount").innerText = `(${inquiries.filter(i => !i.read).length})`;
+      document.getElementById("reviewCount").innerText = `(${reviews.filter(r => !r.approved).length})`;
+      document.getElementById("projectCount").innerText = `(${projects.length})`;
+    }
+
+    // --- INQUIRIES RENDERING & ACTIONS ---
+    function renderInquiries() {
+      const tbody = document.getElementById("inquiriesTableBody");
+      tbody.innerHTML = "";
+
+      if (inquiries.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center;">No client inquiries logged yet.</td></tr>`;
+        return;
+      }
+
+      // Render newest first
+      inquiries.slice().reverse().forEach(inq => {
+        const tr = document.createElement("tr");
+        const statusBadge = inq.read 
+          ? `<span class="admin-badge" style="background: rgba(138,129,117,0.15); color: var(--warm-gray);">Read</span>`
+          : `<span class="admin-badge admin-badge-new">New</span>`;
+
+        const markReadBtn = inq.read
+          ? ""
+          : `<button onclick="markInquiryRead('${inq.id}')" class="admin-action-btn admin-action-approve">Mark Read</button>`;
+
+        tr.innerHTML = `
+          <td>${inq.date || 'Raw'}</td>
+          <td>
+            <strong>${inq.name}</strong><br>
+            <span style="font-size:0.75rem; color:var(--warm-gray);">${inq.email}</span><br>
+            <span style="font-size:0.75rem; color:var(--warm-gray);">${inq.phone || 'No phone'}</span>
+          </td>
+          <td>${inq.projectType}</td>
+          <td>
+            <span style="font-weight: 500;">${inq.budget}</span><br>
+            <span style="font-size:0.75rem; color:var(--warm-gray);">${inq.timeline}</span>
+          </td>
+          <td>${inq.location || 'Mumbai'}</td>
+          <td><div style="max-width:240px; white-space:normal; font-size:0.8rem; line-height:1.4;">${inq.message}</div></td>
+          <td>${statusBadge}</td>
+          <td>
+            <div class="admin-actions">
+              ${markReadBtn}
+              <button onclick="deleteInquiry('${inq.id}')" class="admin-action-btn admin-action-delete">Delete</button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function markInquiryRead(id) {
+      // Find in local array
+      const local = inquiries.find(i => i.id === id);
+      if (local) local.read = true;
+
+      // Update in localStorage if it was a stored inquiry
+      const stored = JSON.parse(localStorage.getItem("spaceEdgeInquiries") || "[]");
+      const storedMatch = stored.find(i => i.id === id);
+      if (storedMatch) {
+        storedMatch.read = true;
+        localStorage.setItem("spaceEdgeInquiries", JSON.stringify(stored));
+      }
+
+      renderInquiries();
+      updateBadges();
+    }
+
+    function deleteInquiry(id) {
+      if (!confirm("Are you sure you want to delete this inquiry entry?")) return;
+
+      // Filter local
+      inquiries = inquiries.filter(i => i.id !== id);
+
+      // Filter localStorage
+      const stored = JSON.parse(localStorage.getItem("spaceEdgeInquiries") || "[]");
+      const updated = stored.filter(i => i.id !== id);
+      localStorage.setItem("spaceEdgeInquiries", JSON.stringify(updated));
+
+      renderInquiries();
+      updateBadges();
+    }
+
+    // --- REVIEWS RENDERING & ACTIONS ---
+    function renderReviews() {
+      const tbody = document.getElementById("reviewsTableBody");
+      tbody.innerHTML = "";
+
+      if (reviews.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" style="text-align: center;">No reviews available.</td></tr>`;
+        return;
+      }
+
+      reviews.slice().reverse().forEach(rev => {
+        const tr = document.createElement("tr");
+        const stars = "&#9733;".repeat(rev.rating) + "&#9734;".repeat(5 - rev.rating);
+        const statusBadge = rev.approved
+          ? `<span class="admin-badge admin-badge-approved">Approved</span>`
+          : `<span class="admin-badge admin-badge-pending">Pending</span>`;
+
+        const actions = rev.approved
+          ? `<button onclick="deleteReview('${rev.id}')" class="admin-action-btn admin-action-delete">Delete</button>`
+          : `
+            <button onclick="approveReview('${rev.id}')" class="admin-action-btn admin-action-approve">Approve</button>
+            <button onclick="rejectReview('${rev.id}')" class="admin-action-btn admin-action-reject">Reject</button>
+          `;
+
+        tr.innerHTML = `
+          <td>${rev.date || 'Jul 2026'}</td>
+          <td><strong>${rev.name}</strong></td>
+          <td>${rev.project}</td>
+          <td><span style="color: var(--brass);">${stars}</span></td>
+          <td><div style="max-width: 300px; white-space: normal; font-size: 0.8rem; line-height: 1.4; font-style: italic;">"${rev.text}"</div></td>
+          <td>${statusBadge}</td>
+          <td>
+            <div class="admin-actions">
+              ${actions}
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function approveReview(id) {
+      // Find in localStorage pendingReviews
+      const pending = JSON.parse(localStorage.getItem("spaceEdgePendingReviews") || "[]");
+      const revToApprove = pending.find(r => r.id === id);
+
+      if (revToApprove) {
+        // Remove from pending
+        const updatedPending = pending.filter(r => r.id !== id);
+        localStorage.setItem("spaceEdgePendingReviews", JSON.stringify(updatedPending));
+
+        // Add to approved
+        const approved = JSON.parse(localStorage.getItem("spaceEdgeApprovedReviews") || "[]");
+        revToApprove.approved = true;
+        approved.push(revToApprove);
+        localStorage.setItem("spaceEdgeApprovedReviews", JSON.stringify(approved));
+      }
+
+      initDashboardData();
+    }
+
+    function rejectReview(id) {
+      if (!confirm("Are you sure you want to reject and delete this review?")) return;
+
+      // Remove from pending
+      const pending = JSON.parse(localStorage.getItem("spaceEdgePendingReviews") || "[]");
+      const updatedPending = pending.filter(r => r.id !== id);
+      localStorage.setItem("spaceEdgePendingReviews", JSON.stringify(updatedPending));
+
+      initDashboardData();
+    }
+
+    function deleteReview(id) {
+      if (!confirm("Are you sure you want to permanently delete this review?")) return;
+
+      // Remove from approved storage
+      const approved = JSON.parse(localStorage.getItem("spaceEdgeApprovedReviews") || "[]");
+      const updatedApproved = approved.filter(r => r.id !== id);
+      localStorage.setItem("spaceEdgeApprovedReviews", JSON.stringify(updatedApproved));
+
+      initDashboardData();
+    }
+
+    // --- PROJECTS RENDERING & ACTIONS ---
+    function renderProjects() {
+      const tbody = document.getElementById("projectsTableBody");
+      tbody.innerHTML = "";
+
+      projects.forEach(proj => {
+        const tr = document.createElement("tr");
+        const featuredCheckbox = proj.featured
+          ? `<span style="color: var(--olive); font-weight: bold;">✔ Yes</span>`
+          : `<span style="color: var(--warm-gray);">No</span>`;
+
+        tr.innerHTML = `
+          <td><img src="${proj.image}" alt="${proj.title}" class="project-thumb"></td>
+          <td><strong>${proj.title}</strong></td>
+          <td>${proj.category}</td>
+          <td>${proj.location}</td>
+          <td>${proj.year}</td>
+          <td>${featuredCheckbox}</td>
+          <td>
+            <div class="admin-actions">
+              <button onclick="editProjectAlert()" class="admin-action-btn admin-action-approve">Edit</button>
+              <button onclick="deleteProject('${proj.id}')" class="admin-action-btn admin-action-delete">Delete</button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function editProjectAlert() {
+      alert("Interactive project metadata edits via JSON CMS are coming in v2. Please use 'Add New Project' to append to catalog.");
+    }
+
+    function deleteProject(id) {
+      if (id.startsWith("proj_seed")) {
+        alert("Seed template projects cannot be deleted via browser localStorage simulation in v1.");
+        return;
+      }
+      if (!confirm("Are you sure you want to delete this project from the catalog?")) return;
+
+      // Filter local
+      projects = projects.filter(p => p.id !== id);
+
+      // Filter localStorage
+      const stored = JSON.parse(localStorage.getItem("spaceEdgeProjects") || "[]");
+      const updated = stored.filter(p => p.id !== id);
+      localStorage.setItem("spaceEdgeProjects", JSON.stringify(updated));
+
+      renderProjects();
+      updateBadges();
+    }
+
+    // --- ADD PROJECT MODAL ACTIONS ---
+    const modal = document.getElementById("projectModal");
+
+    function openProjectModal() {
+      modal.classList.add("open");
+    }
+
+    function closeProjectModal() {
+      modal.classList.remove("open");
+      document.getElementById("newProjectForm").reset();
+    }
+
+    function saveProject(e) {
+      e.preventDefault();
+
+      const title = document.getElementById("projTitle").value;
+      const category = document.getElementById("projCategory").value;
+      const location = document.getElementById("projLocation").value;
+      const year = parseInt(document.getElementById("projYear").value);
+      const image = document.getElementById("projImage").value;
+      const excerpt = document.getElementById("projExcerpt").value;
+
+      const newProj = {
+        id: "proj_custom_" + Date.now(),
+        title: title,
+        category: category,
+        location: location,
+        year: year,
+        image: image,
+        excerpt: excerpt,
+        featured: false
+      };
+
+      // Save to localStorage
+      const stored = JSON.parse(localStorage.getItem("spaceEdgeProjects") || "[]");
+      stored.push(newProj);
+      localStorage.setItem("spaceEdgeProjects", JSON.stringify(stored));
+
+      closeProjectModal();
+      initDashboardData();
+    }
+  </script>
+
+</body>
+</html>
