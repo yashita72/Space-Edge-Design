@@ -3,9 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Edge Design - Home Interior Design & Renovation Service Company</title>
+  <title>Best Interior Designers Company in India - Space Edge Design</title>
   <meta name="description" content="India's Most Trusted Home Interior Design & Renovation Service Company. Get Expert Interior Designers to Create Modular Kitchens, Bedrooms, Living Rooms & More. Flat 10-year warranty. Book a Free Consultation.">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* High-fidelity Livspace navbar dropdown styles */
+    .nav-links li {
+      position: relative;
+    }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: none;
+      grid-template-columns: repeat(2, 200px);
+      gap: 0.75rem;
+      z-index: 1000;
+      margin-top: 0.5rem;
+    }
+    .nav-links li:hover .dropdown-menu {
+      display: grid;
+    }
+    .dropdown-link {
+      font-size: 0.82rem;
+      color: var(--neutral-body);
+      transition: color var(--transition);
+      padding: 0.25rem 0;
+      white-space: nowrap;
+    }
+    .dropdown-link:hover {
+      color: var(--primary);
+    }
+    
+    /* Secondary Navigation Bar */
+    .secondary-nav {
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 73px; /* Right beneath main sticky nav */
+      z-index: 990;
+      transition: var(--transition);
+    }
+    .secondary-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.5rem;
+    }
+    .secondary-nav-link {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--neutral-body);
+      transition: color var(--transition);
+    }
+    .secondary-nav-link:hover {
+      color: var(--primary);
+    }
+
+    /* Live Carousel Image Slider styles */
+    .liv-carousel {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      background: var(--neutral-dark);
+    }
+    .liv-slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .liv-slide {
+      position: relative;
+      width: 33.333%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .liv-slide-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+    .liv-slide-content {
+      position: relative;
+      z-index: 10;
+      color: var(--bg-white);
+      padding: 0 1.5rem;
+      max-width: 800px;
+    }
+    .liv-slide-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--bg-white);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .liv-carousel-prev,
+    .liv-carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      z-index: 20;
+      transition: var(--transition);
+    }
+    .liv-carousel-prev:hover,
+    .liv-carousel-next:hover {
+      background: var(--primary);
+    }
+    .liv-carousel-prev { left: 1.5rem; }
+    .liv-carousel-next { right: 1.5rem; }
+
+    /* Cities dropdown specifically */
+    .cities-grid {
+      grid-template-columns: repeat(3, 150px);
+    }
+  </style>
 </head>
 <body>
 
@@ -17,14 +152,60 @@
         <span class="nav-logo-tagline">Home Interiors</span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="portfolio.html" class="nav-link">Design Gallery</a></li>
-        <li><a href="about.html" class="nav-link">About Story</a></li>
-        <li><a href="services.html" class="nav-link">Service Packages</a></li>
-        <li><a href="reviews.html" class="nav-link">Client Reviews</a></li>
-        <li><a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="#book-consult" class="nav-link nav-cta">Book Consultation</a></li>
+        <li>
+          <a href="portfolio.html" class="nav-link">Design Ideas &darr;</a>
+          <div class="dropdown-menu">
+            <a href="portfolio.html" class="dropdown-link">Modular Kitchen Designs</a>
+            <a href="portfolio.html" class="dropdown-link">Wardrobe Designs</a>
+            <a href="portfolio.html" class="dropdown-link">Bathroom Designs</a>
+            <a href="portfolio.html" class="dropdown-link">Master Bedroom Designs</a>
+            <a href="portfolio.html" class="dropdown-link">Living Room Designs</a>
+            <a href="portfolio.html" class="dropdown-link">Pooja Room Designs</a>
+            <a href="portfolio.html" class="dropdown-link">TV Unit Designs</a>
+            <a href="portfolio.html" class="dropdown-link">False Ceiling Designs</a>
+            <a href="portfolio.html" class="dropdown-link">Kids Bedroom Designs</a>
+            <a href="portfolio.html" class="dropdown-link">Balcony Designs</a>
+          </div>
+        </li>
+        <li>
+          <a href="reviews.html" class="nav-link">Magazine &darr;</a>
+          <div class="dropdown-menu">
+            <a href="reviews.html" class="dropdown-link">Room Ideas</a>
+            <a href="reviews.html" class="dropdown-link">Decor & Inspiration</a>
+            <a href="reviews.html" class="dropdown-link">Ceiling Design</a>
+            <a href="reviews.html" class="dropdown-link">Furniture Ideas</a>
+            <a href="reviews.html" class="dropdown-link">Home Decor</a>
+            <a href="reviews.html" class="dropdown-link">Lighting Ideas</a>
+          </div>
+        </li>
+        <li>
+          <a href="ghaziabad.html" class="nav-link">Cities &darr;</a>
+          <div class="dropdown-menu cities-grid">
+            <a href="ghaziabad.html" class="dropdown-link">Delhi</a>
+            <a href="ghaziabad.html" class="dropdown-link">Noida</a>
+            <a href="ghaziabad.html" class="dropdown-link">Gurugram</a>
+            <a href="ghaziabad.html" class="dropdown-link" style="color: var(--primary); font-weight:600;">Ghaziabad</a>
+            <a href="ghaziabad.html" class="dropdown-link">Faridabad</a>
+            <a href="ghaziabad.html" class="dropdown-link">Bengaluru</a>
+            <a href="ghaziabad.html" class="dropdown-link">Mumbai</a>
+            <a href="ghaziabad.html" class="dropdown-link">Pune</a>
+            <a href="ghaziabad.html" class="dropdown-link">Kolkata</a>
+          </div>
+        </li>
+        <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Store Locator</a></li>
+        <li>
+          <a href="about.html" class="nav-link">More &darr;</a>
+          <div class="dropdown-menu">
+            <a href="about.html" class="dropdown-link">Refer a Friend</a>
+            <a href="about.html" class="dropdown-link">Press</a>
+            <a href="about.html" class="dropdown-link">Careers</a>
+            <a href="about.html" class="dropdown-link">About Us</a>
+            <a href="contact.html" class="dropdown-link">Contact Us</a>
+            <a href="admin.html" class="dropdown-link">Admin Dashboard</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-link nav-cta">Book free consultation</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
         <span></span>
@@ -37,205 +218,108 @@
   <!-- --- MOBILE NAV --- -->
   <div class="nav-mobile" id="mobileMenu">
     <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
-    <a href="index.html" class="nav-link active">Home</a>
-    <a href="portfolio.html" class="nav-link">Design Gallery</a>
-    <a href="about.html" class="nav-link">About Story</a>
-    <a href="services.html" class="nav-link">Service Packages</a>
-    <a href="reviews.html" class="nav-link">Client Reviews</a>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="portfolio.html" class="nav-link">Design Ideas</a>
+    <a href="reviews.html" class="nav-link">Magazine</a>
     <a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="#book-consult" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="admin.html" class="nav-link">Admin Hub</a>
+    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book free consultation</a>
   </div>
 
-  <!-- --- HERO SECTION --- -->
-  <header class="hero">
-    <div class="container hero-content-grid">
-      <!-- Left Content -->
-      <div class="reveal">
-        <h1 class="hero-title">Your <span>dream home</span> interiors is just a click away</h1>
-        <p class="hero-desc">
-          Space Edge Design is India's leading home interior brand. We design and install beautiful, customized modular kitchens, wardrobes, and full home interiors with a flat 10-year warranty.
-        </p>
-        <div class="hero-metrics">
-          <div class="hero-metric-item">
-            <span class="hero-metric-val">45 Days</span>
-            <span class="hero-metric-label">Move-in Guarantee</span>
-          </div>
-          <div class="hero-metric-item">
-            <span class="hero-metric-val">10 Years</span>
-            <span class="hero-metric-label">Flat Warranty*</span>
-          </div>
-          <div class="hero-metric-item">
-            <span class="hero-metric-val">146+</span>
-            <span class="hero-metric-label">Quality Checks</span>
-          </div>
+  <!-- --- SECONDARY NAVIGATION --- -->
+  <div class="secondary-nav">
+    <div class="container secondary-nav-inner">
+      <a href="about.html" class="secondary-nav-link">How it works</a>
+      <a href="services.html" class="secondary-nav-link">Offerings</a>
+      <a href="services.html" class="secondary-nav-link">Price Calculators</a>
+      <a href="about.html" class="secondary-nav-link">The Modular Journey</a>
+      <a href="contact.html" class="secondary-nav-link">Own a franchise</a>
+    </div>
+  </div>
+
+  <!-- --- LIVE CAROUSEL IMAGE SLIDER --- -->
+  <div class="liv-carousel">
+    <div class="liv-slides" id="livSlides">
+      <!-- Slide 1 -->
+      <div class="liv-slide">
+        <img class="liv-slide-img" src="images/hero.png" alt="Home to beautiful interiors">
+        <div class="liv-slide-content">
+          <h2 class="liv-slide-title">Home to beautiful interiors</h2>
+          <a href="contact.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 0.95rem;">Book free consultation &rarr;</a>
         </div>
       </div>
 
-      <!-- Right Form Card -->
-      <div class="hero-form-card reveal reveal-delay-1" id="book-consult">
-        <h3 class="hero-form-title">Talk to a designer</h3>
-        <p class="hero-form-desc">Get free estimate and layout blueprint for your dream space.</p>
-        
-        <form class="form" id="heroInquiryForm">
-          <input type="text" class="hp-field" name="nickname" id="heroNickname">
-          
-          <div class="form-group">
-            <label for="hName">Name</label>
-            <input type="text" id="hName" required placeholder="Enter your name">
-          </div>
+      <!-- Slide 2 -->
+      <div class="liv-slide">
+        <img class="liv-slide-img" src="images/project-kitchen.png" alt="Kitchen interior cost estimates">
+        <div class="liv-slide-content">
+          <h2 class="liv-slide-title">Want to know how much your kitchen interiors will cost?</h2>
+          <a href="services.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 0.95rem;">Calculate now &rarr;</a>
+        </div>
+      </div>
 
-          <div class="form-group">
-            <label for="hEmail">Email Address</label>
-            <input type="email" id="hEmail" required placeholder="e.g. yourname@gmail.com">
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="hPhone">Phone Number</label>
-              <input type="tel" id="hPhone" required placeholder="+91 XXXXX XXXXX">
-            </div>
-            <div class="form-group">
-              <label for="hType">Requirement</label>
-              <select id="hType" required>
-                <option value="Full Home">Full Home Interiors</option>
-                <option value="Modular Kitchen">Modular Kitchen Only</option>
-                <option value="Room Refresh">Single Room Refresh</option>
-                <option value="Wardrobe">Wardrobe & Storage</option>
-                <option value="Commercial">Commercial / Other</option>
-              </select>
-            </div>
-          </div>
-
-          <div id="heroFormMessage" class="form-submit-message"></div>
-
-          <button type="submit" id="heroSubmitBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Book Free Consultation</button>
-        </form>
+      <!-- Slide 3 -->
+      <div class="liv-slide">
+        <img class="liv-slide-img" src="images/project-bedroom.png" alt="Lifetime warranty on modular units">
+        <div class="liv-slide-content">
+          <h2 class="liv-slide-title">Introducing India's first lifetime warranty*</h2>
+          <a href="contact.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 0.95rem;">Book free consultation &rarr;</a>
+        </div>
       </div>
     </div>
-  </header>
 
-  <!-- --- STATS BAR --- -->
-  <section class="stats-bar">
-    <div class="container stats-inner">
-      <div class="stat-item reveal">
-        <div class="stat-number">20,000+</div>
-        <div class="stat-label">Happy Homes Designed</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <div class="stat-number">50+</div>
-        <div class="stat-label">Design Experience Centers</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <div class="stat-number">10 Years</div>
-        <div class="stat-label">Warranty Support</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <div class="stat-number">45 Days</div>
-        <div class="stat-label">Delivery Timeline</div>
-      </div>
-    </div>
-  </section>
+    <!-- Carousel Controls -->
+    <button class="liv-carousel-prev" id="livPrevBtn">&lsaquo;</button>
+    <button class="liv-carousel-next" id="livNextBtn">&rsaquo;</button>
+  </div>
 
-  <!-- --- SERVICES / ONE-STOP SHOP --- -->
+  <!-- --- ONE-STOP SHOP SECTION --- -->
   <section class="section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">One-Stop Shop</span>
-        <h2 class="section-title">End-to-End Home Interiors</h2>
-        <p class="section-subtitle">We design, source, coordinate, and install everything you need for your space.</p>
+        <h2 class="section-title">One-stop shop for all things interiors</h2>
+        <p class="section-subtitle">Be it end-to-end interiors, renovation or modular solutions, we have it all for your home or office. With a wide range of furniture &amp; decor, we have your back from start to finish.</p>
       </div>
 
       <div class="services-grid reveal">
         <!-- Card 1 -->
         <div class="service-card" onclick="location.href='services.html'">
           <div class="service-icon">🍳</div>
-          <h3 class="service-name">Modular Kitchens</h3>
-          <p class="service-desc">Tailor-made layouts built with high-quality moisture-resistant panels, soft-close hardware, and stylish countertops.</p>
-          <span class="project-card-link">Learn More &rarr;</span>
+          <h3 class="service-name">Modular Interiors</h3>
+          <p class="service-desc">Functional kitchen, wardrobe and storage units crafted to optimize layout density and structural stability.</p>
+          <span class="project-card-link">View Details &rarr;</span>
         </div>
 
         <!-- Card 2 -->
         <div class="service-card" onclick="location.href='services.html'">
-          <div class="service-icon">🚪</div>
-          <h3 class="service-name">Wardrobes & Storage</h3>
-          <p class="service-desc">Custom swing or sliding wardrobes designed to fit your room layouts and solve clutter once and for all.</p>
-          <span class="project-card-link">Learn More &rarr;</span>
+          <div class="service-icon">🏠</div>
+          <h3 class="service-name">Full Home Interiors</h3>
+          <p class="service-desc">Turnkey interior solutions for your home, from ceiling illumination setups to modular furniture integrations.</p>
+          <span class="project-card-link">View Details &rarr;</span>
         </div>
 
         <!-- Card 3 -->
         <div class="service-card" onclick="location.href='services.html'">
-          <div class="service-icon">💡</div>
-          <h3 class="service-name">Lighting & False Ceiling</h3>
-          <p class="service-desc">Concealed ambient and task lighting configured inside premium moisture-resistant gypsum boards.</p>
-          <span class="project-card-link">Learn More &rarr;</span>
+          <div class="service-icon">💎</div>
+          <h3 class="service-name">Luxury Interiors</h3>
+          <p class="service-desc">Tailored interior specifications that redefine elegance, utilizing custom premium finishes and marbles.</p>
+          <span class="project-card-link">View Details &rarr;</span>
         </div>
 
         <!-- Card 4 -->
         <div class="service-card" onclick="location.href='services.html'">
-          <div class="service-icon">🏗</div>
-          <h3 class="service-name">Civil & Flooring Work</h3>
-          <p class="service-desc">Demolition, masonry, premium tile laying, wood-herringbone flooring, and plumbing changes resolved safely.</p>
-          <span class="project-card-link">Learn More &rarr;</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- FEATURED PROJECTS GALLERY --- -->
-  <section class="section" style="background: var(--bg-gray);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label">Inspiration</span>
-        <h2 class="section-title">Step Inside Real Homes</h2>
-        <p class="section-subtitle">Explore real living rooms, kitchens, and bedrooms completed by our team.</p>
-      </div>
-
-      <div class="projects-grid reveal">
-        <!-- Project 1 -->
-        <div class="project-card" onclick="location.href='project-morel-residence.html'">
-          <div class="project-img-wrapper">
-            <img src="images/hero.png" alt="The Morel Residence Living Room">
-          </div>
-          <div class="project-info">
-            <span class="project-category">Full Home • South Mumbai</span>
-            <h3 class="project-title">The Morel Residence</h3>
-            <p class="project-desc">A spacious colonial apartment turned into a warm oasis of raw brass accents and olive green velvet couches.</p>
-            <span class="project-card-link">View Walkthrough &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card" onclick="location.href='portfolio.html'">
-          <div class="project-img-wrapper">
-            <img src="images/project-kitchen.png" alt="The Fernandez Kitchen">
-          </div>
-          <div class="project-info">
-            <span class="project-category">Kitchen • Bandra West</span>
-            <h3 class="project-title">The Fernandez Kitchen</h3>
-            <p class="project-desc">Sage green cabinets and aged terracotta backsplash custom built to maximize storage and morning light.</p>
-            <span class="project-card-link">View Gallery &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card" onclick="location.href='portfolio.html'">
-          <div class="project-img-wrapper">
-            <img src="images/project-dining.png" alt="The Patel Dining Room">
-          </div>
-          <div class="project-info">
-            <span class="project-category">Dining Room • Powai</span>
-            <h3 class="project-title">The Patel Dining Room</h3>
-            <p class="project-desc">An eclectic dining room featuring a round walnut table, matching rattan chairs, and a custom gallery art wall.</p>
-            <span class="project-card-link">View Gallery &rarr;</span>
-          </div>
+          <div class="service-icon">🏷️</div>
+          <h3 class="service-name">Value Interiors</h3>
+          <p class="service-desc">Quality interior packages executed at budget-friendly values to meet all your functional layout needs.</p>
+          <span class="project-card-link">View Details &rarr;</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- --- TESTIMONIALS CAROUSEL --- -->
-  <section class="section">
+  <section class="section" style="background: var(--bg-gray);">
     <div class="container">
       <div class="section-header reveal">
         <span class="label">Testimonials</span>
@@ -278,45 +362,48 @@
     </div>
   </section>
 
-  <!-- --- FAQ SECTION --- -->
-  <section class="section" style="background: var(--bg-gray); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label">FAQs</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+  <!-- --- BOOK CONSULTATION SECTION --- -->
+  <section class="section" id="book-consult">
+    <div class="container-sm">
+      <div class="hero-form-card reveal">
+        <h3 class="hero-form-title" style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Talk to a design consultant</h3>
+        <p class="hero-form-desc" style="text-align: center; margin-bottom: 2rem;">Get customized layout blueprints and estimated costs for your dream home.</p>
+        
+        <form class="form" id="consultForm">
+          <input type="text" class="hp-field" name="nickname" id="consultNickname">
+          
+          <div class="form-group">
+            <label for="cName">Your Name</label>
+            <input type="text" id="cName" required placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="cEmail">Email Address</label>
+            <input type="email" id="cEmail" required placeholder="name@example.com">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cPhone">Phone Number</label>
+              <input type="tel" id="cPhone" required placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="form-group">
+              <label for="cType">Property Plan</label>
+              <select id="cType" required>
+                <option value="1 BHK">1 BHK Apartment</option>
+                <option value="2 BHK" selected>2 BHK Apartment</option>
+                <option value="3 BHK">3 BHK Apartment</option>
+                <option value="Modular Kitchen">Modular Kitchen Only</option>
+                <option value="Other">Renovation / Villa</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="formMessage" class="form-submit-message"></div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Book Free Consultation</button>
+        </form>
       </div>
-
-      <div class="faq-wrapper reveal">
-        <div class="faq-item">
-          <button class="faq-question">1. Why do I need an interior designer?</button>
-          <div class="faq-answer">
-            <p>An interior designer gauges your functional needs and tastes to configure your dream space properly. They assist in sourcing the right materials, designing spatial layouts, planning illumination coordinates, and coordinating builders to deliver a flawless result.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">2. Why is Space Edge Design perfect for your home interior design?</button>
-          <div class="faq-answer">
-            <p>We are a certified partner that delivers customized layouts with modular factory finishes, transparent timelines, flat 10-year warranty options, and zero contractor management overheads.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">3. What is the cost of home interiors?</button>
-          <div class="faq-answer">
-            <p>Pricing varies as per materials, size, and layout scope. Standard modular packages begin at: 1 BHK starting from ₹1.99 Lakhs, 2 BHK starting from ₹3.57 Lakhs, and 3 BHK starting from ₹4.23 Lakhs.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- CTA BANNER --- -->
-  <section class="cta-banner reveal">
-    <div class="container">
-      <h2>Your dream interiors is just a click away</h2>
-      <p>Turn your home into a dream home. Consult our experts.</p>
-      <a href="#book-consult" class="btn btn-secondary" style="background: var(--bg-white); color: var(--primary); font-size: 0.95rem;">Book Free Consultation</a>
     </div>
   </section>
 
@@ -392,7 +479,34 @@
       mobileMenu.classList.remove('open');
     });
 
-    // 3. Carousel Testimonials
+    // 3. Livspace High-Fidelity Slides
+    const livSlides = document.getElementById('livSlides');
+    const slideElements = Array.from(livSlides.children);
+    const livPrevBtn = document.getElementById('livPrevBtn');
+    const livNextBtn = document.getElementById('livNextBtn');
+    let livIndex = 0;
+
+    function updateLivSlider() {
+      livSlides.style.transform = `translateX(-${livIndex * 33.333}%)`;
+    }
+
+    livPrevBtn.addEventListener('click', () => {
+      livIndex = (livIndex > 0) ? livIndex - 1 : slideElements.length - 1;
+      updateLivSlider();
+    });
+
+    livNextBtn.addEventListener('click', () => {
+      livIndex = (livIndex < slideElements.length - 1) ? livIndex + 1 : 0;
+      updateLivSlider();
+    });
+
+    // Auto advance slide every 5 seconds
+    setInterval(() => {
+      livIndex = (livIndex < slideElements.length - 1) ? livIndex + 1 : 0;
+      updateLivSlider();
+    }, 5000);
+
+    // 4. Testimonials Slider
     const track = document.getElementById('carouselTrack');
     const slides = Array.from(track.children);
     const prevBtn = document.getElementById('prevBtn');
@@ -435,71 +549,54 @@
       updateCarousel();
     });
 
-    // 4. Inquiry Logger
-    const heroInquiryForm = document.getElementById('heroInquiryForm');
-    const heroSubmitBtn = document.getElementById('heroSubmitBtn');
-    const heroFormMessage = document.getElementById('heroFormMessage');
+    // 5. Inquiry Form Submission
+    const consultForm = document.getElementById('consultForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formMessage = document.getElementById('formMessage');
 
-    heroInquiryForm.addEventListener('submit', (e) => {
+    consultForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      if (document.getElementById('heroNickname').value) {
-        heroFormMessage.className = 'form-submit-message success';
-        heroFormMessage.innerText = 'Thank you for booking consultation!';
-        heroInquiryForm.reset();
+      if (document.getElementById('consultNickname').value) {
+        formMessage.className = 'form-submit-message success';
+        formMessage.innerText = 'Thank you! Your request has been received.';
+        consultForm.reset();
         return;
       }
 
-      const name = document.getElementById('hName').value;
-      const email = document.getElementById('hEmail').value;
-      const phone = document.getElementById('hPhone').value;
-      const type = document.getElementById('hType').value;
+      const name = document.getElementById('cName').value;
+      const email = document.getElementById('cEmail').value;
+      const phone = document.getElementById('cPhone').value;
+      const propertyType = document.getElementById('cType').value;
 
-      heroSubmitBtn.disabled = true;
-      heroSubmitBtn.innerText = 'Logging...';
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
 
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem('spaceEdgeInquiries') || '[]');
-        list.push({
+        const existingInquiries = JSON.parse(localStorage.getItem('spaceEdgeInquiries') || '[]');
+        const newInquiry = {
           id: 'inq_' + Date.now(),
           name: name,
           email: email,
           phone: phone,
-          projectType: type + ' (Home Page)',
+          projectType: propertyType,
           budget: 'N/A',
           timeline: 'ASAP',
           location: 'Mumbai',
-          message: `Consultation request from home page hero card. Requirement: ${type}.`,
+          message: `Consultation request from home page. Property type: ${propertyType}.`,
           date: new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
           read: false
-        });
-        localStorage.setItem('spaceEdgeInquiries', JSON.stringify(list));
+        };
+        existingInquiries.push(newInquiry);
+        localStorage.setItem('spaceEdgeInquiries', JSON.stringify(existingInquiries));
 
-        heroFormMessage.className = 'form-submit-message success';
-        heroFormMessage.innerText = `Consultation Booked! Thank you, ${name}. We will call you within 24 hours.`;
-        heroInquiryForm.reset();
+        formMessage.className = 'form-submit-message success';
+        formMessage.innerText = `Consultation Booked! Thank you, ${name}. We will contact you within 24 hours.`;
         
-        heroSubmitBtn.disabled = false;
-        heroSubmitBtn.innerText = 'Book Free Consultation';
+        consultForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Book Free Consultation';
       }, 1000);
-    });
-
-    // 5. FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const q = item.querySelector('.faq-question');
-      const a = item.querySelector('.faq-answer');
-      q.addEventListener('click', () => {
-        const active = item.classList.contains('active');
-        faqItems.forEach(i => {
-          i.classList.remove('active');
-          i.querySelector('.faq-answer').style.maxHeight = null;
-        });
-        if (!active) {
-          item.classList.add('active');
-          a.style.maxHeight = a.scrollHeight + 'px';
-        }
-      });
     });
 
     // 6. Scroll Reveals
