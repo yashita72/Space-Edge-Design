@@ -3,23 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Morel Residence | Space Edge Design</title>
-  <meta name="description" content="Case study of The Morel Residence interior redesign. South Mumbai residence blending raw brass, velvet olive, and custom botanicals.">
+  <title>The Morel Residence Case Study | Space Edge Design</title>
+  <meta name="description" content="View the full home interior case study of The Morel Residence by Space Edge Design. Interactive before/after layout slider included.">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Specific styles for details page */
-    .project-detail-desc {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 4rem;
-      margin-top: 3rem;
-      align-items: start;
+    /* Details layout styles */
+    .project-detail-hero {
+      background: var(--neutral-dark);
+      color: var(--bg-white);
+      padding: clamp(7rem, 9vw, 9rem) 0 3.5rem;
     }
-    @media (max-width: 768px) {
-      .project-detail-desc {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
+    .materials-palette {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .material-swatch {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .swatch-color {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
     }
   </style>
 </head>
@@ -30,15 +39,15 @@
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-name">SPACE EDGE DESIGN</span>
-        <span class="nav-logo-tagline">Editorial Interiors</span>
+        <span class="nav-logo-tagline">Home Interiors</span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
-        <li><a href="ghaziabad.html" class="nav-link">Ghaziabad</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Design Gallery</a></li>
+        <li><a href="about.html" class="nav-link">About Story</a></li>
+        <li><a href="services.html" class="nav-link">Service Packages</a></li>
+        <li><a href="reviews.html" class="nav-link">Client Reviews</a></li>
+        <li><a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
         <li><a href="contact.html" class="nav-link nav-cta">Book Consultation</a></li>
       </ul>
@@ -54,93 +63,86 @@
   <div class="nav-mobile" id="mobileMenu">
     <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
     <a href="index.html" class="nav-link">Home</a>
-    <a href="portfolio.html" class="nav-link active">Portfolio</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="services.html" class="nav-link">Services</a>
-    <a href="reviews.html" class="nav-link">Reviews</a>
-    <a href="ghaziabad.html" class="nav-link">Ghaziabad</a>
+    <a href="portfolio.html" class="nav-link active">Design Gallery</a>
+    <a href="about.html" class="nav-link">About Story</a>
+    <a href="services.html" class="nav-link">Service Packages</a>
+    <a href="reviews.html" class="nav-link">Client Reviews</a>
+    <a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a>
     <a href="contact.html" class="nav-link">Contact</a>
     <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
   </div>
 
-  <!-- --- PROJECT HERO --- -->
+  <!-- --- HERO SECTION --- -->
   <header class="project-detail-hero">
-    <div class="container" style="padding-bottom: 3rem;">
-      <div style="margin-bottom: 1.5rem;">
-        <span class="label label-brass" style="color: var(--brass-lt);">Case Study • Full Home</span>
+    <div class="container">
+      <div style="margin-bottom: 0.5rem;">
+        <span class="label" style="color: var(--primary-light);">Full Home Case Study</span>
       </div>
-      <h1 class="display-lg" style="margin-bottom: 1rem;">The Morel Residence</h1>
-      <p class="serif-lg" style="color: rgba(250,247,242,0.75); max-width: 680px; font-size: 1.35rem; line-height: 1.5;">
-        A sweeping full-home transformation turning a dated colonial apartment into a curated retreat of brass, velvet, and botanical warmth.
-      </p>
-    </div>
-    <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; width: 100%;">
-      <img src="images/hero.png" alt="The Morel Residence Living Room Showcase" style="width: 100%; height: 100%; object-fit: cover; filter: sepia(0.08);">
+      <h1 class="display-lg" style="color: var(--bg-white);">The Morel Residence</h1>
+      <p style="color: rgba(255,255,255,0.7); max-width: 650px;">A complete apartment renovation turning a dated layout into a premium, functional, and modern space in South Mumbai.</p>
     </div>
   </header>
 
-  <!-- --- CASE STUDY SPECS --- -->
-  <section class="section-sm" style="border-bottom: 1px solid var(--border-lt);">
+  <!-- --- PROJECT DETAILS GRID --- -->
+  <section class="section">
     <div class="container">
-      <div class="project-meta">
-        <div class="project-meta-item">
-          <div class="project-meta-label">Location</div>
-          <div class="project-meta-value">South Mumbai</div>
+      
+      <!-- Before/After Slider Container -->
+      <div class="reveal" style="margin-bottom: 4rem;">
+        <h3 style="margin-bottom: 1.5rem;">Interactive Before & After Comparison</h3>
+        <div class="before-after" id="beforeAfterSlider">
+          <div class="before-after-before">
+            <img src="images/project-kitchen.png" alt="Before Layout">
+            <span class="before-after-label before-after-label-before">Before Construction</span>
+          </div>
+          <div class="before-after-after" id="afterImageContainer">
+            <img src="images/hero.png" alt="Completed Interiors">
+            <span class="before-after-label before-after-label-after">Completed Interior</span>
+          </div>
+          <div class="before-after-handle" id="sliderHandle">
+            <div class="before-after-handle-circle">&harr;</div>
+          </div>
         </div>
-        <div class="project-meta-item">
-          <div class="project-meta-label">Area</div>
-          <div class="project-meta-value">3,200 sq ft</div>
-        </div>
-        <div class="project-meta-item">
-          <div class="project-meta-label">Duration</div>
-          <div class="project-meta-value">6 Months</div>
-        </div>
-        <div class="project-meta-item">
-          <div class="project-meta-label">Year</div>
-          <div class="project-meta-value">2025</div>
-        </div>
+        <p style="font-size: 0.8rem; color: var(--neutral-light); margin-top: 0.5rem; text-align: center;">Drag the vertical slider handle sideways to compare the raw space with the finished setup.</p>
       </div>
 
-      <!-- Description Grid -->
-      <div class="project-detail-desc">
-        <!-- Story -->
+      <div class="contact-grid" style="align-items: start;">
+        <!-- Left: Briefing details -->
         <div class="reveal">
-          <h3 class="display-sm" style="margin-bottom: 1rem;">The Brief</h3>
-          <p style="margin-bottom: 2rem; font-size: 0.95rem;">
-            The Morels had lived in this 1970s colonial apartment in South Mumbai for two decades. The space was filled with disparate memories but lacked a cohesive narrative. Our brief was to design a layout that honoured the high ceilings and classic bones of the structure, while layering modern design comforts, deep textures, and unhurried vintage character.
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Project Summary</h3>
+          <p style="font-size: 0.92rem; color: var(--neutral-body); line-height: 1.7; margin-bottom: 1.5rem;">
+            The Morel family required a structural layout change to maximize ambient light and storage in their 1,400 sq.ft. space. Our designers stripped down partition walls, introduced a modular kitchen layout, and styled the rooms with bespoke wardrobes and custom timber accents.
           </p>
-
-          <h3 class="display-sm" style="margin-bottom: 1rem;">The Challenge</h3>
-          <p style="font-size: 0.95rem;">
-            Because of the structural layouts of Horniman-era designs, the load-bearing columns could not be adjusted, which limited open-plan options between the living room and dining room. We solved this by designing a beautiful custom divider screen made of woven cane and warm-brushed brass details, defining functional boundaries while allowing diffused sunset light to filter through.
-          </p>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Key Specifications:</h4>
+          <ul class="service-includes" style="margin-bottom: 1.5rem;">
+            <li>10-year factory finish warranty protection.</li>
+            <li>Customized moisture-resistant gypsum false ceiling board.</li>
+            <li>Soft-close tandem drawers in the kitchen core.</li>
+            <li>Anti-scratch matte laminates on the floor-to-ceiling closets.</li>
+          </ul>
         </div>
 
-        <!-- Materials -->
-        <div class="reveal reveal-delay-1" style="background: var(--warm-white); border: 1px solid var(--border-lt); padding: 2rem; border-radius: var(--radius-md);">
-          <h4 class="label label-brass" style="margin-bottom: 1.25rem;">Materials & Palette</h4>
-          <p style="font-size: 0.85rem; color: var(--warm-gray); margin-bottom: 1.5rem;">Curated swatches and tactile surfaces integrated throughout the residence:</p>
+        <!-- Right: Palette details -->
+        <div class="reveal reveal-delay-1" style="background: var(--bg-gray); padding: 2.25rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <h3 style="font-size: 1.15rem; margin-bottom: 1rem;">Design Materials & Palette</h3>
+          <p style="font-size: 0.8rem; color: var(--neutral-light); margin-bottom: 1.5rem;">Material textures approved for modular fabrications:</p>
           
           <div class="materials-palette">
             <div class="material-swatch">
-              <span class="material-swatch-dot" style="background-color: #6B7A4E;"></span>
-              <span>Velvet Olive</span>
+              <div class="swatch-color" style="background: #6B7A4E;"></div>
+              <span style="font-size: 0.85rem; font-weight: 500;">Olive Green Velvet</span>
             </div>
             <div class="material-swatch">
-              <span class="material-swatch-dot" style="background-color: #B8933F;"></span>
-              <span>Raw Brass</span>
+              <div class="swatch-color" style="background: #B8933F;"></div>
+              <span style="font-size: 0.85rem; font-weight: 500;">Polished Brass Accents</span>
             </div>
             <div class="material-swatch">
-              <span class="material-swatch-dot" style="background-color: #E8DEC8;"></span>
-              <span>Lime Plaster</span>
+              <div class="swatch-color" style="background: #E8DEC8;"></div>
+              <span style="font-size: 0.85rem; font-weight: 500;">Alabaster Gypsum</span>
             </div>
             <div class="material-swatch">
-              <span class="material-swatch-dot" style="background-color: #7B5E3A;"></span>
-              <span>Walnut Wood</span>
-            </div>
-            <div class="material-swatch">
-              <span class="material-swatch-dot" style="background-color: #C2714F;"></span>
-              <span>Terracotta Tile</span>
+              <div class="swatch-color" style="background: #7B5E3A;"></div>
+              <span style="font-size: 0.85rem; font-weight: 500;">Cognac Walnut Panels</span>
             </div>
           </div>
         </div>
@@ -148,89 +150,12 @@
     </div>
   </section>
 
-  <!-- --- BEFORE/AFTER SLIDER --- -->
-  <section class="section" style="background: var(--parchment);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label label-brass">Spatial Comparison</span>
-        <h2 class="display-sm section-title">Before & After</h2>
-        <p class="section-subtitle" style="margin-bottom: 2rem;">Drag the handle center line to slide between the initial raw site and the final styled layout.</p>
-      </div>
-
-      <!-- Comparison Slider Box -->
-      <div class="before-after reveal" id="beforeAfterSlider">
-        <!-- Before layer -->
-        <div class="before-after-before">
-          <img src="images/project-kitchen.png" alt="Before Interior View">
-          <span class="before-after-label before-after-label-before">Before (Raw Site)</span>
-        </div>
-
-        <!-- After layer -->
-        <div class="before-after-after" id="afterContainer">
-          <img src="images/hero.png" alt="After Finished Interior View">
-          <span class="before-after-label before-after-label-after">After (Finished Room)</span>
-        </div>
-
-        <!-- Slider handle bar -->
-        <div class="before-after-handle" id="sliderHandle">
-          <div class="before-after-handle-circle">↔</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- PHOTO GALLERY WALL --- -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label">Gallery Views</span>
-        <h2 class="display-sm section-title">Project Details</h2>
-      </div>
-
-      <div class="project-detail-gallery reveal">
-        <div class="gallery-wide" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/hero.png" alt="Living Room Detail" style="cursor: pointer;">
-        </div>
-        <div onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/project-dining.png" alt="Dining Room Detail" style="cursor: pointer;">
-        </div>
-        <div onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/project-bedroom.png" alt="Bedroom Detail" style="cursor: pointer;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- LIGHTBOX --- -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
-    <img id="lightboxImg" src="" alt="Lightbox View">
-  </div>
-
-  <!-- --- CLIENT TESTIMONIAL --- -->
-  <section class="section-sm" style="background: var(--parchment); border-top: 1px solid var(--border-lt); border-bottom: 1px solid var(--border-lt);">
-    <div class="container-sm" style="text-align: center;">
-      <span class="testimonial-quote-mark" style="margin-bottom: 0.5rem;">&ldquo;</span>
-      <p class="serif-lg" style="font-size: 1.4rem; color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.6;">
-        "Arjun didn’t just redesign our home — he gave us a space that finally feels like us. Every corner has something tactile and beautiful to discover."
-      </p>
-      <div class="testimonial-author">Priya & Karan Morel</div>
-      <div class="testimonial-project">Homeowners, South Mumbai</div>
-    </div>
-  </section>
-
-  <!-- --- PREV/NEXT NAVIGATION --- -->
-  <div class="container" style="display: flex; justify-content: space-between; padding: 3rem 0; border-bottom: 1px solid var(--border-lt);">
-    <a href="portfolio.html" class="btn btn-ghost">&larr; Back to Portfolio</a>
-    <a href="portfolio.html" class="btn btn-ghost">Next Project &rarr;</a>
-  </div>
-
   <!-- --- CTA BANNER --- -->
   <section class="cta-banner reveal">
     <div class="container">
-      <h2>Start your own design story</h2>
-      <p>Consult with Arjun to map out your residential transformation.</p>
-      <a href="contact.html" class="btn btn-cta-light">Consult Our Studio</a>
+      <h2>Transform your apartment layout</h2>
+      <p>Consult with our designers today to get personalized estimate reports.</p>
+      <a href="contact.html" class="btn btn-secondary" style="background: var(--bg-white); color: var(--primary);">Estimate My Project</a>
     </div>
   </section>
 
@@ -239,45 +164,45 @@
     <div class="container footer-grid">
       <div>
         <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
-        <p class="footer-brand-desc">Curating warm, vintage-inspired editorial interiors tailored to modern living. Designed by Arjun Kapoor.</p>
+        <p class="footer-brand-desc">India's leading interior design brand, offering custom modular kitchens, wardrobes, and civil renovations. Handled by Arjun Kapoor.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="Pinterest">PI</a>
+          <a href="#" class="social-link" aria-label="YouTube">YT</a>
+        </div>
       </div>
       <div>
-        <h5 class="footer-col-title">Explore</h5>
+        <h5 class="footer-col-title">Offerings</h5>
         <ul class="footer-links">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-          <li><a href="about.html" class="footer-link">About Story</a></li>
-          <li><a href="services.html" class="footer-link">Services</a></li>
-          <li><a href="reviews.html" class="footer-link">Client Reviews</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="services.html" class="footer-link">Modular Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Full Home Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Room Refreshes</a></li>
+          <li><a href="services.html" class="footer-link">Art Styling</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Services</h5>
+        <h5 class="footer-col-title">Get Inspired</h5>
         <ul class="footer-links">
-          <li><a href="services.html" class="footer-link">Full Home Design</a></li>
-          <li><a href="services.html" class="footer-link">Room Refresh</a></li>
-          <li><a href="services.html" class="footer-link">Styling Only</a></li>
-          <li><a href="services.html" class="footer-link">Virtual Consultation</a></li>
+          <li><a href="portfolio.html" class="footer-link">Design Ideas</a></li>
+          <li><a href="portfolio.html" class="footer-link">Living Rooms</a></li>
+          <li><a href="portfolio.html" class="footer-link">Kitchen Layouts</a></li>
+          <li><a href="portfolio.html" class="footer-link">Bedrooms</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Studio</h5>
+        <h5 class="footer-col-title">Studio Hub</h5>
         <ul class="footer-links">
-          <li class="footer-link" style="color: rgba(250,247,242,0.65);">Fort, Mumbai, India</li>
-          <li class="footer-link"><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
-          <li class="footer-link"><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></li>
-          <li class="footer-link"><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.6;">Admin Portal</a></li>
+          <li class="footer-link" style="color: rgba(255,255,255,0.5);">Horniman Circle, Fort, Mumbai</li>
+          <li><a href="ghaziabad.html" class="footer-link" style="color: var(--primary-light); font-weight: 600;">Ghaziabad Studio</a></li>
+          <li><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
+          <li><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.65;">Admin Portal</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
       <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">IG</a>
-        <a href="#" class="social-link" aria-label="Pinterest">PI</a>
-        <a href="#" class="social-link" aria-label="Houzz">HZ</a>
-      </div>
+      <span class="footer-copy">Flat 10-year warranty* • 45-day move-in guarantee</span>
     </div>
   </footer>
 
@@ -286,7 +211,7 @@
     // 1. Navigation Scroll Class
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
+      if (window.scrollY > 40) {
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
@@ -306,101 +231,44 @@
       mobileMenu.classList.remove('open');
     });
 
-    // 3. Before/After Comparison Slider Interaction
+    // 3. Before / After Slider Logic
     const slider = document.getElementById('beforeAfterSlider');
     const handle = document.getElementById('sliderHandle');
-    const afterContainer = document.getElementById('afterContainer');
+    const afterImage = document.getElementById('afterImageContainer');
 
-    let isSliding = false;
-
-    // Center starting values
-    const initSlider = () => {
-      const sliderWidth = slider.offsetWidth;
-      afterContainer.style.clipPath = `inset(0 0 0 50%)`;
-      handle.style.left = `50%`;
-    };
-
-    window.addEventListener('load', initSlider);
-    window.addEventListener('resize', initSlider);
-
-    const slideMove = (clientX) => {
+    function updateSlider(xPos) {
       const rect = slider.getBoundingClientRect();
-      const positionX = clientX - rect.left;
+      let percentage = ((xPos - rect.left) / rect.width) * 100;
       
-      // Calculate percentage within boundary constraints
-      let percentage = (positionX / rect.width) * 100;
       if (percentage < 0) percentage = 0;
       if (percentage > 100) percentage = 100;
 
-      // Update DOM
-      // clip-path inset goes clockwise: top, right, bottom, left.
-      // We want to clip the left side of the 'After' image as the slider moves right.
-      // So left inset = percentage% of width.
-      afterContainer.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-      handle.style.left = `${percentage}%`;
-    };
+      handle.style.left = percentage + '%';
+      afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    }
 
-    // Mouse events
-    slider.addEventListener('mousedown', (e) => {
-      isSliding = true;
-      slideMove(e.clientX);
+    // Touch event support
+    slider.addEventListener('touchmove', (e) => {
+      const touchX = e.touches[0].clientX;
+      updateSlider(touchX);
+    });
+
+    // Mouse event support
+    let isDragging = false;
+    slider.addEventListener('mousedown', () => {
+      isDragging = true;
     });
 
     window.addEventListener('mouseup', () => {
-      isSliding = false;
+      isDragging = false;
     });
 
-    window.addEventListener('mousemove', (e) => {
-      if (!isSliding) return;
-      slideMove(e.clientX);
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      updateSlider(e.clientX);
     });
 
-    // Touch events
-    slider.addEventListener('touchstart', (e) => {
-      isSliding = true;
-      slideMove(e.touches[0].clientX);
-    });
-
-    window.addEventListener('touchend', () => {
-      isSliding = false;
-    });
-
-    window.addEventListener('touchmove', (e) => {
-      if (!isSliding) return;
-      slideMove(e.touches[0].clientX);
-    });
-
-    // 4. Lightbox Logic
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-
-    function openLightbox(src) {
-      lightboxImg.src = src;
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    lightboxClose.addEventListener('click', () => {
-      lightbox.classList.remove('open');
-      document.body.style.overflow = 'auto';
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    // 5. Intersection Observer for Scroll Reveals
+    // 4. Scroll Reveals
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -410,13 +278,10 @@
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.15
     });
 
-    reveals.forEach(element => {
-      revealObserver.observe(element);
-    });
+    reveals.forEach(r => revealObserver.observe(r));
   </script>
 
 </body>

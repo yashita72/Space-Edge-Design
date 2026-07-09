@@ -10,9 +10,9 @@
     /* Ghaziabad specific page styles */
     .ghz-hero {
       position: relative;
-      background: var(--ink);
-      color: var(--warm-white);
-      padding: clamp(8rem, 12vw, 11rem) 0 clamp(4rem, 6vw, 6rem);
+      background: var(--neutral-dark);
+      color: var(--bg-white);
+      padding: clamp(7rem, 10vw, 9rem) 0 clamp(4rem, 6vw, 6rem);
       overflow: hidden;
     }
     .ghz-hero::after {
@@ -22,14 +22,13 @@
       background-image: url('images/hero.png');
       background-size: cover;
       background-position: center;
-      opacity: 0.18;
-      filter: grayscale(1);
+      opacity: 0.15;
     }
     .ghz-hero-content {
       position: relative;
       z-index: 5;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 4rem;
       align-items: center;
     }
@@ -39,14 +38,6 @@
         gap: 3rem;
       }
     }
-    .hero-form-card {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 1.75rem;
-      color: var(--ink);
-      box-shadow: var(--shadow-xl);
-    }
     /* Pricing table styles */
     .price-grid {
       display: grid;
@@ -55,9 +46,9 @@
       margin-top: 3rem;
     }
     .price-card {
-      background: var(--warm-white);
-      border: 1px solid var(--border-lt);
-      border-radius: var(--radius-sm);
+      background: var(--bg-gray);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
       padding: 2rem 1.5rem;
       text-align: center;
       transition: var(--transition);
@@ -65,38 +56,38 @@
     .price-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-md);
-      border-color: var(--terracotta);
+      border-color: var(--primary);
     }
     .price-val {
       font-family: var(--font-display);
       font-size: 1.8rem;
-      color: var(--terracotta);
+      color: var(--primary);
       margin: 0.5rem 0;
+      font-weight: 700;
     }
     /* Localities styles */
     .locality-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1rem;
       margin-top: 2rem;
     }
     .locality-item-link {
-      background: var(--warm-white);
-      border: 1px solid var(--border-lt);
+      background: var(--bg-white);
+      border: 1px solid var(--border);
       padding: 0.85rem 1.25rem;
       border-radius: var(--radius-sm);
       font-size: 0.82rem;
-      color: var(--ink-muted);
+      color: var(--neutral-body);
       display: flex;
       justify-content: space-between;
       align-items: center;
       transition: var(--transition);
     }
     .locality-item-link:hover {
-      background: var(--parchment);
-      border-color: var(--brass);
-      color: var(--ink);
-      transform: translateY(-2px);
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
     }
     /* FAQ Accordion */
     .faq-wrapper {
@@ -107,9 +98,9 @@
       gap: 1rem;
     }
     .faq-item {
-      background: var(--warm-white);
-      border: 1px solid var(--border-lt);
-      border-radius: var(--radius-sm);
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
       overflow: hidden;
     }
     .faq-question {
@@ -118,8 +109,8 @@
       text-align: left;
       font-family: var(--font-display);
       font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--ink);
+      font-weight: 600;
+      color: var(--neutral-dark);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -129,9 +120,8 @@
     }
     .faq-question::after {
       content: '+';
-      font-family: var(--font-body);
-      font-size: 1.2rem;
-      color: var(--warm-gray);
+      font-size: 1.25rem;
+      color: var(--neutral-light);
       transition: transform var(--transition);
     }
     .faq-item.active .faq-question::after {
@@ -143,7 +133,7 @@
       transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
       padding: 0 1.5rem;
       font-size: 0.88rem;
-      color: var(--ink-muted);
+      color: var(--neutral-body);
       line-height: 1.7;
     }
     .faq-item.active .faq-answer {
@@ -158,16 +148,17 @@
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-name">SPACE EDGE DESIGN</span>
-        <span class="nav-logo-tagline">Editorial Interiors</span>
+        <span class="nav-logo-tagline">Home Interiors</span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="portfolio.html" class="nav-link">Design Gallery</a></li>
+        <li><a href="about.html" class="nav-link">About Story</a></li>
+        <li><a href="services.html" class="nav-link">Service Packages</a></li>
+        <li><a href="reviews.html" class="nav-link">Client Reviews</a></li>
+        <li><a href="ghaziabad.html" class="nav-link active">Ghaziabad Studio</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="#consult-form" class="nav-link nav-cta">Get Free Quote</a></li>
+        <li><a href="#consult-form" class="nav-link nav-cta">Book Consultation</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
         <span></span>
@@ -181,66 +172,67 @@
   <div class="nav-mobile" id="mobileMenu">
     <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
     <a href="index.html" class="nav-link">Home</a>
-    <a href="portfolio.html" class="nav-link">Portfolio</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="services.html" class="nav-link">Services</a>
-    <a href="reviews.html" class="nav-link">Reviews</a>
+    <a href="portfolio.html" class="nav-link">Design Gallery</a>
+    <a href="about.html" class="nav-link">About Story</a>
+    <a href="services.html" class="nav-link">Service Packages</a>
+    <a href="reviews.html" class="nav-link">Client Reviews</a>
+    <a href="ghaziabad.html" class="nav-link active">Ghaziabad Studio</a>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="#consult-form" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Get Free Quote</a>
+    <a href="#consult-form" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
   </div>
 
-  <!-- --- GHAZIABAD HERO WITH FORM --- -->
+  <!-- --- HERO SECTION --- -->
   <header class="ghz-hero">
     <div class="container ghz-hero-content">
-      <!-- Info Left -->
+      <!-- Left Content -->
       <div class="reveal">
-        <div class="page-hero-label" style="margin-bottom: 1.5rem;">
-          <span class="label label-brass" style="color: var(--brass-lt);">Ghaziabad Studio</span>
+        <div style="margin-bottom: 1.5rem;">
+          <span class="label" style="color: var(--primary-light);">Ghaziabad Studio</span>
         </div>
-        <h1 class="display-lg" style="color: var(--warm-white); line-height: 1.1; margin-bottom: 1.5rem;">
+        <h1 class="display-lg" style="color: var(--bg-white); line-height: 1.15; margin-bottom: 1.5rem;">
           Top Interior Designers in Ghaziabad for Home Interiors
         </h1>
-        <p class="serif-lg" style="color: rgba(250, 247, 242, 0.78); max-width: 580px; margin-bottom: 2rem;">
-          Space Edge Design brings modular efficiency and warm, vintage-inspired editorial style to homes across Ghaziabad. We handle everything from structural layout audits to final reveals.
+        <p style="color: rgba(255, 255, 255, 0.85); font-size: 1rem; max-width: 580px; margin-bottom: 2rem;">
+          Space Edge Design brings modular efficiency and modern corporate-luxury styling to homes across Ghaziabad. We handle everything from structural layout plans to on-site reveals.
         </p>
         <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem;">
           <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--brass-lt); font-size: 1.2rem;">✔</span>
-            <span style="font-size: 0.85rem; color: rgba(250,247,242,0.85);">45-Day Delivery Promise</span>
+            <span style="color: var(--primary); font-size: 1.2rem;">✔</span>
+            <span style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">45-Day Delivery Promise</span>
           </div>
           <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--brass-lt); font-size: 1.2rem;">✔</span>
-            <span style="font-size: 0.85rem; color: rgba(250,247,242,0.85);">10-Year Warranty</span>
+            <span style="color: var(--primary); font-size: 1.2rem;">✔</span>
+            <span style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">10-Year Warranty</span>
           </div>
           <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--brass-lt); font-size: 1.2rem;">✔</span>
-            <span style="font-size: 0.85rem; color: rgba(250,247,242,0.85);">100% Custom Execution</span>
+            <span style="color: var(--primary); font-size: 1.2rem;">✔</span>
+            <span style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">146+ Quality Checks</span>
           </div>
         </div>
       </div>
 
-      <!-- Form Right -->
+      <!-- Right Form -->
       <div class="hero-form-card reveal reveal-delay-1" id="consult-form">
-        <h3 class="display-sm" style="font-size: 1.35rem; margin-bottom: 0.5rem;">Book Free Consultation</h3>
-        <p style="font-size: 0.8rem; color: var(--warm-gray); margin-bottom: 1.5rem;">Meet our design experts in Ghaziabad or online.</p>
+        <h3 class="hero-form-title" style="font-size: 1.35rem; margin-bottom: 0.5rem;">Book Free Consultation</h3>
+        <p class="hero-form-desc">Meet our design specialists in Ghaziabad or online.</p>
         
         <form class="form" id="consultationForm">
           <input type="text" class="hp-field" name="company" id="formHoneypot">
           
           <div class="form-group">
             <label for="cName">Full Name</label>
-            <input type="text" id="cName" required placeholder="e.g. Priyesh Sharma">
+            <input type="text" id="cName" required placeholder="Enter your name">
           </div>
           
           <div class="form-group">
             <label for="cEmail">Email Address</label>
-            <input type="email" id="cEmail" required placeholder="e.g. priyesh@example.com">
+            <input type="email" id="cEmail" required placeholder="e.g. name@example.com">
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="cPhone">Phone</label>
-              <input type="tel" id="cPhone" required placeholder="+91 98210 12345">
+              <input type="tel" id="cPhone" required placeholder="+91 XXXXX XXXXX">
             </div>
             <div class="form-group">
               <label for="cType">Property Type</label>
@@ -250,14 +242,14 @@
                 <option value="3 BHK">3 BHK Apartment</option>
                 <option value="4 BHK">4 BHK Apartment</option>
                 <option value="Modular Kitchen">Modular Kitchen</option>
-                <option value="Villa / Other">Villa / Custom Home</option>
+                <option value="Villa / Custom Home">Villa / Custom Home</option>
               </select>
             </div>
           </div>
 
           <div id="formSuccessMsg" class="form-submit-message"></div>
 
-          <button type="submit" id="formSubmitBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Get Free Quote</button>
+          <button type="submit" id="formSubmitBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Get Free Estimate</button>
         </form>
       </div>
     </div>
@@ -267,116 +259,110 @@
   <section class="section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label label-brass">Investment Planning</span>
-        <h2 class="display-sm section-title">Cost of Home Interiors in Ghaziabad</h2>
-        <p class="section-subtitle">A quick breakdown of starting prices to help you plan your budget. Prices include our modular interior layout solutions.</p>
+        <span class="label">Pricing Guide</span>
+        <h2 class="section-title">Cost of Home Interiors in Ghaziabad</h2>
+        <p class="section-subtitle">Estimated starting costs for customized modular layouts and standard design packages in Ghaziabad.</p>
       </div>
 
       <div class="price-grid reveal">
         <!-- 1 BHK -->
         <div class="price-card">
-          <span class="label">1 BHK Apartment</span>
+          <span class="label label-gray">1 BHK Apartment</span>
           <div class="price-val">₹1.99 Lacs*</div>
-          <p style="font-size: 0.75rem; color: var(--warm-gray);">Starting estimate for standard modular fittings.</p>
+          <p style="font-size: 0.75rem; color: var(--neutral-light);">Starting estimate for standard modular fittings.</p>
         </div>
 
         <!-- 2 BHK -->
         <div class="price-card">
-          <span class="label" style="color: var(--terracotta);">2 BHK Apartment</span>
+          <span class="label" style="color: var(--primary);">2 BHK Apartment</span>
           <div class="price-val">₹3.57 Lacs*</div>
-          <p style="font-size: 0.75rem; color: var(--warm-gray);">Starting estimate for standard modular fittings.</p>
+          <p style="font-size: 0.75rem; color: var(--neutral-light);">Starting estimate for standard modular fittings.</p>
         </div>
 
         <!-- 3 BHK -->
         <div class="price-card">
-          <span class="label">3 BHK Apartment</span>
+          <span class="label label-gray">3 BHK Apartment</span>
           <div class="price-val">₹4.23 Lacs*</div>
-          <p style="font-size: 0.75rem; color: var(--warm-gray);">Starting estimate for standard modular fittings.</p>
+          <p style="font-size: 0.75rem; color: var(--neutral-light);">Starting estimate for standard modular fittings.</p>
         </div>
 
         <!-- 4 BHK -->
         <div class="price-card">
-          <span class="label">4 BHK Apartment</span>
+          <span class="label label-gray">4 BHK Apartment</span>
           <div class="price-val">₹4.81 Lacs*</div>
-          <p style="font-size: 0.75rem; color: var(--warm-gray);">Starting estimate for standard modular fittings.</p>
+          <p style="font-size: 0.75rem; color: var(--neutral-light);">Starting estimate for standard modular fittings.</p>
         </div>
 
         <!-- Modular Kitchen -->
         <div class="price-card">
-          <span class="label">Modular Kitchen</span>
+          <span class="label label-gray">Modular Kitchen</span>
           <div class="price-val">₹2.00 Lacs*</div>
-          <p style="font-size: 0.75rem; color: var(--warm-gray);">Starting estimate for premium fittings.</p>
+          <p style="font-size: 0.75rem; color: var(--neutral-light);">Starting estimate for premium fittings.</p>
         </div>
       </div>
-      <p style="text-align: center; font-size: 0.72rem; color: var(--warm-gray); margin-top: 2rem;">*Pricing estimates reflect modular solutions for new homes. Final cost varies based on customized selection of materials, finishes, and layout plans.</p>
+      <p style="text-align: center; font-size: 0.72rem; color: var(--neutral-light); margin-top: 2rem;">*Estimates assume factory-fabricated modular structures for new homes. Handoff costs vary as per design additions.</p>
     </div>
   </section>
 
-  <!-- --- GHAZIABAD PROJECTS SECTION --- -->
-  <section class="section" style="background: var(--parchment); border-top: 1px solid var(--border-lt); border-bottom: 1px solid var(--border-lt);">
+  <!-- --- GHAZIABAD COMPLETED PROJECTS --- -->
+  <section class="section" style="background: var(--bg-gray); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label label-brass">Client Portfolios</span>
-        <h2 class="display-sm section-title">Our Completed Projects in Ghaziabad</h2>
-        <p class="section-subtitle">Step inside real homes in Ghaziabad styled by our design studio.</p>
+        <span class="label">Completed Works</span>
+        <h2 class="section-title">Our Completed Projects in Ghaziabad</h2>
+        <p class="section-subtitle">Browse home designs completed by Space Edge Design in major residential projects.</p>
       </div>
 
       <div class="projects-grid reveal">
         <!-- Project 1 -->
         <div class="project-card" onclick="location.href='project-morel-residence.html'">
-          <img src="images/hero.png" alt="Apex Golf Avenue, Ghaziabad">
-          <div class="project-card-info-always">
-            <span class="project-card-category">Ghaziabad • Apex Golf Avenue</span>
-            <h3 class="project-card-title">Apex Golf Avenue Residence</h3>
+          <div class="project-img-wrapper">
+            <img src="images/hero.png" alt="Apex Golf Avenue, Ghaziabad">
           </div>
-          <div class="project-card-overlay">
-            <span class="project-card-category">Full Home</span>
-            <h3 class="project-card-title">Apex Golf Avenue</h3>
-            <p class="project-card-desc">A beautiful combination of warm terracotta, velvet olive details, and raw brass trims.</p>
-            <span class="project-card-link">View Details &rarr;</span>
+          <div class="project-info">
+            <span class="project-category">Full Home • Apex Golf Avenue</span>
+            <h3 class="project-title">Apex Golf Avenue Residence</h3>
+            <p class="project-desc">A premium 3 BHK apartment styled with warm terracotta, velvet olive details, and custom storage units.</p>
+            <span class="project-card-link">View Walkthrough &rarr;</span>
           </div>
         </div>
 
         <!-- Project 2 -->
         <div class="project-card" onclick="location.href='project-morel-residence.html'">
-          <img src="images/project-kitchen.png" alt="Shipra Sun City, Ghaziabad">
-          <div class="project-card-info-always">
-            <span class="project-card-category">Ghaziabad • Shipra Sun City</span>
-            <h3 class="project-card-title">Shipra Sun City Kitchen</h3>
+          <div class="project-img-wrapper">
+            <img src="images/project-kitchen.png" alt="Shipra Sun City, Ghaziabad">
           </div>
-          <div class="project-card-overlay">
-            <span class="project-card-category">Kitchen Redesign</span>
-            <h3 class="project-card-title">Shipra Sun City Kitchen</h3>
-            <p class="project-card-desc">Sage green cabinets and aged tile finishes customized for space optimization.</p>
-            <span class="project-card-link">View Details &rarr;</span>
+          <div class="project-info">
+            <span class="project-category">Modular Kitchen • Shipra Sun City</span>
+            <h3 class="project-title">Shipra Sun City Kitchen</h3>
+            <p class="project-desc">Modern L-shape kitchen equipped with anti-scratch sage green laminates and automated hardware solutions.</p>
+            <span class="project-card-link">View Walkthrough &rarr;</span>
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="project-card" onclick="location.href='project-morel-residence.html'">
-          <img src="images/project-dining.png" alt="Vasundhara Apartment, Ghaziabad">
-          <div class="project-card-info-always">
-            <span class="project-card-category">Ghaziabad • Vasundhara</span>
-            <h3 class="project-card-title">Vasundhara Dining Room</h3>
+          <div class="project-img-wrapper">
+            <img src="images/project-dining.png" alt="Vasundhara Apartment, Ghaziabad">
           </div>
-          <div class="project-card-overlay">
-            <span class="project-card-category">Dining Room</span>
-            <h3 class="project-card-title">Vasundhara Apartment</h3>
-            <p class="project-card-desc">A custom walnut dining table and classic wall decor layout designed for entertaining.</p>
-            <span class="project-card-link">View Details &rarr;</span>
+          <div class="project-info">
+            <span class="project-category">Dining Room • Vasundhara</span>
+            <h3 class="project-title">Vasundhara Apartment</h3>
+            <p class="project-desc">Contemporary dining layout detailing round walnut timber frames and custom storage sideboards.</p>
+            <span class="project-card-link">View Walkthrough &rarr;</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- --- GHAZIABAD LOCALITIES SECTION --- -->
+  <!-- --- LOCALITIES --- -->
   <section class="section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label label-brass">Locations We Serve</span>
-        <h2 class="display-sm section-title">Localities in Ghaziabad</h2>
-        <p class="section-subtitle">We offer premium interior design consultations across all major neighborhoods in Ghaziabad.</p>
+        <span class="label">Localities We Serve</span>
+        <h2 class="section-title">Localities in Ghaziabad</h2>
+        <p class="section-subtitle">We design and coordinate interior handoffs across all major neighborhoods in Ghaziabad.</p>
       </div>
 
       <div class="locality-grid reveal">
@@ -397,23 +383,21 @@
   </section>
 
   <!-- --- GHAZIABAD FAQ SECTION --- -->
-  <section class="section" style="background: var(--parchment); border-top: 1px solid var(--border-lt);">
+  <section class="section" style="background: var(--bg-gray); border-top: 1px solid var(--border);">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label label-brass">Client Guide</span>
-        <h2 class="display-sm section-title">FAQs About Home Interior Design in Ghaziabad</h2>
+        <span class="label">Client Guide</span>
+        <h2 class="section-title">FAQs About Home Interior Design in Ghaziabad</h2>
       </div>
 
       <div class="faq-wrapper reveal">
-        <!-- FAQ 1 -->
         <div class="faq-item">
           <button class="faq-question">1. Can I meet my interior designer at the Ghaziabad Experience Centre?</button>
           <div class="faq-answer">
-            <p>Yes, absolutely! Meeting interior designers has never been this easy. Our Ghaziabad Experience Centre gives you the opportunity to meet our team of skilled interior designers so that you can connect with them over a cup of chai and discuss your project. So, come meet the industry’s best interior designers in Ghaziabad at our Experience Centre to create beautiful homes, customised as per your needs and likes.</p>
+            <p>Yes, absolutely! Meeting interior designers has never been this easy. Our Ghaziabad Experience Centre gives you the opportunity to meet our team of skilled interior designers so that you can discuss your project. So, come meet the industry’s best interior designers in Ghaziabad at our Experience Centre to create beautiful homes, customised as per your needs and likes.</p>
           </div>
         </div>
 
-        <!-- FAQ 2 -->
         <div class="faq-item">
           <button class="faq-question">2. Can I have a meeting at my home?</button>
           <div class="faq-answer">
@@ -421,7 +405,6 @@
           </div>
         </div>
 
-        <!-- FAQ 3 -->
         <div class="faq-item">
           <button class="faq-question">3. What can I expect to see at the Space Edge Design Experience Centre in Ghaziabad?</button>
           <div class="faq-answer">
@@ -429,7 +412,6 @@
           </div>
         </div>
 
-        <!-- FAQ 4 -->
         <div class="faq-item">
           <button class="faq-question">4. How can I select materials for design?</button>
           <div class="faq-answer">
@@ -437,7 +419,6 @@
           </div>
         </div>
 
-        <!-- FAQ 5 -->
         <div class="faq-item">
           <button class="faq-question">5. How will my site be measured?</button>
           <div class="faq-answer">
@@ -445,7 +426,6 @@
           </div>
         </div>
 
-        <!-- FAQ 6 -->
         <div class="faq-item">
           <button class="faq-question">6. What will be the timelines for my project completion?</button>
           <div class="faq-answer">
@@ -453,7 +433,6 @@
           </div>
         </div>
 
-        <!-- FAQ 7 -->
         <div class="faq-item">
           <button class="faq-question">7. What is the cost of interior design in Ghaziabad?</button>
           <div class="faq-answer">
@@ -461,7 +440,6 @@
           </div>
         </div>
 
-        <!-- FAQ 8 -->
         <div class="faq-item">
           <button class="faq-question">8. What is the starting price for home interiors in Ghaziabad?</button>
           <div class="faq-answer">
@@ -469,7 +447,6 @@
           </div>
         </div>
 
-        <!-- FAQ 9 -->
         <div class="faq-item">
           <button class="faq-question">9. What are the latest trends of Interior design in Ghaziabad?</button>
           <div class="faq-answer">
@@ -485,45 +462,45 @@
     <div class="container footer-grid">
       <div>
         <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
-        <p class="footer-brand-desc">Curating warm, vintage-inspired editorial interiors tailored to modern living. Designed by Arjun Kapoor.</p>
+        <p class="footer-brand-desc">India's leading interior design brand, offering custom modular kitchens, wardrobes, and civil renovations. Handled by Arjun Kapoor.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="Pinterest">PI</a>
+          <a href="#" class="social-link" aria-label="YouTube">YT</a>
+        </div>
       </div>
       <div>
-        <h5 class="footer-col-title">Explore</h5>
+        <h5 class="footer-col-title">Offerings</h5>
         <ul class="footer-links">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-          <li><a href="about.html" class="footer-link">About Story</a></li>
-          <li><a href="services.html" class="footer-link">Services</a></li>
-          <li><a href="reviews.html" class="footer-link">Client Reviews</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="services.html" class="footer-link">Modular Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Full Home Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Room Refreshes</a></li>
+          <li><a href="services.html" class="footer-link">Art Styling</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Services</h5>
+        <h5 class="footer-col-title">Get Inspired</h5>
         <ul class="footer-links">
-          <li><a href="services.html" class="footer-link">Full Home Design</a></li>
-          <li><a href="services.html" class="footer-link">Room Refresh</a></li>
-          <li><a href="services.html" class="footer-link">Styling Only</a></li>
-          <li><a href="services.html" class="footer-link">Virtual Consultation</a></li>
+          <li><a href="portfolio.html" class="footer-link">Design Ideas</a></li>
+          <li><a href="portfolio.html" class="footer-link">Living Rooms</a></li>
+          <li><a href="portfolio.html" class="footer-link">Kitchen Layouts</a></li>
+          <li><a href="portfolio.html" class="footer-link">Bedrooms</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Studio</h5>
+        <h5 class="footer-col-title">Studio Hub</h5>
         <ul class="footer-links">
-          <li class="footer-link" style="color: rgba(250,247,242,0.65);">Fort, Mumbai, India</li>
-          <li class="footer-link"><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
-          <li class="footer-link"><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></li>
-          <li><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.6;">Admin Portal</a></li>
+          <li class="footer-link" style="color: rgba(255,255,255,0.5);">Horniman Circle, Fort, Mumbai</li>
+          <li><a href="ghaziabad.html" class="footer-link" style="color: var(--primary-light); font-weight: 600;">Ghaziabad Studio</a></li>
+          <li><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
+          <li><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.65;">Admin Portal</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
       <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">IG</a>
-        <a href="#" class="social-link" aria-label="Pinterest">PI</a>
-        <a href="#" class="social-link" aria-label="Houzz">HZ</a>
-      </div>
+      <span class="footer-copy">Flat 10-year warranty* • 45-day move-in guarantee</span>
     </div>
   </footer>
 
@@ -532,7 +509,7 @@
     // 1. Navigation Scroll Class
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
+      if (window.scrollY > 40) {
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
@@ -561,13 +538,11 @@
       question.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
 
-        // Close all first
         faqItems.forEach(i => {
           i.classList.remove('active');
           i.querySelector('.faq-answer').style.maxHeight = null;
         });
 
-        // Toggle clicked
         if (!isActive) {
           item.classList.add('active');
           answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -583,7 +558,6 @@
     consultForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Honeypot check
       if (document.getElementById('formHoneypot').value) {
         formSuccessMsg.className = 'form-submit-message success';
         formSuccessMsg.innerText = 'Thank you! Your request has been received.';
@@ -600,7 +574,6 @@
       formSubmitBtn.innerText = 'Processing...';
 
       setTimeout(() => {
-        // Save to spaceEdgeInquiries list in LocalStorage
         const existingInquiries = JSON.parse(localStorage.getItem('spaceEdgeInquiries') || '[]');
         const newInquiry = {
           id: 'inq_' + Date.now(),
@@ -608,27 +581,26 @@
           email: email,
           phone: phone,
           projectType: propertyType + ' Consultation (Ghaziabad)',
-          budget: 'N/A (Ghaziabad Landing Page)',
+          budget: 'N/A',
           timeline: 'ASAP',
           location: 'Ghaziabad',
-          message: `Consultation request from Ghaziabad landing page. Client property type: ${propertyType}.`,
+          message: `Consultation request from Ghaziabad page. Property type: ${propertyType}.`,
           date: new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
           read: false
         };
         existingInquiries.push(newInquiry);
         localStorage.setItem('spaceEdgeInquiries', JSON.stringify(existingInquiries));
 
-        // Display success
         formSuccessMsg.className = 'form-submit-message success';
-        formSuccessMsg.innerText = `Thank you, ${name}! Your Ghaziabad consultation request has been logged. Arjun Kapoor's office will reach out within 24 hours.`;
+        formSuccessMsg.innerText = `Thank you, ${name}! Your consultation request has been logged. Our office will contact you within 24 hours.`;
         
         consultForm.reset();
         formSubmitBtn.disabled = false;
-        formSubmitBtn.innerText = 'Get Free Quote';
+        formSubmitBtn.innerText = 'Get Free Estimate';
       }, 1000);
     });
 
-    // 5. Intersection Observer for Scroll Reveals
+    // 5. Scroll Reveals
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -638,13 +610,10 @@
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.15
     });
 
-    reveals.forEach(element => {
-      revealObserver.observe(element);
-    });
+    reveals.forEach(r => revealObserver.observe(r));
   </script>
 
 </body>

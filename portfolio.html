@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Space Edge Design</title>
-  <meta name="description" content="A curated gallery of interior design projects by Arjun Kapoor, showcasing warm neutrals, modern vintage styling, and tailored layouts.">
+  <title>Design Ideas & Gallery | Space Edge Design</title>
+  <meta name="description" content="Browse home interior design ideas, living rooms, bedrooms, and modular kitchens. Filter by room type and get design inspiration at Space Edge Design.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,16 +14,15 @@
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-name">SPACE EDGE DESIGN</span>
-        <span class="nav-logo-tagline">Editorial Interiors</span>
+        <span class="nav-logo-tagline">Home Interiors</span>
       </a>
       <ul class="nav-links">
-      <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
-        <li><a href="ghaziabad.html" class="nav-link">Ghaziabad</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Design Gallery</a></li>
+        <li><a href="about.html" class="nav-link">About Story</a></li>
+        <li><a href="services.html" class="nav-link">Service Packages</a></li>
+        <li><a href="reviews.html" class="nav-link">Client Reviews</a></li>
+        <li><a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
         <li><a href="contact.html" class="nav-link nav-cta">Book Consultation</a></li>
       </ul>
@@ -39,11 +38,11 @@
   <div class="nav-mobile" id="mobileMenu">
     <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
     <a href="index.html" class="nav-link">Home</a>
-    <a href="portfolio.html" class="nav-link active">Portfolio</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="services.html" class="nav-link">Services</a>
-    <a href="reviews.html" class="nav-link">Reviews</a>
-    <a href="ghaziabad.html" class="nav-link">Ghaziabad</a>
+    <a href="portfolio.html" class="nav-link active">Design Gallery</a>
+    <a href="about.html" class="nav-link">About Story</a>
+    <a href="services.html" class="nav-link">Service Packages</a>
+    <a href="reviews.html" class="nav-link">Client Reviews</a>
+    <a href="ghaziabad.html" class="nav-link">Ghaziabad Studio</a>
     <a href="contact.html" class="nav-link">Contact</a>
     <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Consultation</a>
   </div>
@@ -51,11 +50,11 @@
   <!-- --- PAGE HERO --- -->
   <header class="page-hero">
     <div class="container">
-      <div class="page-hero-label">
-        <span class="label label-brass">Gallery</span>
+      <div style="margin-bottom: 0.5rem;">
+        <span class="label">Inspiration Gallery</span>
       </div>
-      <h1 class="display-lg">Our Work</h1>
-      <p>A curated selection of spaces transformed through craft, patience, and obsessive attention to detail.</p>
+      <h1 class="display-lg">Home Interior Design Ideas</h1>
+      <p>Browse through hundreds of modern modular layouts curated by our design experts to find the perfect style for your space.</p>
     </div>
   </header>
 
@@ -64,63 +63,78 @@
     <div class="container">
       <!-- Filters -->
       <div class="portfolio-filters reveal">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn active" data-filter="all">All Designs</button>
         <button class="filter-btn" data-filter="full-home">Full Home</button>
-        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
-        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
-        <button class="filter-btn" data-filter="dining">Dining Room</button>
-        <button class="filter-btn" data-filter="study">Home Study</button>
+        <button class="filter-btn" data-filter="kitchen">Modular Kitchens</button>
+        <button class="filter-btn" data-filter="bedroom">Bedrooms</button>
+        <button class="filter-btn" data-filter="dining">Dining Rooms</button>
+        <button class="filter-btn" data-filter="study">Home Studies</button>
       </div>
 
-      <!-- Masonry Grid -->
-      <div class="masonry-grid reveal">
+      <!-- Modern Card Grid -->
+      <div class="projects-grid reveal" id="portfolioGrid" style="margin-top: 2rem;">
         <!-- Item 1: Morel Residence (Full Home) -->
-        <div class="masonry-item" data-category="full-home">
-          <img src="images/hero.png" alt="The Morel Residence" onclick="openLightbox(this.src)">
-          <div class="masonry-item-overlay">
-            <span class="project-card-category">Full Home • South Mumbai</span>
-            <h3 class="project-card-title">The Morel Residence</h3>
-            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+        <div class="project-card" data-category="full-home">
+          <div class="project-img-wrapper" onclick="openLightbox('images/hero.png')">
+            <img src="images/hero.png" alt="The Morel Residence Living Room">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Full Home • South Mumbai</span>
+            <h3 class="project-title">The Morel Residence</h3>
+            <p class="project-desc">A premium apartment transformation featuring olive velvet details, raw brass screens, and custom woodwork.</p>
+            <a href="project-morel-residence.html" class="project-card-link">View Case Study &rarr;</a>
           </div>
         </div>
 
         <!-- Item 2: Fernandez Kitchen (Kitchen) -->
-        <div class="masonry-item" data-category="kitchen">
-          <img src="images/project-kitchen.png" alt="The Fernandez Kitchen" onclick="openLightbox(this.src)">
-          <div class="masonry-item-overlay">
-            <span class="project-card-category">Kitchen • Bandra West</span>
-            <h3 class="project-card-title">The Fernandez Kitchen</h3>
-            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+        <div class="project-card" data-category="kitchen">
+          <div class="project-img-wrapper" onclick="openLightbox('images/project-kitchen.png')">
+            <img src="images/project-kitchen.png" alt="The Fernandez Kitchen">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Modular Kitchen • Bandra West</span>
+            <h3 class="project-title">The Fernandez Kitchen</h3>
+            <p class="project-desc">Sage green cabinets and aged terracotta backsplash custom built to maximize storage and morning light.</p>
+            <a href="project-morel-residence.html" class="project-card-link">View Case Study &rarr;</a>
           </div>
         </div>
 
         <!-- Item 3: Belvedere Master Suite (Bedroom) -->
-        <div class="masonry-item" data-category="bedroom">
-          <img src="images/project-bedroom.png" alt="Belvedere Master Suite" onclick="openLightbox(this.src)">
-          <div class="masonry-item-overlay">
-            <span class="project-card-category">Bedroom • Juhu</span>
-            <h3 class="project-card-title">Belvedere Master Suite</h3>
-            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+        <div class="project-card" data-category="bedroom">
+          <div class="project-img-wrapper" onclick="openLightbox('images/project-bedroom.png')">
+            <img src="images/project-bedroom.png" alt="Belvedere Master Suite">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Bedroom • Juhu</span>
+            <h3 class="project-title">Belvedere Master Suite</h3>
+            <p class="project-desc">Elegant master bedroom styled in deep terracotta and soft linens for a calming retreat.</p>
+            <a href="project-morel-residence.html" class="project-card-link">View Case Study &rarr;</a>
           </div>
         </div>
 
         <!-- Item 4: Patel Dining Room (Dining) -->
-        <div class="masonry-item" data-category="dining">
-          <img src="images/project-dining.png" alt="The Patel Dining Room" onclick="openLightbox(this.src)">
-          <div class="masonry-item-overlay">
-            <span class="project-card-category">Dining Room • Powai</span>
-            <h3 class="project-card-title">The Patel Dining Room</h3>
-            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+        <div class="project-card" data-category="dining">
+          <div class="project-img-wrapper" onclick="openLightbox('images/project-dining.png')">
+            <img src="images/project-dining.png" alt="The Patel Dining Room">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Dining Room • Powai</span>
+            <h3 class="project-title">The Patel Dining Room</h3>
+            <p class="project-desc">An eclectic dining room featuring a round walnut table, rattan chairs, and custom gallery wall layouts.</p>
+            <a href="project-morel-residence.html" class="project-card-link">View Case Study &rarr;</a>
           </div>
         </div>
 
         <!-- Item 5: Writer's Study (Home Study) -->
-        <div class="masonry-item" data-category="study">
-          <img src="images/project-study.png" alt="The Writer's Study" onclick="openLightbox(this.src)">
-          <div class="masonry-item-overlay">
-            <span class="project-card-category">Home Study • Colaba</span>
-            <h3 class="project-card-title">The Writer's Study</h3>
-            <a href="project-morel-residence.html" class="project-card-link" style="margin-top: 0.5rem; display: inline-flex;">View Project &rarr;</a>
+        <div class="project-card" data-category="study">
+          <div class="project-img-wrapper" onclick="openLightbox('images/project-study.png')">
+            <img src="images/project-study.png" alt="The Writer's Study">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Home Study • Colaba</span>
+            <h3 class="project-title">The Writer's Study</h3>
+            <p class="project-desc">A dark academic style workspace featuring built-in bookshelves, dark olive walls, and cognac leather.</p>
+            <a href="project-morel-residence.html" class="project-card-link">View Case Study &rarr;</a>
           </div>
         </div>
       </div>
@@ -136,9 +150,9 @@
   <!-- --- CTA BANNER --- -->
   <section class="cta-banner reveal">
     <div class="container">
-      <h2>Have a project in mind?</h2>
-      <p>Let's talk about how we can craft a beautiful space together.</p>
-      <a href="contact.html" class="btn btn-cta-light">Get in Touch</a>
+      <h2>Have a specific project layout in mind?</h2>
+      <p>Consult with our designers today to get personalized estimate reports.</p>
+      <a href="contact.html" class="btn btn-secondary" style="background: var(--bg-white); color: var(--primary);">Get Free Quote</a>
     </div>
   </section>
 
@@ -147,45 +161,45 @@
     <div class="container footer-grid">
       <div>
         <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
-        <p class="footer-brand-desc">Curating warm, vintage-inspired editorial interiors tailored to modern living. Designed by Arjun Kapoor.</p>
+        <p class="footer-brand-desc">India's leading interior design brand, offering custom modular kitchens, wardrobes, and civil renovations. Handled by Arjun Kapoor.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="Pinterest">PI</a>
+          <a href="#" class="social-link" aria-label="YouTube">YT</a>
+        </div>
       </div>
       <div>
-        <h5 class="footer-col-title">Explore</h5>
+        <h5 class="footer-col-title">Offerings</h5>
         <ul class="footer-links">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-          <li><a href="about.html" class="footer-link">About Story</a></li>
-          <li><a href="services.html" class="footer-link">Services</a></li>
-          <li><a href="reviews.html" class="footer-link">Client Reviews</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="services.html" class="footer-link">Modular Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Full Home Interiors</a></li>
+          <li><a href="services.html" class="footer-link">Room Refreshes</a></li>
+          <li><a href="services.html" class="footer-link">Art Styling</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Services</h5>
+        <h5 class="footer-col-title">Get Inspired</h5>
         <ul class="footer-links">
-          <li><a href="services.html" class="footer-link">Full Home Design</a></li>
-          <li><a href="services.html" class="footer-link">Room Refresh</a></li>
-          <li><a href="services.html" class="footer-link">Styling Only</a></li>
-          <li><a href="services.html" class="footer-link">Virtual Consultation</a></li>
+          <li><a href="portfolio.html" class="footer-link">Design Ideas</a></li>
+          <li><a href="portfolio.html" class="footer-link">Living Rooms</a></li>
+          <li><a href="portfolio.html" class="footer-link">Kitchen Layouts</a></li>
+          <li><a href="portfolio.html" class="footer-link">Bedrooms</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Studio</h5>
+        <h5 class="footer-col-title">Studio Hub</h5>
         <ul class="footer-links">
-          <li class="footer-link" style="color: rgba(250,247,242,0.65);">Fort, Mumbai, India</li>
-          <li class="footer-link"><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
-          <li class="footer-link"><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></li>
-          <li class="footer-link"><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.6;">Admin Portal</a></li>
+          <li class="footer-link" style="color: rgba(255,255,255,0.5);">Horniman Circle, Fort, Mumbai</li>
+          <li><a href="ghaziabad.html" class="footer-link" style="color: var(--primary-light); font-weight: 600;">Ghaziabad Studio</a></li>
+          <li><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
+          <li><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.65;">Admin Portal</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
       <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">IG</a>
-        <a href="#" class="social-link" aria-label="Pinterest">PI</a>
-        <a href="#" class="social-link" aria-label="Houzz">HZ</a>
-      </div>
+      <span class="footer-copy">Flat 10-year warranty* • 45-day move-in guarantee</span>
     </div>
   </footer>
 
@@ -194,7 +208,7 @@
     // 1. Navigation Scroll Class
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
+      if (window.scrollY > 40) {
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
@@ -216,29 +230,28 @@
 
     // 3. Filtering Logic
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const masonryItems = document.querySelectorAll('.masonry-item');
+    const projectCards = document.querySelectorAll('#portfolioGrid .project-card');
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        // Toggle active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
         const filterValue = button.getAttribute('data-filter');
 
-        masonryItems.forEach(item => {
-          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-            item.style.display = 'block';
+        projectCards.forEach(card => {
+          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            card.style.display = 'block';
             setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'scale(1)';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
             }, 50);
           } else {
-            item.style.opacity = '0';
-            item.style.transform = 'scale(0.95)';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
             setTimeout(() => {
-              item.style.display = 'none';
-            }, 300);
+              card.style.display = 'none';
+            }, 250);
           }
         });
       });
@@ -274,7 +287,7 @@
       }
     });
 
-    // 5. Intersection Observer for Scroll Reveals
+    // 5. Scroll Reveals
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -284,13 +297,10 @@
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.15
     });
 
-    reveals.forEach(element => {
-      revealObserver.observe(element);
-    });
+    reveals.forEach(r => revealObserver.observe(r));
   </script>
 
 </body>
