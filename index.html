@@ -195,7 +195,7 @@
             <a href="about.html" class="dropdown-link">Careers</a>
             <a href="about.html" class="dropdown-link">About Us</a>
             <a href="contact.html" class="dropdown-link">Contact Us</a>
-            
+            <a href="admin.html" class="dropdown-link">Admin Dashboard</a>
           </div>
         </li>
         <li><a href="contact.html" class="nav-link nav-cta">Book free consultation</a></li>
@@ -216,8 +216,18 @@
     <a href="reviews.html" class="nav-link">Magazine</a>
    
     <a href="contact.html" class="nav-link">Contact Us</a>
-    
+    <a href="admin.html" class="nav-link">Admin Hub</a>
     <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book free consultation</a>
+  </div>
+
+  <!-- --- SECONDARY NAVIGATION --- -->
+  <div class="secondary-nav">
+    <div class="container secondary-nav-inner">
+      <a href="about.html" class="secondary-nav-link">How it works</a>
+     
+      <a href="about.html" class="secondary-nav-link">The Modular Journey</a>
+      <a href="contact.html" class="secondary-nav-link">Own a franchise</a>
+    </div>
   </div>
 
   <!-- --- LIVE CAROUSEL IMAGE SLIDER --- -->
@@ -232,19 +242,30 @@
         </div>
       </div>
 
-      <!-- Carousel Controls -->
+      <!-- Slide 2 -->
+      <div class="liv-slide">
+        <img class="liv-slide-img" src="images/project-kitchen.png" alt="Kitchen interior cost estimates">
+        <div class="liv-slide-content">
+          <h2 class="liv-slide-title">Want to know how much your kitchen interiors will cost?</h2>
+          <a href="services.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 0.95rem;">Calculate now &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="liv-slide">
+        <img class="liv-slide-img" src="images/project-bedroom.png" alt="Lifetime warranty on modular units">
+        <div class="liv-slide-content">
+          <h2 class="liv-slide-title">Introducing India's first lifetime warranty*</h2>
+          <a href="contact.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 0.95rem;">Book free consultation &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
     <button class="liv-carousel-prev" id="livPrevBtn">&lsaquo;</button>
     <button class="liv-carousel-next" id="livNextBtn">&rsaquo;</button>
   </div>
-
-
-
-  
-
-    
-  
-
-  <!-- --- BOOK CONSULTATION SECTION --- -->
+<!-- --- BOOK CONSULTATION SECTION --- -->
   <section class="section" id="book-consult">
     <div class="container-sm">
       <div class="hero-form-card reveal">
@@ -324,9 +345,9 @@
         <h5 class="footer-col-title">Studio Hub</h5>
         <ul class="footer-links">
           <li class="footer-link" style="color: rgba(255,255,255,0.5);">Horniman Circle, Fort, Mumbai</li>
-          
+          <li><a href="ghaziabad.html" class="footer-link" style="color: var(--primary-light); font-weight: 600;">Ghaziabad Studio</a></li>
           <li><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
-          
+          <li><a href="admin.html" class="footer-link" style="text-decoration: underline; opacity: 0.65;">Admin Portal</a></li>
         </ul>
       </div>
     </div>
@@ -387,6 +408,49 @@
       livIndex = (livIndex < slideElements.length - 1) ? livIndex + 1 : 0;
       updateLivSlider();
     }, 5000);
+
+    // 4. Testimonials Slider
+    const track = document.getElementById('carouselTrack');
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('carouselDots');
+
+    let currentIndex = 0;
+
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      if (idx === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        currentIndex = idx;
+        updateCarousel();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.children);
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+      updateCarousel();
+    });
 
     // 5. Inquiry Form Submission
     const consultForm = document.getElementById('consultForm');
