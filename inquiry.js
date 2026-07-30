@@ -1,28 +1,20 @@
-// ====================================================
-// SHARED ENQUIRY SUBMISSION SERVICE
-// Google Apps Script Integration
-// ====================================================
-
-const GOOGLE_APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbx76YHs7vArLLZUt12-eBT-EletqYtcjwBm-cDXk7hN2NDKVzMZc-ujaAjiDsvLPDRiRw/exec";
-
 async function submitEnquiry(enquiry) {
-  console.log("Submitting enquiry:", enquiry);
 
-  try {
-    await fetch(GOOGLE_APPS_SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8"
-      },
-      body: JSON.stringify(enquiry)
+    const response = await fetch("/api/contact", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(enquiry)
+
     });
 
-    return true;
+    if (!response.ok) {
+        throw new Error("Submission failed");
+    }
 
-  } catch (err) {
-    console.error(err);
-    throw err;
-  }
+    return true;
 }
