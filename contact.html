@@ -295,5 +295,52 @@
     reveals.forEach(r => revealObserver.observe(r));
   </script>
 
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a
+    href="https://wa.me/919870551785?text=Hi%20Sumit%20Kumar%20Gaur%2C%0A%0AI%20visited%20the%20Space%20Edge%20Design%20website%20and%20would%20like%20to%20discuss%20my%20interior%20design%20requirements.%0A%0APlease%20let%20me%20know%20a%20convenient%20time%20to%20connect."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa-fab"
+    aria-label="Chat with us on WhatsApp"
+    title="Chat on WhatsApp"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white" aria-hidden="true">
+      <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.83.74 5.49 2.03 7.8L.5 31.5l7.93-2.01A15.47 15.47 0 0 0 16 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.3a13.22 13.22 0 0 1-6.74-1.84l-.48-.29-4.97 1.26 1.31-4.82-.32-.5A13.23 13.23 0 1 1 16 28.8zm7.27-9.9c-.4-.2-2.35-1.16-2.71-1.29-.37-.13-.63-.2-.9.2-.26.4-1.02 1.28-1.25 1.55-.23.26-.46.3-.86.1-.4-.2-1.68-.62-3.2-1.97-1.18-1.05-1.98-2.35-2.21-2.74-.23-.4-.02-.61.17-.81.18-.18.4-.46.6-.7.2-.23.26-.4.4-.66.13-.26.06-.5-.03-.7-.1-.2-.9-2.17-1.23-2.97-.32-.78-.65-.68-.9-.69l-.76-.01c-.26 0-.68.1-1.04.5-.36.4-1.36 1.33-1.36 3.24s1.4 3.76 1.59 4.02c.2.26 2.75 4.2 6.67 5.89.93.4 1.66.64 2.22.82.93.3 1.78.26 2.45.16.75-.11 2.35-.96 2.68-1.89.33-.92.33-1.71.23-1.88-.1-.17-.36-.26-.76-.46z"/>
+    </svg>
+  </a>
+  <style>
+    .wa-fab {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 9999;
+      width: 58px;
+      height: 58px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      opacity: 0;
+      animation: waFadeIn 0.8s ease 1s forwards;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .wa-fab:hover {
+      transform: scale(1.12);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6), 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    @keyframes waFadeIn {
+      from { opacity: 0; transform: scale(0.7); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @media (max-width: 480px) {
+      .wa-fab { bottom: 18px; right: 18px; width: 52px; height: 52px; }
+      .wa-fab svg { width: 24px; height: 24px; }
+    }
+  </style>
+
 </body>
 </html>
