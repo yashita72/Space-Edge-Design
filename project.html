@@ -1,266 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Space Edge Design</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Project Portfolio - Space Edge Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
-<nav class="nav">
+  <!-- ================= NAVBAR ================= -->
+  <nav class="nav" id="mainNav">
     <div class="container nav-inner">
-
-        <a href="index.html" class="nav-logo">
-
-            <img src="images/logo.PNG" class="nav-logo-img">
-
-            <div class="nav-logo-text">
-                <span class="nav-logo-name">
-                    SPACE EDGE DESIGN
-                </span>
-
-                <span class="nav-logo-tagline">
-                    HOME INTERIORS
-                </span>
-            </div>
-
-        </a>
-
-        <ul class="nav-links">
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="about.html">About</a></li>
-
-            <li><a href="services.html">Services</a></li>
-
-            <li><a href="projects.html" class="active">Projects</a></li>
-
-            <li><a href="reviews.html">Reviews</a></li>
-
-            <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-
-        <a href="contact.html" class="btn btn-primary">
-            Book Consultation
-        </a>
-
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.PNG" alt="Space Edge Design Logo" class="nav-logo-img">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">SPACE EDGE DESIGN</span>
+          <span class="nav-logo-tagline">Home Interiors</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="project.html" class="nav-link active">Projects</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Book Free Consultation</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-</nav>
+  </nav>
 
-<!-- ================= HERO ================= -->
+  <!-- --- MOBILE NAV --- -->
+  <div class="nav-mobile" id="mobileMenu">
+    <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="project.html" class="nav-link active">Projects</a>
+    <a href="reviews.html" class="nav-link">Reviews</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Free Consultation</a>
+  </div>
 
-<section class="projects-hero">
-
+  <!-- ================= HERO ================= -->
+  <section class="portfolio-hero">
     <div class="container">
+      <span class="hero-subtitle">CURATED INTERIOR ARCHITECTURE</span>
+      <h1 class="hero-title">Crafting Premium Living Experiences</h1>
+      <p class="hero-desc">Explore our signature residential design portfolio across Delhi NCR. Minimalist design, luxury finishes, and precision-engineered spaces customized to your lifestyle.</p>
+    </div>
+  </section>
 
-        <h1>Our Projects</h1>
+  <!-- ================= PROJECTS GRID ================= -->
+  <section class="projects-section">
+    <div class="container">
+      <div class="projects-grid">
+        <!-- Project 01 -->
+        <div class="project-card" data-project-id="project1">
+          <div class="project-media-wrapper">
+            <img class="project-img" src="images/projects/project1/cover.jpg" alt="Project 01 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder-box cover-placeholder">
+              <span class="placeholder-text">Project 01 Cover Placeholder</span>
+            </div>
+            <div class="card-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-number">01</span>
+            <div class="project-header">
+              <h3 class="project-name">The Sky Villa</h3>
+              <p class="project-short-desc">Luxury penthouse featuring a contemporary design language, custom modular units, and automated lighting solutions in Gurugram.</p>
+            </div>
+            <button class="btn-view-project">View Project &rarr;</button>
+          </div>
+        </div>
 
-        <p>
-            Explore our completed residential and commercial
-            interior design projects crafted with elegance,
-            precision and timeless aesthetics.
-        </p>
+        <!-- Project 02 -->
+        <div class="project-card" data-project-id="project2">
+          <div class="project-media-wrapper">
+            <img class="project-img" src="images/projects/project2/cover.jpg" alt="Project 02 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder-box cover-placeholder">
+              <span class="placeholder-text">Project 02 Cover Placeholder</span>
+            </div>
+            <div class="card-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-number">02</span>
+            <div class="project-header">
+              <h3 class="project-name">Minimalist Mansion</h3>
+              <p class="project-short-desc">Ultra-modern minimalist residence focusing on neutral tones, clean lines, and integrated smart kitchens in Noida.</p>
+            </div>
+            <button class="btn-view-project">View Project &rarr;</button>
+          </div>
+        </div>
 
+        <!-- Project 03 -->
+        <div class="project-card" data-project-id="project3">
+          <div class="project-media-wrapper">
+            <img class="project-img" src="images/projects/project3/cover.jpg" alt="Project 03 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder-box cover-placeholder">
+              <span class="placeholder-text">Project 03 Cover Placeholder</span>
+            </div>
+            <div class="card-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-number">03</span>
+            <div class="project-header">
+              <h3 class="project-name">Japandi Haven</h3>
+              <p class="project-short-desc">Warm, tranquil blend of Japanese minimalism and Scandinavian warmth featuring white ash wood wardrobes and neutral tones in South Delhi.</p>
+            </div>
+            <button class="btn-view-project">View Project &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Project 04 -->
+        <div class="project-card" data-project-id="project4">
+          <div class="project-media-wrapper">
+            <img class="project-img" src="images/projects/project4/cover.jpg" alt="Project 04 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder-box cover-placeholder">
+              <span class="placeholder-text">Project 04 Cover Placeholder</span>
+            </div>
+            <div class="card-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-number">04</span>
+            <div class="project-header">
+              <h3 class="project-name">The Heritage Flat</h3>
+              <p class="project-short-desc">Classic luxury aesthetics blended with modern storage design, grand living spaces, and luxury false ceiling detailing in Dwarka.</p>
+            </div>
+            <button class="btn-view-project">View Project &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Project 05 -->
+        <div class="project-card" data-project-id="project5">
+          <div class="project-media-wrapper">
+            <img class="project-img" src="images/projects/project5/cover.jpg" alt="Project 05 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder-box cover-placeholder">
+              <span class="placeholder-text">Project 05 Cover Placeholder</span>
+            </div>
+            <div class="card-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-number">05</span>
+            <div class="project-header">
+              <h3 class="project-name">Urban Oasis</h3>
+              <p class="project-short-desc">High-tech modular design layout optimized for premium urban living, featuring dual TV units, study rooms, and bathrooms in Ghaziabad.</p>
+            </div>
+            <button class="btn-view-project">View Project &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPANDED DETAILED PROJECT VIEW ================= -->
+  <section id="project-detail-section" class="project-detail-section">
+    <div class="container">
+      <div id="project-detail-placeholder" class="project-detail-instruction">
+        <p>Select a project from the portfolio grid above to view details, design specifications, and room galleries.</p>
+      </div>
+      
+      <!-- Container for dynamic content injection -->
+      <div id="project-detail-content" class="project-detail-content" style="display: none;">
+        <div class="detail-header-row">
+          <div>
+            <span id="detail-project-number" class="detail-project-number">01</span>
+            <h2 id="detail-project-title" class="detail-project-title">Project Title</h2>
+          </div>
+          <button id="btn-close-detail" class="btn-close-detail">&times; Close View</button>
+        </div>
+
+        <!-- Overview Details Table/Grid -->
+        <div class="project-specs-grid">
+          <div class="spec-col">
+            <h4>Project Overview</h4>
+            <p id="detail-project-overview">Detailed overview of the project interiors...</p>
+          </div>
+          <div class="spec-col specs-meta">
+            <div class="meta-item">
+              <span class="meta-label">Area</span>
+              <span id="detail-project-area" class="meta-value">3,200 sq ft</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Completion Time</span>
+              <span id="detail-project-time" class="meta-value">45 Days</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Interior Style</span>
+              <span id="detail-project-style" class="meta-value">Modern Luxury</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Services Included</span>
+              <span id="detail-project-services" class="meta-value">Modular Kitchen, Wardrobes, Civil Work</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room Categories Grid -->
+        <h3 class="section-subtitle">ROOM CATEGORIES</h3>
+        <div id="room-categories-grid" class="room-categories-grid">
+          <!-- Dynamically populated from project.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LIGHTBOX GALLERY ================= -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close gallery">&times;</button>
+    
+    <div class="lightbox-content-wrapper">
+      <button id="lightbox-prev" class="lightbox-nav-btn prev" aria-label="Previous image">&lsaquo;</button>
+      
+      <div class="lightbox-main-media">
+        <!-- Lightbox image with fallback to styled placeholder if not found -->
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Image" onerror="this.style.display='none'; document.getElementById('lightbox-placeholder').style.display='flex';">
+        <div id="lightbox-placeholder" class="placeholder-box gallery-placeholder" style="display: none;">
+          <span id="lightbox-placeholder-text" class="placeholder-text">Gallery Image Placeholder</span>
+        </div>
+      </div>
+
+      <button id="lightbox-next" class="lightbox-nav-btn next" aria-label="Next image">&rsaquo;</button>
     </div>
 
-</section>
-
-<!-- ================= FILTERS ================= -->
-
-<section class="project-filter">
-
-<div class="container">
-
-<button class="filter-btn active" data-filter="all">
-All
-</button>
-
-<button class="filter-btn" data-filter="residential">
-Residential
-</button>
-
-<button class="filter-btn" data-filter="commercial">
-Commercial
-</button>
-
-<button class="filter-btn" data-filter="kitchen">
-Kitchen
-</button>
-
-<button class="filter-btn" data-filter="bedroom">
-Bedroom
-</button>
-
-<button class="filter-btn" data-filter="living">
-Living Room
-</button>
-
-</div>
-
-</section>
-
-<!-- ================= PROJECT GRID ================= -->
-
-<section class="projects">
-
-<div class="container">
-
-<div class="project-grid">
-
-<!-- CARD 1 -->
-
-<div class="project-card"
-data-category="residential">
-
-<img
-src="images/project-bedroom.png">
-
-<div class="project-content">
-
-<h3>Luxury Bedroom</h3>
-
-<p>Delhi NCR</p>
-
-<button class="view-btn">
-
-View Details
-
-</button>
-
-</div>
-
-</div>
-
-<!-- CARD 2 -->
-
-<div class="project-card"
-data-category="kitchen">
-
-<img
-src="images/project-kitchen.png">
-
-<div class="project-content">
-
-<h3>Modern Kitchen</h3>
-
-<p>Noida</p>
-
-<button class="view-btn">
-
-View Details
-
-</button>
-
-</div>
-
-</div>
-
-<!-- CARD 3 -->
-
-<div class="project-card"
-data-category="living">
-
-<img
-src="images/project-study.png">
-
-<div class="project-content">
-
-<h3>Minimal Living Room</h3>
-
-<p>Gurugram</p>
-
-<button class="view-btn">
-
-View Details
-
-</button>
-
-</div>
-
-</div>
-
-<!-- CARD 4 -->
-
-<div class="project-card"
-data-category="commercial">
-
-<img
-src="images/project-dining.png">
-
-<div class="project-content">
-
-<h3>Corporate Office</h3>
-
-<p>Delhi</p>
-
-<button class="view-btn">
-
-View Details
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= MODAL ================= -->
-
-<div class="project-modal">
-
-<div class="modal-box">
-
-<span class="close-modal">
-
-&times;
-
-</span>
-
-<img
-id="modalImage">
-
-<h2 id="modalTitle">
-
-Project Name
-
-</h2>
-
-<p id="modalLocation">
-
-Location
-
-</p>
-
-<p>
-
-Every Space Edge Design project
-is thoughtfully designed using
-premium materials, optimized
-layouts and timeless aesthetics.
-
-</p>
-
-</div>
-
-</div>
-
-<script src="projects.js"></script>
-
+    <div class="lightbox-meta">
+      <span id="lightbox-counter" class="lightbox-counter">1 / 5</span>
+      <span id="lightbox-caption" class="lightbox-caption">Room Name</span>
+    </div>
+
+    <!-- Thumbnail Strip -->
+    <div id="lightbox-thumbnails" class="lightbox-thumbnails">
+      <!-- Dynamically filled with thumbnails -->
+    </div>
+  </div>
+
+  <!-- ================= BOOK CONSULTATION ================= -->
+  <section class="section consultation-section">
+    <div class="container-sm">
+      <div class="consultation-card">
+        <h3 class="consultation-title">Book a Design Consultation</h3>
+        <p class="consultation-desc">Collaborate with our expert interior designers to bring premium craftsmanship, bespoke modular systems, and flawless luxury styling to your home.</p>
+        <form class="consultation-form" id="projectConsultForm">
+          <input type="hidden" id="pSource" value="Book Consultation">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pName">Full Name *</label>
+              <input type="text" id="pName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="pPhone">Phone Number *</label>
+              <input type="tel" id="pPhone" required placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pEmail">Email Address</label>
+              <input type="email" id="pEmail" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+              <label for="pCity">City</label>
+              <input type="text" id="pCity" placeholder="e.g. Ghaziabad">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pSpace">Service Required *</label>
+            <select id="pSpace" required>
+              <option value="" disabled selected>Select service...</option>
+              <option value="Complete Home Interior">Complete Home Interior</option>
+              <option value="Modular Kitchen">Modular Kitchen</option>
+              <option value="Bedroom">Bedroom</option>
+              <option value="Living Room">Living Room</option>
+              <option value="Wardrobe">Wardrobe</option>
+              <option value="False Ceiling">False Ceiling</option>
+              <option value="TV Unit">TV Unit</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pMessage">Message</label>
+            <textarea id="pMessage" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <div id="projectFormMessage" class="form-message"></div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Reserve Free Consultation Slot</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid" style="grid-template-columns: 1.5fr 1fr 1fr;">
+      <div>
+        <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
+        <p class="footer-brand-desc">Elegant, functional and personalized home interiors across Delhi NCR.</p>
+        <p class="footer-brand-desc" style="margin-top: 1rem;">Managed by<br>Sumit Kumar Gaur<br>Founder & Owner</p>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Offerings</h5>
+        <ul class="footer-links" style="list-style-type: none; padding: 0;">
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Complete Home Interiors</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Modular Kitchens</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Living Rooms</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Bedrooms</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Wardrobes</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• TV Units</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• False Ceilings</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-col-title">Office</h5>
+        <ul class="footer-links">
+          <li class="footer-link" style="color: rgba(255,255,255,0.6); line-height: 1.9;">
+            Vasundhara<br>Ghaziabad<br>Uttar Pradesh<br><br>
+            <a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a><br>
+            <a href="tel:+91XXXXXXXXXX" class="footer-link">+91 XXXXXXXXXX</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="footer-copy">&copy; 2026 Space Edge Design<br>Designed & Managed by Sumit Kumar Gaur.</span>
+    </div>
+  </footer>
+
+  <script src="inquiry.js"></script>
+  <script src="project.js"></script>
 </body>
-
 </html>

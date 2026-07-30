@@ -156,21 +156,12 @@
     </div>
     </a>
       <ul class="nav-links">
-       
-       
-        
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="project.html" class="nav-link">Projects</a></li>
-        
-        <li>
-          <a href="about.html" class="nav-link">More &darr;</a>
-          <div class="dropdown-menu">
-            <a href="about.html" class="dropdown-link">Careers</a>
-           
-            <a href="contact.html" class="dropdown-link">Contact Us</a>
-            <a href="admin.html" class="dropdown-link">Admin Dashboard</a>
-          </div>
-        </li>
-        <li><a href="contact.html" class="nav-link nav-cta">Book free consultation</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Book Free Consultation</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
         <span></span>
@@ -183,13 +174,12 @@
   <!-- --- MOBILE NAV --- -->
   <div class="nav-mobile" id="mobileMenu">
     <button class="nav-mobile-close" id="mobileCloseBtn">&times;</button>
-    <a href="index.html" class="nav-link">Home</a>
-   
-
-   
-    <a href="contact.html" class="nav-link">Contact Us</a>
-    
-    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book free consultation</a>
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="project.html" class="nav-link">Projects</a>
+    <a href="reviews.html" class="nav-link">Reviews</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="contact.html" class="nav-link btn btn-primary" style="margin-top: 1rem; color: var(--warm-white);">Book Free Consultation</a>
   </div>
 
  
@@ -238,32 +228,48 @@
         
         <form class="form" id="consultForm">
           <input type="text" class="hp-field" name="nickname" id="consultNickname">
+          <input type="hidden" id="consultSource" value="Book Consultation">
           
-          <div class="form-group">
-            <label for="cName">Your Name</label>
-            <input type="text" id="cName" required placeholder="Enter your name">
-          </div>
-
-          <div class="form-group">
-            <label for="cEmail">Email Address</label>
-            <input type="email" id="cEmail" required placeholder="name@example.com">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cName">Full Name *</label>
+              <input type="text" id="cName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="cPhone">Phone Number *</label>
+              <input type="tel" id="cPhone" required placeholder="+91 XXXXX XXXXX">
+            </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="cPhone">Phone Number</label>
-              <input type="tel" id="cPhone" required placeholder="+91 XXXXX XXXXX">
+              <label for="cEmail">Email Address</label>
+              <input type="email" id="cEmail" placeholder="name@example.com">
             </div>
             <div class="form-group">
-              <label for="cType">Property Plan</label>
-              <select id="cType" required>
-                <option value="1 BHK">1 BHK Apartment</option>
-                <option value="2 BHK" selected>2 BHK Apartment</option>
-                <option value="3 BHK">3 BHK Apartment</option>
-                <option value="Modular Kitchen">Modular Kitchen Only</option>
-                <option value="Other">Renovation / Villa</option>
-              </select>
+              <label for="cCity">City</label>
+              <input type="text" id="cCity" placeholder="e.g. Ghaziabad">
             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cType">Service Required *</label>
+            <select id="cType" required>
+              <option value="" disabled selected>Select service...</option>
+              <option value="Complete Home Interior">Complete Home Interior</option>
+              <option value="Modular Kitchen">Modular Kitchen</option>
+              <option value="Bedroom">Bedroom</option>
+              <option value="Living Room">Living Room</option>
+              <option value="Wardrobe">Wardrobe</option>
+              <option value="False Ceiling">False Ceiling</option>
+              <option value="TV Unit">TV Unit</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" placeholder="Tell us about your project..."></textarea>
           </div>
 
           <div id="formMessage" class="form-submit-message"></div>
@@ -276,52 +282,42 @@
 
   <!-- --- FOOTER --- -->
   <footer class="footer">
-    <div class="container footer-grid">
+    <div class="container footer-grid" style="grid-template-columns: 1.5fr 1fr 1fr;">
       <div>
         <h4 class="footer-brand-name">SPACE EDGE DESIGN</h4>
-        <p class="footer-brand-desc">India's leading interior design brand, offering custom modular kitchens, wardrobes, and civil renovations. Handled by Arjun Kapoor.</p>
-        <div class="footer-social">
-          <a href="#" class="social-link" aria-label="Facebook">FB</a>
-          <a href="#" class="social-link" aria-label="Instagram">IG</a>
-          <a href="#" class="social-link" aria-label="Pinterest">PI</a>
-          <a href="#" class="social-link" aria-label="YouTube">YT</a>
-        </div>
+        <p class="footer-brand-desc">Elegant, functional and personalized home interiors across Delhi NCR.</p>
+        <p class="footer-brand-desc" style="margin-top: 1rem;">Managed by<br>Sumit Kumar Gaur<br>Founder & Owner</p>
       </div>
       <div>
         <h5 class="footer-col-title">Offerings</h5>
-        <ul class="footer-links">
-          <li><a href="services.html" class="footer-link">Modular Interiors</a></li>
-          <li><a href="services.html" class="footer-link">Full Home Interiors</a></li>
-          <li><a href="services.html" class="footer-link">Room Refreshes</a></li>
-          <li><a href="services.html" class="footer-link">Art Styling</a></li>
+        <ul class="footer-links" style="list-style-type: none; padding: 0;">
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Complete Home Interiors</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Modular Kitchens</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Living Rooms</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Bedrooms</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• Wardrobes</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• TV Units</li>
+          <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); cursor: default;">• False Ceilings</li>
         </ul>
       </div>
       <div>
-        <h5 class="footer-col-title">Get Inspired</h5>
+        <h5 class="footer-col-title">Office</h5>
         <ul class="footer-links">
-          <li><a href="portfolio.html" class="footer-link">Design Ideas</a></li>
-          <li><a href="portfolio.html" class="footer-link">Living Rooms</a></li>
-          <li><a href="portfolio.html" class="footer-link">Kitchen Layouts</a></li>
-          <li><a href="portfolio.html" class="footer-link">Bedrooms</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="footer-col-title">Studio Hub</h5>
-        <ul class="footer-links">
-          <li class="footer-link" style="color: rgba(255,255,255,0.5);">Horniman Circle, Fort, Mumbai</li>
-          
-          <li><a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a></li>
-         
+          <li class="footer-link" style="color: rgba(255,255,255,0.6); line-height: 1.9;">
+            Vasundhara<br>Ghaziabad<br>Uttar Pradesh<br><br>
+            <a href="mailto:hello@spaceedgedesign.in" class="footer-link">hello@spaceedgedesign.in</a><br>
+            <a href="tel:+91XXXXXXXXXX" class="footer-link">+91 XXXXXXXXXX</a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span class="footer-copy">&copy; 2026 Space Edge Design. All rights reserved.</span>
-      <span class="footer-copy">Flat 10-year warranty* • 45-day move-in guarantee</span>
+      <span class="footer-copy">&copy; 2026 Space Edge Design<br>Designed & Managed by Sumit Kumar Gaur.</span>
     </div>
   </footer>
 
   <!-- --- JAVASCRIPT --- -->
+  <script src="inquiry.js"></script>
   <script>
     // 1. Navigation Scroll Class
     const nav = document.getElementById('mainNav');
@@ -380,50 +376,60 @@
     const submitBtn = document.getElementById('submitBtn');
     const formMessage = document.getElementById('formMessage');
 
-    consultForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    if (consultForm) {
+      consultForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-      if (document.getElementById('consultNickname').value) {
-        formMessage.className = 'form-submit-message success';
-        formMessage.innerText = 'Thank you! Your request has been received.';
-        consultForm.reset();
-        return;
-      }
+        if (document.getElementById('consultNickname').value) {
+          formMessage.className = 'form-submit-message success';
+          formMessage.innerText = 'Thank you! Your request has been received.';
+          consultForm.reset();
+          return;
+        }
 
-      const name = document.getElementById('cName').value;
-      const email = document.getElementById('cEmail').value;
-      const phone = document.getElementById('cPhone').value;
-      const propertyType = document.getElementById('cType').value;
+        const name = document.getElementById('cName').value;
+        const phone = document.getElementById('cPhone').value;
+        const email = document.getElementById('cEmail').value || '';
+        const city = document.getElementById('cCity').value || '';
+        const service = document.getElementById('cType').value;
+        const message = document.getElementById('cMessage').value || '';
+        const source = document.getElementById('consultSource').value || 'Book Consultation';
 
-      submitBtn.disabled = true;
-      submitBtn.innerText = 'Sending...';
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Sending...';
 
-      setTimeout(() => {
-        const existingInquiries = JSON.parse(localStorage.getItem('spaceEdgeInquiries') || '[]');
-        const newInquiry = {
-          id: 'inq_' + Date.now(),
-          name: name,
-          email: email,
-          phone: phone,
-          projectType: propertyType,
-          budget: 'N/A',
-          timeline: 'ASAP',
-          location: 'Mumbai',
-          message: `Consultation request from home page. Property type: ${propertyType}.`,
-          date: new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
-          read: false
+        const now = new Date();
+        const enquiry = {
+          name,
+          phone,
+          email,
+          city,
+          service,
+          message,
+          source,
+          date: now.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
+          time: now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
         };
-        existingInquiries.push(newInquiry);
-        localStorage.setItem('spaceEdgeInquiries', JSON.stringify(existingInquiries));
 
-        formMessage.className = 'form-submit-message success';
-        formMessage.innerText = `Consultation Booked! Thank you, ${name}. We will contact you within 24 hours.`;
-        
-        consultForm.reset();
-        submitBtn.disabled = false;
-        submitBtn.innerText = 'Book Free Consultation';
-      }, 1000);
-    });
+        submitEnquiry(enquiry)
+          .then(() => {
+            formMessage.className = 'form-submit-message success';
+            formMessage.innerHTML = 'Thank you! Your enquiry has been received.<br>Our team will contact you shortly.';
+            formMessage.style.display = 'block';
+            consultForm.reset();
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Book Free Consultation';
+          })
+          .catch(err => {
+            console.error(err);
+            formMessage.className = 'form-submit-message error';
+            formMessage.innerText = 'Something went wrong. Please try again.';
+            formMessage.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Book Free Consultation';
+          });
+      });
+    }
 
     // 6. Scroll Reveals
     const reveals = document.querySelectorAll('.reveal');
