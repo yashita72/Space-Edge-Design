@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Project Portfolio - Space Edge Design</title>
+  <title>Our Projects — Space Edge Design | Home Interiors Delhi NCR</title>
+  <meta name="description" content="Explore Space Edge Design's completed home interior projects — modular kitchens, bedrooms, wardrobes, living rooms across Delhi NCR.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="project.css">
 </head>
@@ -55,188 +56,14 @@
     </div>
   </section>
 
-  <!-- ================= PROJECTS GRID ================= -->
-  <section class="projects-section">
+  <!-- ================= PROJECTS — VIDEO SHOWCASE ================= -->
+  <section class="projects-section" aria-label="Our Projects">
     <div class="container">
-      <div class="projects-grid">
-        <!-- Project 01 -->
-        <div class="project-card" data-project-id="project1">
-          <div class="project-media-wrapper">
-            <img class="project-img" src="images/projects/project1/cover.jpg" alt="Project 01 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="placeholder-box cover-placeholder">
-              <span class="placeholder-text">Project 01 Cover Placeholder</span>
-            </div>
-            <div class="card-overlay"></div>
-          </div>
-          <div class="project-info">
-            <span class="project-number">01</span>
-            <div class="project-header">
-              <h3 class="project-name">The Sky Villa</h3>
-              <p class="project-short-desc">Luxury penthouse featuring a contemporary design language, custom modular units, and automated lighting solutions in Gurugram.</p>
-            </div>
-            <button class="btn-view-project">View Project &rarr;</button>
-          </div>
-        </div>
-
-        <!-- Project 02 -->
-        <div class="project-card" data-project-id="project2">
-          <div class="project-media-wrapper">
-            <img class="project-img" src="images/projects/project2/cover.jpg" alt="Project 02 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="placeholder-box cover-placeholder">
-              <span class="placeholder-text">Project 02 Cover Placeholder</span>
-            </div>
-            <div class="card-overlay"></div>
-          </div>
-          <div class="project-info">
-            <span class="project-number">02</span>
-            <div class="project-header">
-              <h3 class="project-name">Minimalist Mansion</h3>
-              <p class="project-short-desc">Ultra-modern minimalist residence focusing on neutral tones, clean lines, and integrated smart kitchens in Noida.</p>
-            </div>
-            <button class="btn-view-project">View Project &rarr;</button>
-          </div>
-        </div>
-
-        <!-- Project 03 -->
-        <div class="project-card" data-project-id="project3">
-          <div class="project-media-wrapper">
-            <img class="project-img" src="images/projects/project3/cover.jpg" alt="Project 03 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="placeholder-box cover-placeholder">
-              <span class="placeholder-text">Project 03 Cover Placeholder</span>
-            </div>
-            <div class="card-overlay"></div>
-          </div>
-          <div class="project-info">
-            <span class="project-number">03</span>
-            <div class="project-header">
-              <h3 class="project-name">Japandi Haven</h3>
-              <p class="project-short-desc">Warm, tranquil blend of Japanese minimalism and Scandinavian warmth featuring white ash wood wardrobes and neutral tones in South Delhi.</p>
-            </div>
-            <button class="btn-view-project">View Project &rarr;</button>
-          </div>
-        </div>
-
-        <!-- Project 04 -->
-        <div class="project-card" data-project-id="project4">
-          <div class="project-media-wrapper">
-            <img class="project-img" src="images/projects/project4/cover.jpg" alt="Project 04 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="placeholder-box cover-placeholder">
-              <span class="placeholder-text">Project 04 Cover Placeholder</span>
-            </div>
-            <div class="card-overlay"></div>
-          </div>
-          <div class="project-info">
-            <span class="project-number">04</span>
-            <div class="project-header">
-              <h3 class="project-name">The Heritage Flat</h3>
-              <p class="project-short-desc">Classic luxury aesthetics blended with modern storage design, grand living spaces, and luxury false ceiling detailing in Dwarka.</p>
-            </div>
-            <button class="btn-view-project">View Project &rarr;</button>
-          </div>
-        </div>
-
-        <!-- Project 05 -->
-        <div class="project-card" data-project-id="project5">
-          <div class="project-media-wrapper">
-            <img class="project-img" src="images/projects/project5/cover.jpg" alt="Project 05 Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="placeholder-box cover-placeholder">
-              <span class="placeholder-text">Project 05 Cover Placeholder</span>
-            </div>
-            <div class="card-overlay"></div>
-          </div>
-          <div class="project-info">
-            <span class="project-number">05</span>
-            <div class="project-header">
-              <h3 class="project-name">Urban Oasis</h3>
-              <p class="project-short-desc">High-tech modular design layout optimized for premium urban living, featuring dual TV units, study rooms, and bathrooms in Ghaziabad.</p>
-            </div>
-            <button class="btn-view-project">View Project &rarr;</button>
-          </div>
-        </div>
+      <div class="projects-list" id="projectsList">
+        <!-- Dynamically generated by project.js from the `projects` array -->
       </div>
     </div>
   </section>
-
-  <!-- ================= EXPANDED DETAILED PROJECT VIEW ================= -->
-  <section id="project-detail-section" class="project-detail-section">
-    <div class="container">
-      <div id="project-detail-placeholder" class="project-detail-instruction">
-        <p>Select a project from the portfolio grid above to view details, design specifications, and room galleries.</p>
-      </div>
-      
-      <!-- Container for dynamic content injection -->
-      <div id="project-detail-content" class="project-detail-content" style="display: none;">
-        <div class="detail-header-row">
-          <div>
-            <span id="detail-project-number" class="detail-project-number">01</span>
-            <h2 id="detail-project-title" class="detail-project-title">Project Title</h2>
-          </div>
-          <button id="btn-close-detail" class="btn-close-detail">&times; Close View</button>
-        </div>
-
-        <!-- Overview Details Table/Grid -->
-        <div class="project-specs-grid">
-          <div class="spec-col">
-            <h4>Project Overview</h4>
-            <p id="detail-project-overview">Detailed overview of the project interiors...</p>
-          </div>
-          <div class="spec-col specs-meta">
-            <div class="meta-item">
-              <span class="meta-label">Area</span>
-              <span id="detail-project-area" class="meta-value">3,200 sq ft</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Completion Time</span>
-              <span id="detail-project-time" class="meta-value">45 Days</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Interior Style</span>
-              <span id="detail-project-style" class="meta-value">Modern Luxury</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Services Included</span>
-              <span id="detail-project-services" class="meta-value">Modular Kitchen, Wardrobes, Civil Work</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Room Categories Grid -->
-        <h3 class="section-subtitle">ROOM CATEGORIES</h3>
-        <div id="room-categories-grid" class="room-categories-grid">
-          <!-- Dynamically populated from project.js -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= LIGHTBOX GALLERY ================= -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
-    <button id="lightbox-close" class="lightbox-close" aria-label="Close gallery">&times;</button>
-    
-    <div class="lightbox-content-wrapper">
-      <button id="lightbox-prev" class="lightbox-nav-btn prev" aria-label="Previous image">&lsaquo;</button>
-      
-      <div class="lightbox-main-media">
-        <!-- Lightbox image with fallback to styled placeholder if not found -->
-        <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Image" onerror="this.style.display='none'; document.getElementById('lightbox-placeholder').style.display='flex';">
-        <div id="lightbox-placeholder" class="placeholder-box gallery-placeholder" style="display: none;">
-          <span id="lightbox-placeholder-text" class="placeholder-text">Gallery Image Placeholder</span>
-        </div>
-      </div>
-
-      <button id="lightbox-next" class="lightbox-nav-btn next" aria-label="Next image">&rsaquo;</button>
-    </div>
-
-    <div class="lightbox-meta">
-      <span id="lightbox-counter" class="lightbox-counter">1 / 5</span>
-      <span id="lightbox-caption" class="lightbox-caption">Room Name</span>
-    </div>
-
-    <!-- Thumbnail Strip -->
-    <div id="lightbox-thumbnails" class="lightbox-thumbnails">
-      <!-- Dynamically filled with thumbnails -->
-    </div>
-  </div>
 
   <!-- ================= BOOK CONSULTATION ================= -->
   <section class="section consultation-section">
