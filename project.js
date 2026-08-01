@@ -32,7 +32,7 @@ const projects = [
     services:    ['Full Home Interiors', 'Modular Kitchen', 'Wardrobes', 'False Ceiling'],
     area:        '1,850 sq.ft.',
     year:        '2025',
-    video:       '',   // ← Replace with video URL e.g. 'videos/project1.mp4'
+    video: 'videos/project1.mp4',   // ← Replace with video URL e.g. 'videos/project1.mp4'
   },
   {
     number:      '02',
@@ -42,7 +42,7 @@ const projects = [
     services:    ['Modular Kitchen', 'Wardrobes', 'TV Unit', 'Bedroom'],
     area:        '1,200 sq.ft.',
     year:        '2025',
-    video:       '',   // ← Replace with video URL
+    video: 'videos/project2.mp4',  // ← Replace with video URL
   },
   {
     number:      '03',
@@ -52,7 +52,7 @@ const projects = [
     services:    ['Complete Home Interior', 'False Ceiling', 'Modular Kitchen', 'Living Room'],
     area:        '2,100 sq.ft.',
     year:        '2026',
-    video:       '',   // ← Replace with video URL
+    video:       'videos/project3.mp4',   // ← Replace with video URL
   },
 ];
 
