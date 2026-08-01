@@ -52,6 +52,7 @@ const projects = [
     services:    ['Full Home Interior', 'Modular Kitchen', 'False Ceiling', 'Wardrobes'],
     area:        '1200 sq.ft.',
     year:        '2025',
+<<<<<<< HEAD
     video:       'videos/project3.mp4',
   },
   {
