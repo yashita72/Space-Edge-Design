@@ -26,33 +26,33 @@ if (nav) {
 const projects = [
   {
     number:      '01',
-    title:       'The Sky Villa',
-    location:    'Vasundhara, Ghaziabad',
-    description: 'A contemporary full-home interior featuring clean lines, premium modular cabinetry, and a serene colour palette that brings warmth and sophistication to every room.',
-    services:    ['Full Home Interiors', 'Modular Kitchen', 'Wardrobes', 'False Ceiling'],
-    area:        '1,850 sq.ft.',
+    title:       '2 BHK Residence',
+    location:    'Jaipuria Sunrise Green, Indirapuram',
+    description: 'A complete interior design project for a modern 2 BHK home featuring premium finishes, smart storage solutions, elegant false ceilings, modular kitchen, and contemporary living spaces designed for comfortable family living.',
+    services:    ['Full Home Interior', 'Modular Kitchen', 'Wardrobes', 'False Ceiling'],
+    area:        '1200 sq.ft.',
     year:        '2025',
-    video: 'videos/project1.mp4',   // ← Replace with video URL e.g. 'videos/project1.mp4'
+    video:       '',
   },
   {
     number:      '02',
-    title:       'The Minimalist Nest',
-    location:    'Indirapuram, Ghaziabad',
-    description: 'A 2BHK transformation into a calm, clutter-free sanctuary. Neutral tones, hidden storage, and precision-crafted modular units define every corner of this residence.',
-    services:    ['Modular Kitchen', 'Wardrobes', 'TV Unit', 'Bedroom'],
-    area:        '1,200 sq.ft.',
+    title:       'Modern 2 BHK Home',
+    location:    'Jaipuria Sunrise Green, Indirapuram',
+    description: 'A stylish full-home interior project designed with modern aesthetics, functional layouts, premium materials, and customized furniture to maximize comfort and space utilization.',
+    services:    ['Full Home Interior', 'TV Unit', 'Modular Kitchen', 'Living Room'],
+    area:        '1200 sq.ft.',
     year:        '2025',
-    video: 'videos/project2.mp4',  // ← Replace with video URL
+    video:       '',
   },
   {
     number:      '03',
-    title:       'The Heritage Haven',
-    location:    'Raj Nagar Extension, Ghaziabad',
-    description: 'Classic warmth meets modern functionality. This project combines rich wood finishes, ornate false ceilings, and smart storage to create a timeless living experience.',
-    services:    ['Complete Home Interior', 'False Ceiling', 'Modular Kitchen', 'Living Room'],
-    area:        '2,100 sq.ft.',
-    year:        '2026',
-    video:       'videos/project3.mp4',   // ← Replace with video URL
+    title:       'Elegant 2 BHK Interior',
+    location:    'Jaipuria Sunrise Green, Indirapuram',
+    description: 'A thoughtfully designed 2 BHK interior combining minimal elegance with practical functionality, including premium modular solutions, sophisticated lighting, and high-quality finishes throughout the home.',
+    services:    ['Full Home Interior', 'Modular Kitchen', 'False Ceiling', 'Wardrobes'],
+    area:        '1200 sq.ft.',
+    year:        '2025',
+    video:       '',
   },
 ];
 
@@ -96,7 +96,6 @@ function buildProjectsHTML() {
 
       <!-- CONTENT COLUMN -->
       <div class="pv-content-col">
-        <p class="pv-project-number">Project ${p.number}</p>
 
         <h2 class="pv-title">${p.title}</h2>
 
