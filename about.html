@@ -6,6 +6,23 @@
   <title>About Us | Space Edge Design</title>
   <meta name="description" content="Learn about Space Edge Design, a premium interior design studio in Delhi NCR specializing in modular kitchens, wardrobes, and complete home interiors.">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-img-wrapper {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .about-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .about-img-wrapper:hover .about-img {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
 
@@ -57,11 +74,9 @@
   <!-- --- BRAND STATEMENT SECTION --- -->
   <section class="section">
     <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center;">
-      <!-- Left: Metric Placeholder Image Wrapper -->
+      <!-- Left: Who We Are Hero Image -->
       <div class="about-img-wrapper reveal" style="aspect-ratio: 4 / 3;">
-        <div class="about-img-placeholder" style="border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; background: var(--bg-gray); color: var(--neutral-light); font-weight: 700; font-size: 2rem; height: 100%;">
-          SED
-        </div>
+        <img src="images/hero.png" alt="Space Edge Design - Modern Home Interiors" class="about-img">
       </div>
 
       <!-- Right: Biography Description -->
@@ -128,11 +143,9 @@
   <!-- --- OWNER / FOUNDER SECTION --- -->
   <section class="section reveal" style="background: var(--bg-gray); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0;">
     <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center;">
-      <!-- Left: Founder Photo Placeholder -->
+      <!-- Left: Founder Photo -->
       <div class="about-img-wrapper" style="aspect-ratio: 4 / 5;">
-        <div class="about-img-placeholder" style="border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; background: var(--bg-white); color: var(--neutral-light); font-weight: 600; font-size: 1.2rem; height: 100%; border: 2px dashed var(--border);">
-          Founder Photo
-        </div>
+        <img src="images/founder.jpeg" alt="Sumit Kumar Gaur - Founder & Owner" class="about-img" style="object-position: center;">
       </div>
 
       <!-- Right: Biography / Details -->
