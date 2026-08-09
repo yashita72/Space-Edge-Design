@@ -1,25 +1,47 @@
 /* =======================================================
    SPACE EDGE DESIGN — DESIGN GALLERY JS
    Manages category listing, grid rendering, hash routing,
-   and visual placeholders. Ready to load real local assets.
+   and visual placeholders. Loads real local assets from project.
    ======================================================= */
 
 // ── CENTRALIZED GALLERY DATA ─────────────────────────────────
-// To add actual images, specify their relative URLs and captions:
-// Example:
-// bedroom: [
-//   { src: 'gallery/bedroom/bedroom-01.jpg', caption: 'Premium Oak Master Bedroom' },
-//   { src: 'gallery/bedroom/bedroom-02.jpg', caption: 'Modern Minimalist Guest Bedroom' }
-// ]
+// Centralized mapping using local photographs from the images folder.
 const galleryData = {
-  bedroom: [],
-  drawingRoom: [],
-  bathroom: [],
-  kitchen: [],
-  diningRoom: [],
-  kidsRoom: [],
-  office: [],
-  fullHome: []
+  bedroom: [
+    { src: 'images/project-bedroom.png', caption: 'Luxury Master Bedroom Suite' },
+    { src: 'images/wardrobe1.jpeg', caption: 'Premium Built-in Wardrobe Style 1' },
+    { src: 'images/wardrobe2.jpeg', caption: 'Elegant Sliding Wardrobe Style 2' },
+    { src: 'images/wardrobe3.jpeg', caption: 'Minimalist Wardrobe Design Style 3' },
+    { src: 'images/wardrobe4.jpeg', caption: 'Modern Wardrobe with Integrated Mirrors' },
+    { src: 'images/wardrobe5.jpeg', caption: 'Contemporary Walk-in Closet Wardrobe' }
+  ],
+  drawingRoom: [
+    { src: 'images/tvunit1.jpeg', caption: 'Modern Wall-Mounted TV Unit console' },
+    { src: 'images/tvunit2.jpeg', caption: 'Minimalist Floating Console TV Unit' }
+  ],
+  kitchen: [
+    { src: 'images/project-kitchen.png', caption: 'Premium Modular Kitchen Layout' },
+    { src: 'images/kitchen1.jpeg', caption: 'Modern Kitchen Cabinets and Countertop' },
+    { src: 'images/kitchen2.jpeg', caption: 'Contemporary L-Shaped Kitchen Layout' },
+    { src: 'images/kitchen3.jpeg', caption: 'Elegant Kitchen Storage and Island Design' }
+  ],
+  diningRoom: [
+    { src: 'images/project-dining.png', caption: 'Spacious Architectural Dining Room Layout' }
+  ],
+  bathroom: [], // Empty, will show elegant coming soon state
+  studyOffice: [
+    { src: 'images/project-study.png', caption: 'Bespoke Executive Home Office & Study' }
+  ],
+  poojaRoom: [
+    { src: 'images/mandir.jpeg', caption: 'Tranquil Custom Mandir Pooja Room Design' }
+  ],
+  wardrobe: [
+    { src: 'images/wardrobe1.jpeg', caption: 'Premium Built-in Wardrobe Style 1' },
+    { src: 'images/wardrobe2.jpeg', caption: 'Elegant Sliding Wardrobe Style 2' },
+    { src: 'images/wardrobe3.jpeg', caption: 'Minimalist Wardrobe Design Style 3' },
+    { src: 'images/wardrobe4.jpeg', caption: 'Modern Wardrobe with Integrated Mirrors' },
+    { src: 'images/wardrobe5.jpeg', caption: 'Contemporary Walk-in Closet Wardrobe' }
+  ]
 };
 
 // ── CATEGORY CONFIGURATION ───────────────────────────────────
@@ -35,11 +57,6 @@ const categoriesConfig = {
     desc: 'Inviting, elegant settings for entertaining and family gathering.',
     icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c0 4.41 3.59 8 8 8h4c4.41 0 8-3.59 8-8s-3.59-8-8-8h-4c-4.41 0-8 3.59-8 8zm10-6c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6z"/></svg>`
   },
-  bathroom: {
-    name: 'Bathroom',
-    desc: 'Clean, sanctuary spaces with modern details and premium fixtures.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12V4c0-1.1-.9-2-2-2h-3v2h3v8H4V4h3V2H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-8 4c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/></svg>`
-  },
   kitchen: {
     name: 'Kitchen',
     desc: 'Functional and beautiful cooking environments with modular cabinets.',
@@ -50,38 +67,57 @@ const categoriesConfig = {
     desc: 'Bespoke layouts optimized for premium dining experiences.',
     icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 2v20H9V2h2zm8 7h-2v13h-2V9h-2c0-2.76 2.24-5 5-5s5 2.24 5 5h-4z"/></svg>`
   },
-  kidsRoom: {
-    name: 'Kids Room',
-    desc: 'Vibrant, modular, and fun environments designed for growth.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>`
+  bathroom: {
+    name: 'Bathroom',
+    desc: 'Clean, sanctuary spaces with modern details and premium fixtures.',
+    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12V4c0-1.1-.9-2-2-2h-3v2h3v8H4V4h3V2H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-8 4c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/></svg>`
   },
-  office: {
-    name: 'Office',
+  studyOffice: {
+    name: 'Study / Office',
     desc: 'Inspiring spaces tailored to focus, productivity, and organization.',
     icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>`
   },
-  fullHome: {
-    name: 'Full Home',
-    desc: 'Seamless, end-to-end interior design architecture for entire homes.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>`
+  poojaRoom: {
+    name: 'Pooja Room',
+    desc: 'Bespoke, serene mandir arrangements for quiet contemplation.',
+    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>`
+  },
+  wardrobe: {
+    name: 'Wardrobe',
+    desc: 'Premium customizable storage and wardrobe modular systems.',
+    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-8V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-2 14H4V4h6v4h8v12z"/></svg>`
   }
 };
 
 // ── REUSABLE COMPONENTS ──────────────────────────────────────
 
 // 1. GalleryCategoryCard Component
-function GalleryCategoryCard(key, config) {
-  return `
-    <article class="gallery-category-card" data-category="${key}" aria-label="View ${config.name} Design Gallery" role="button" tabindex="0">
+function GalleryCategoryCard(key, config, previewImageSrc) {
+  let mediaHtml = '';
+
+  if (previewImageSrc) {
+    mediaHtml = `
+      <div class="gallery-category-img-container">
+        <img src="${previewImageSrc}" alt="${config.name} Preview Thumbnail" loading="lazy">
+      </div>
+    `;
+  } else {
+    mediaHtml = `
       <div class="gallery-category-img-placeholder" aria-hidden="true">
         ${config.icon}
-        <span class="gallery-category-placeholder-text">Open Gallery</span>
+        <span class="gallery-category-placeholder-text">Coming Soon</span>
       </div>
+    `;
+  }
+
+  return `
+    <a href="#${key}" class="gallery-category-card" aria-label="View ${config.name} Design Gallery">
+      ${mediaHtml}
       <div class="gallery-category-info">
         <h2 class="gallery-category-title">${config.name}</h2>
         <p class="gallery-category-desc">${config.desc}</p>
       </div>
-    </article>
+    </a>
   `;
 }
 
@@ -253,14 +289,6 @@ class DesignGallery {
     // Handle hash routing
     window.addEventListener('hashchange', () => this.handleRoute());
     
-    // Back button setup
-    const backBtn = document.getElementById('galleryBackBtn');
-    if (backBtn) {
-      backBtn.addEventListener('click', () => {
-        window.location.hash = '';
-      });
-    }
-
     // Initialize the lightbox component
     this.lightbox = new GalleryLightbox('galleryLightbox');
 
@@ -295,28 +323,15 @@ class DesignGallery {
     const backContainer = document.getElementById('galleryBackContainer');
     if (backContainer) backContainer.classList.add('hidden');
 
-    // Generate grid cards HTML
+    // Generate grid cards HTML, showing the first image from each category as preview
     const cardsHtml = Object.keys(this.config).map(key => {
-      return GalleryCategoryCard(key, this.config[key]);
+      const itemsList = this.data[key] || [];
+      const firstImage = itemsList.find(item => item.src && item.src.trim() !== '');
+      const previewSrc = firstImage ? firstImage.src : null;
+      return GalleryCategoryCard(key, this.config[key], previewSrc);
     }).join('');
 
     this.container.innerHTML = GalleryGrid(cardsHtml);
-
-    // Bind event listeners to category cards
-    const categoryCards = this.container.querySelectorAll('.gallery-category-card');
-    categoryCards.forEach(card => {
-      // Click event
-      card.addEventListener('click', () => {
-        window.location.hash = card.dataset.category;
-      });
-      // Accessibility keydown
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          window.location.hash = card.dataset.category;
-        }
-      });
-    });
   }
 
   renderCategoryView(categoryKey) {
@@ -329,13 +344,25 @@ class DesignGallery {
     const backContainer = document.getElementById('galleryBackContainer');
     if (backContainer) backContainer.classList.remove('hidden');
 
-    // Get current files, default to 9 placeholders if array is empty
-    let items = this.data[categoryKey] || [];
+    // Get current files
+    const items = this.data[categoryKey] || [];
+
+    // Show dynamic coming soon empty state if category contains no images
     if (items.length === 0) {
-      items = Array.from({ length: 9 }, (_, i) => ({
-        src: '',
-        caption: `${catConfig.name} Concept Layout ${i + 1}`
-      }));
+      this.activeImagesList = [];
+      this.container.innerHTML = `
+        <div class="gallery-empty-state">
+          <div class="gallery-empty-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M12 7v6M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="gallery-empty-title">Coming Soon</h3>
+          <p class="gallery-empty-desc">We are currently executing premium projects in this category. Elegant photoshoot layouts and styling configurations will be added here soon.</p>
+        </div>
+      `;
+      return;
     }
 
     // Identify images that are valid (non-placeholder) for lightbox pagination
