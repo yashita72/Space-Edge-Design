@@ -405,3 +405,63 @@
   color: var(--text-muted);
   line-height: 1.6;
 }
+
+/* --- Gallery Category Tabs --- */
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.gallery-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: var(--bg-white);
+  transition: all var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.gallery-tab svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  opacity: 0.7;
+  transition: opacity var(--transition);
+}
+
+.gallery-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-tab.active {
+  background: var(--primary);
+  color: var(--bg-white);
+  border-color: var(--primary);
+}
+
+.gallery-tab.active svg {
+  opacity: 1;
+}
+
+/* Adjustments for back button when tabs are present */
+.gallery-back-container {
+  margin-bottom: 1.5rem;
+}
+

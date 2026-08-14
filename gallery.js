@@ -8,39 +8,56 @@
 // Centralized mapping using local photographs from the images folder.
 const galleryData = {
   bedroom: [
-    { src: 'images/project-bedroom.png', caption: 'Luxury Master Bedroom Suite' },
-    { src: 'images/wardrobe1.jpeg', caption: 'Premium Built-in Wardrobe Style 1' },
-    { src: 'images/wardrobe2.jpeg', caption: 'Elegant Sliding Wardrobe Style 2' },
-    { src: 'images/wardrobe3.jpeg', caption: 'Minimalist Wardrobe Design Style 3' },
-    { src: 'images/wardrobe4.jpeg', caption: 'Modern Wardrobe with Integrated Mirrors' },
-    { src: 'images/wardrobe5.jpeg', caption: 'Contemporary Walk-in Closet Wardrobe' }
-  ],
-  drawingRoom: [
-    { src: 'images/tvunit1.jpeg', caption: 'Modern Wall-Mounted TV Unit console' },
-    { src: 'images/tvunit2.jpeg', caption: 'Minimalist Floating Console TV Unit' }
+    { src: 'images/bed.jpeg', caption: 'Luxury Master Bedroom Suite', alt: 'Space Edge Design Master Bedroom Interior' }
   ],
   kitchen: [
-    { src: 'images/project-kitchen.png', caption: 'Premium Modular Kitchen Layout' },
-    { src: 'images/kitchen1.jpeg', caption: 'Modern Kitchen Cabinets and Countertop' },
-    { src: 'images/kitchen2.jpeg', caption: 'Contemporary L-Shaped Kitchen Layout' },
-    { src: 'images/kitchen3.jpeg', caption: 'Elegant Kitchen Storage and Island Design' }
+    { src: 'images/kitchen1.jpeg', caption: 'Modern Kitchen Cabinets and Countertop', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen2.jpeg', caption: 'Contemporary L-Shaped Kitchen Layout', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen3.jpeg', caption: 'Elegant Kitchen Storage and Island Design', alt: 'Space Edge Design Modular Kitchen' }
   ],
-  diningRoom: [
-    { src: 'images/project-dining.png', caption: 'Spacious Architectural Dining Room Layout' }
+  mandir: [
+    { src: 'images/mandir.jpeg', caption: 'Tranquil Custom Mandir Pooja Room Design', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir2.jpeg', caption: 'Bespoke Wooden Mandir Setup', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir3.jpeg', caption: 'Serene Pooja Mandir with Backlit CNC Cutting', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir4.jpeg', caption: 'Contemporary Marble Pooja Mandir', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir5.jpeg', caption: 'Traditional Carved Wood Mandir', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir6.jpeg', caption: 'Elegant Glass-Door Pooja Room Mandir', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir7.jpeg', caption: 'Minimalist Wall-Mounted Mandir Unit', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir8.jpeg', caption: 'Modern Pooja Room with LED Lighting', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir9.jpeg', caption: 'Bespoke Home Mandir with Storage Drawer', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir10.jpeg', caption: 'Luxury White Marble Pooja Mandir', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir11.jpeg', caption: 'Compact Pooja Cabinet Mandir', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir12.jpeg', caption: 'Premium Wooden Mandir with Brass Bells', alt: 'Space Edge Design Mandir Interior' },
+    { src: 'images/mandir13.jpeg', caption: 'Exquisite Pooja Mandir with Ambient Backlighting', alt: 'Space Edge Design Mandir Interior' }
   ],
-  bathroom: [], // Empty, will show elegant coming soon state
-  studyOffice: [
-    { src: 'images/project-study.png', caption: 'Bespoke Executive Home Office & Study' }
-  ],
-  poojaRoom: [
-    { src: 'images/mandir.jpeg', caption: 'Tranquil Custom Mandir Pooja Room Design' }
+  tvunit: [
+    { src: 'images/tvunit1.jpeg', caption: 'Modern Wall-Mounted TV Unit Console', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit2.jpeg', caption: 'Minimalist Floating Console TV Unit', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit3.jpeg', caption: 'Bespoke Wooden TV Unit with Open Shelving', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit4.jpeg', caption: 'Sleek Modern TV Console Cabinet', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit5.jpeg', caption: 'Luxury Backlit Marble Pattern TV Unit', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit6.jpeg', caption: 'Contemporary Wooden TV Showcase Unit', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit7.jpeg', caption: 'Elegant Media Console with Built-In Storage', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit8.jpeg', caption: 'Compact Wall TV Unit for Living Rooms', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit9.jpeg', caption: 'High-End Customized TV Wall Unit', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit10.jpeg', caption: 'Floating Shelf TV Console Design', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit11.jpeg', caption: 'Sophisticated Living Room Entertainment Unit', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit12.jpeg', caption: 'Premium Modern TV Cabinet Unit', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit13.jpeg', caption: 'Bespoke Styled Entertainment Console', alt: 'Space Edge Design TV Unit' },
+    { src: 'images/tvunit14.jpeg', caption: 'Chic Living Room TV Backdrop Setup', alt: 'Space Edge Design TV Unit' }
   ],
   wardrobe: [
-    { src: 'images/wardrobe1.jpeg', caption: 'Premium Built-in Wardrobe Style 1' },
-    { src: 'images/wardrobe2.jpeg', caption: 'Elegant Sliding Wardrobe Style 2' },
-    { src: 'images/wardrobe3.jpeg', caption: 'Minimalist Wardrobe Design Style 3' },
-    { src: 'images/wardrobe4.jpeg', caption: 'Modern Wardrobe with Integrated Mirrors' },
-    { src: 'images/wardrobe5.jpeg', caption: 'Contemporary Walk-in Closet Wardrobe' }
+    { src: 'images/wardrobe1.jpeg', caption: 'Premium Built-in Wardrobe Style 1', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe2.jpeg', caption: 'Elegant Sliding Wardrobe Style 2', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe3.jpeg', caption: 'Minimalist Wardrobe Design Style 3', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe4.jpeg', caption: 'Modern Wardrobe with Integrated Mirrors', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe5.jpeg', caption: 'Contemporary Walk-in Closet Wardrobe', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe6.jpeg', caption: 'High-End Modular Wardrobe System', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe7.jpeg', caption: 'Sleek Laminated Wardrobe with Handles', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe8.jpeg', caption: 'Luxury Custom Wardrobe with Loft Storage', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe9.jpeg', caption: 'Bespoke Wooden Sliding Wardrobe', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe10.jpeg', caption: 'Modern Bedroom Wardrobe Layout', alt: 'Space Edge Design Wardrobe' },
+    { src: 'images/wardrobe11.jpeg', caption: 'Premium Styled Closet Wardrobe', alt: 'Space Edge Design Wardrobe' }
   ]
 };
 
@@ -52,38 +69,23 @@ const categoriesConfig = {
     desc: 'Serene, personal spaces crafted for rest and absolute relaxation.',
     icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>`
   },
-  drawingRoom: {
-    name: 'Drawing Room',
-    desc: 'Inviting, elegant settings for entertaining and family gathering.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c0 4.41 3.59 8 8 8h4c4.41 0 8-3.59 8-8s-3.59-8-8-8h-4c-4.41 0-8 3.59-8 8zm10-6c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6z"/></svg>`
-  },
   kitchen: {
     name: 'Kitchen',
     desc: 'Functional and beautiful cooking environments with modular cabinets.',
     icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm8-3H18V2h-2v4h-1v5h3v11h2V11c0-2.76-2.24-5-5-5z"/></svg>`
   },
-  diningRoom: {
-    name: 'Dining Room',
-    desc: 'Bespoke layouts optimized for premium dining experiences.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 2v20H9V2h2zm8 7h-2v13h-2V9h-2c0-2.76 2.24-5 5-5s5 2.24 5 5h-4z"/></svg>`
-  },
-  bathroom: {
-    name: 'Bathroom',
-    desc: 'Clean, sanctuary spaces with modern details and premium fixtures.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12V4c0-1.1-.9-2-2-2h-3v2h3v8H4V4h3V2H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-8 4c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/></svg>`
-  },
-  studyOffice: {
-    name: 'Study / Office',
-    desc: 'Inspiring spaces tailored to focus, productivity, and organization.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>`
-  },
-  poojaRoom: {
-    name: 'Pooja Room',
+  mandir: {
+    name: 'Mandir / Pooja Room',
     desc: 'Bespoke, serene mandir arrangements for quiet contemplation.',
     icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>`
   },
+  tvunit: {
+    name: 'TV Units / Entertainment Units',
+    desc: 'Custom modern media consoles and premium TV entertainment units.',
+    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/></svg>`
+  },
   wardrobe: {
-    name: 'Wardrobe',
+    name: 'Wardrobes',
     desc: 'Premium customizable storage and wardrobe modular systems.',
     icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-8V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-2 14H4V4h6v4h8v12z"/></svg>`
   }
@@ -137,7 +139,7 @@ function GalleryImageCard(item, itemIndex, actualImgIndex) {
   if (hasImage) {
     return `
       <article class="gallery-image-card has-image" data-img-index="${actualImgIndex}" aria-label="View larger image: ${item.caption || 'Interior Project'}" role="button" tabindex="0">
-        <img src="${item.src}" alt="${item.caption || 'Premium Interior Design'}" loading="lazy">
+        <img src="${item.src}" alt="${item.alt || item.caption || 'Premium Interior Design'}" loading="lazy">
       </article>
     `;
   } else {
@@ -308,11 +310,42 @@ class DesignGallery {
       });
     }
 
+    // Render the tabs and highlight the active one
+    this.renderTabs(hash);
+
     if (hash && this.config[hash]) {
       this.renderCategoryView(hash);
     } else {
       this.renderCategoriesView();
     }
+  }
+
+  renderTabs(activeKey) {
+    const tabsContainer = document.getElementById('galleryTabs');
+    if (!tabsContainer) return;
+
+    // Generate 'All' tab
+    const allActive = !activeKey ? 'active' : '';
+    let tabsHtml = `
+      <a href="#" class="gallery-tab ${allActive}" aria-label="Show all categories">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/></svg>
+        All Categories
+      </a>
+    `;
+
+    // Generate tabs for each category config
+    tabsHtml += Object.keys(this.config).map(key => {
+      const activeClass = (key === activeKey) ? 'active' : '';
+      const cat = this.config[key];
+      return `
+        <a href="#${key}" class="gallery-tab ${activeClass}" aria-label="Show ${cat.name} Category">
+          ${cat.icon}
+          ${cat.name}
+        </a>
+      `;
+    }).join('');
+
+    tabsContainer.innerHTML = tabsHtml;
   }
 
   renderCategoriesView() {
