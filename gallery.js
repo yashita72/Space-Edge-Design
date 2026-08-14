@@ -7,13 +7,26 @@
 // ── CENTRALIZED GALLERY DATA ─────────────────────────────────
 // Centralized mapping using local photographs from the images folder.
 const galleryData = {
-  bedroom: [
-    { src: 'images/bed.jpeg', caption: 'Luxury Master Bedroom Suite', alt: 'Space Edge Design Master Bedroom Interior' }
-  ],
   kitchen: [
+    { src: 'images/kitchen.jpeg', caption: 'Premium Modular Kitchen Design', alt: 'Space Edge Design Modular Kitchen' },
     { src: 'images/kitchen1.jpeg', caption: 'Modern Kitchen Cabinets and Countertop', alt: 'Space Edge Design Modular Kitchen' },
     { src: 'images/kitchen2.jpeg', caption: 'Contemporary L-Shaped Kitchen Layout', alt: 'Space Edge Design Modular Kitchen' },
-    { src: 'images/kitchen3.jpeg', caption: 'Elegant Kitchen Storage and Island Design', alt: 'Space Edge Design Modular Kitchen' }
+    { src: 'images/kitchen3.jpeg', caption: 'Elegant Kitchen Storage and Island Design', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen5.jpeg', caption: 'Sleek Minimalist Kitchen Style', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen6.jpeg', caption: 'Luxury Modular Kitchen Cabinetry', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen7.jpeg', caption: 'Contemporary Kitchen Interior with Appliances', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen8.jpeg', caption: 'Custom Kitchen Shelving and Organizer', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen9.jpeg', caption: 'Modern Kitchen Backsplash and Countertop', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen10.jpeg', caption: 'Bespoke Kitchen Drawer and Cabinet Set', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen11.jpeg', caption: 'Elegant White-Themed Modular Kitchen', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen12.jpeg', caption: 'High-End Smart Kitchen Layout', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen13.jpeg', caption: 'Spacious Kitchen Cabinet Storage', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen14.jpeg', caption: 'Chic L-Shaped Modern Kitchen Design', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen15.jpeg', caption: 'Premium Kitchen Counter and Pantry Design', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen16.jpeg', caption: 'Modern Kitchen Lighting and Decor', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen17.jpeg', caption: 'Bespoke Oak Finish Modular Kitchen', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen18.jpeg', caption: 'Minimalist Kitchen Countertop and Sink', alt: 'Space Edge Design Modular Kitchen' },
+    { src: 'images/kitchen19.jpeg', caption: 'Luxury High-Gloss Kitchen Cabinetry', alt: 'Space Edge Design Modular Kitchen' }
   ],
   mandir: [
     { src: 'images/mandir.jpeg', caption: 'Tranquil Custom Mandir Pooja Room Design', alt: 'Space Edge Design Mandir Interior' },
@@ -64,11 +77,6 @@ const galleryData = {
 // ── CATEGORY CONFIGURATION ───────────────────────────────────
 // Icons are optimized, elegant inline SVGs
 const categoriesConfig = {
-  bedroom: {
-    name: 'Bedroom',
-    desc: 'Serene, personal spaces crafted for rest and absolute relaxation.',
-    icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>`
-  },
   kitchen: {
     name: 'Kitchen',
     desc: 'Functional and beautiful cooking environments with modular cabinets.',
