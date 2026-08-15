@@ -1,0 +1,13 @@
+{
+  "name": "space-edge-design",
+  "version": "1.0.0",
+  "description": "Space Edge Design website backend on Cloudflare Workers",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.123.0"
+  }
+}
