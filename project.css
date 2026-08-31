@@ -518,14 +518,13 @@
 
   .pv-meta { grid-template-columns: 1fr; }
 
-  .pv-meta-item:nth-child(even) { border-right: 1px solid var(--border); }
-  .pv-meta-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
-  .pv-meta-item:last-child { border-bottom: none; }
+  .pv-meta-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+  .pv-meta-item:last-child { border-bottom: none !important; }
 
   .pv-actions { flex-direction: column; }
   .pv-btn { justify-content: center; }
 
-  .consultation-card { padding: 32px 22px; }
+  .consultation-card { padding: 24px 16px; border-radius: var(--radius-md); }
 }
 
 @media (max-width: 480px) {

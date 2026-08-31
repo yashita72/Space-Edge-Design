@@ -347,6 +347,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .gallery-hero {
+    padding: 110px 0 40px;
+  }
+  .gallery-section {
+    padding: 30px 0 60px;
+  }
+}
+
 @media (max-width: 576px) {
   .gallery-grid {
     grid-template-columns: 1fr;
@@ -364,6 +373,17 @@
   }
   .lightbox-next {
     right: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-tab {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+  .gallery-tabs {
+    gap: 8px;
+    margin-bottom: 1.5rem;
   }
 }
 
