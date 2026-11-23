@@ -36,29 +36,6 @@
     ]
   }
   </script>
-  <style>
-    /* Star select in review form */
-    .rating-select {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      gap: 0.25rem;
-    }
-    .rating-select input {
-      display: none;
-    }
-    .rating-select label {
-      font-size: 1.8rem;
-      color: var(--border);
-      cursor: pointer;
-      transition: color var(--transition);
-    }
-    .rating-select label:hover,
-    .rating-select label:hover ~ label,
-    .rating-select input:checked ~ label {
-      color: #FFB800;
-    }
-  </style>
 </head>
 <body>
 
@@ -128,47 +105,6 @@
       <!-- Featurable Live Google Reviews Embed -->
       <div id="featurable-145c3c03-139a-4e72-b146-2e96adb0dad5" data-featurable-async></div>
       <script src="https://cdn.featurable.com/widget/v2/embed.js" defer charset="UTF-8"></script>
-
-      <!-- Add Review Form -->
-      <div class="hero-form-card reveal" style="max-width: 600px; margin: 4rem auto 0;">
-        <h3 class="hero-form-title">Share Your Experience</h3>
-        <p class="hero-form-desc">Worked with us? Log your verified project rating and review here.</p>
-
-        <form class="form" id="reviewForm">
-          <input type="text" class="hp-field" name="nickname" id="reviewNickname">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="reviewName">Your Name</label>
-              <input type="text" id="reviewName" required placeholder="e.g. Priyesh Mehta">
-            </div>
-            <div class="form-group">
-              <label for="reviewProject">Project Location / Type</label>
-              <input type="text" id="reviewProject" required placeholder="e.g. Noida Bedroom Upgrade">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Rating</label>
-            <div class="rating-select">
-              <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">&#9733;</label>
-              <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">&#9733;</label>
-              <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">&#9733;</label>
-              <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">&#9733;</label>
-              <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">&#9733;</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="reviewText">Your Review</label>
-            <textarea id="reviewText" required minlength="20" placeholder="Tell us about the modular quality, design discussions, and timeline completion..."></textarea>
-          </div>
-
-          <div id="formMessage" class="form-submit-message"></div>
-
-          <button type="submit" class="btn btn-primary" style="margin-top: 1rem; align-self: flex-start;">Submit Review</button>
-        </form>
-      </div>
     </div>
   </section>
 
@@ -253,96 +189,7 @@
       mobileMenu.classList.remove('open');
     });
 
-    // 3. Load approved reviews from localStorage if they exist
-    document.addEventListener('DOMContentLoaded', () => {
-      loadLocalStorageReviews();
-    });
-
-    function loadLocalStorageReviews() {
-      const stored = localStorage.getItem('spaceEdgeApprovedReviews');
-      if (stored) {
-        const approved = JSON.parse(stored);
-        const container = document.getElementById('reviewsContainer');
-        if (!container) return;
-        
-        approved.forEach(rev => {
-          if (document.getElementById(`rev-local-${rev.id}`)) return;
-
-          const card = document.createElement('div');
-          card.className = 'review-card reveal visible';
-          card.id = `rev-local-${rev.id}`;
-
-          const starsHtml = '&#9733;'.repeat(rev.rating) + '&#9734;'.repeat(5 - rev.rating);
-          const avatar = rev.name.substring(0, 2).toUpperCase();
-
-          card.innerHTML = `
-            <div class="review-header">
-              <div>
-                <h3 class="review-name">${rev.name}</h3>
-                <span class="review-project">${rev.project}</span>
-              </div>
-              <div class="review-avatar">${avatar}</div>
-            </div>
-            <div class="testimonial-stars" style="margin-bottom: 0.8rem; justify-content: flex-start;">
-              ${starsHtml}
-            </div>
-            <p class="review-text">"${rev.text}"</p>
-            <div class="review-date">${rev.date || 'Just now'}</div>
-          `;
-          container.appendChild(card);
-        });
-      }
-    }
-
-    // 4. Form Submission Logic
-    const reviewForm = document.getElementById('reviewForm');
-    const formMessage = document.getElementById('formMessage');
-
-    reviewForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      if (document.getElementById('reviewNickname').value) {
-        formMessage.className = 'form-submit-message success';
-        formMessage.innerText = 'Thank you! Your review has been submitted for moderation.';
-        reviewForm.reset();
-        return;
-      }
-
-      const name = document.getElementById('reviewName').value;
-      const project = document.getElementById('reviewProject').value;
-      const text = document.getElementById('reviewText').value;
-      
-      const ratingElement = document.querySelector('input[name="rating"]:checked');
-      if (!ratingElement) {
-        formMessage.className = 'form-submit-message error';
-        formMessage.innerText = 'Please select a star rating.';
-        return;
-      }
-      const rating = parseInt(ratingElement.value);
-
-      const pendingReviews = JSON.parse(localStorage.getItem('spaceEdgePendingReviews') || '[]');
-      const newReview = {
-        id: 'rev_' + Date.now(),
-        name: name,
-        project: project,
-        rating: rating,
-        text: text,
-        date: new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' }),
-        approved: false
-      };
-      pendingReviews.push(newReview);
-      localStorage.setItem('spaceEdgePendingReviews', JSON.stringify(pendingReviews));
-
-      formMessage.className = 'form-submit-message success';
-      formMessage.innerText = 'Thank you! Your review has been submitted and will appear after moderation.';
-      reviewForm.reset();
-      
-      setTimeout(() => {
-        formMessage.style.display = 'none';
-      }, 5000);
-    });
-
-    // 5. Scroll Reveals
+    // 3. Scroll Reveals
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
