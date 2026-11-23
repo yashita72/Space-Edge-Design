@@ -264,10 +264,10 @@ button {
 .liv-carousel {
   position: relative;
   width: 100%;
-  height: 480px;
+  min-height: 520px;
+  margin-top: 72px; /* Top offset matching fixed navbar height (72px) */
   overflow: hidden;
-  background: #d66d6d;
-  margin-top: 0;
+  background: #b81d24;
 }
 .liv-slides {
   display: flex;
@@ -275,13 +275,16 @@ button {
   height: 100%;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.liv-slide {
+.liv-slide,
+.hero-slide {
   position: relative;
   width: 33.3333%;
-  height: 100%;
+  min-height: 520px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 .liv-slide-img {
   position: absolute;
@@ -301,11 +304,11 @@ button {
 }
 .liv-slide-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--bg-white);
   line-height: 1.25;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 .liv-carousel-prev,
@@ -315,7 +318,7 @@ button {
   transform: translateY(-50%);
   width: 48px; height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   color: var(--bg-white);
   display: flex;
   align-items: center;
@@ -334,24 +337,28 @@ button {
 
 /* Slide 1 - Logo Banner specific styles (Desktop & default) */
 .liv-slide-hero {
-  background-color: #d66d6d;
-  align-items: flex-end;
+  background-color: #b81d24;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 44px;
 }
 .liv-slide-hero .liv-slide-hero-img {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 440px;
+  aspect-ratio: 1774 / 887;
   object-fit: contain;
   opacity: 1;
-  background-color: #d66d6d;
+  background-color: #b81d24;
+  display: block;
 }
 .liv-slide-hero-content {
   position: relative;
   z-index: 10;
   text-align: center;
-  padding: 0 1.5rem;
-  margin-bottom: 2rem;
+  padding: 12px 1.5rem 0;
+  background-color: #b81d24;
 }
 .liv-slide-hero .liv-slide-title:empty {
   display: none;
@@ -359,8 +366,23 @@ button {
 }
 .liv-slide-hero-btn {
   display: inline-block;
-  padding: 0.9rem 2.25rem;
+  padding: 0.85rem 2.25rem;
   font-size: 0.95rem;
+}
+
+/* Slides 2 and 3 padding and centering */
+.hero-slide:not(.liv-slide-hero) {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 44px;
+  box-sizing: border-box;
+}
+.hero-slide:not(.liv-slide-hero) .liv-slide-content {
+  max-width: 720px;
+  padding: 0;
 }
 
 /* --- Section Headers --- */
@@ -895,21 +917,34 @@ button {
   
   /* Carousel Slider mobile fixes */
   .liv-carousel {
+    margin-top: 72px; /* Top offset matching fixed navbar height (72px) */
     height: auto;
-    background: #d66d6d;
+    min-height: 320px;
+    background: #b81d24;
   }
   .liv-slides {
     height: auto;
+    min-height: 320px;
   }
-  .liv-slide {
+  .liv-slide,
+  .hero-slide {
     height: auto;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 44px;
+    box-sizing: border-box;
   }
   .liv-slide-hero {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    background-color: #d66d6d;
+    background-color: #b81d24;
+    padding: 16px 20px 24px;
     height: auto;
+    min-height: 320px;
   }
   .liv-slide-hero .liv-slide-hero-img {
     position: relative;
@@ -918,31 +953,46 @@ button {
     height: auto;
     aspect-ratio: 1774 / 887;
     object-fit: contain;
-    background-color: #d66d6d;
+    background-color: #b81d24;
     opacity: 1;
     display: block;
   }
   .liv-slide-hero-content {
     position: relative;
     width: 100%;
-    padding: 0.75rem 1rem 1.25rem;
+    padding: 12px 1rem 0;
     margin: 0;
     text-align: center;
-    background-color: #d66d6d;
+    background-color: #b81d24;
     z-index: 10;
   }
   .liv-slide-hero-btn {
     padding: 0.6rem 1.5rem !important;
     font-size: 0.85rem !important;
   }
+  .hero-slide:not(.liv-slide-hero) {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 44px;
+    box-sizing: border-box;
+  }
+  .hero-slide:not(.liv-slide-hero) .liv-slide-content {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-slide:not(.liv-slide-hero) .btn,
   .liv-slide-content .btn {
     padding: 0.6rem 1.5rem !important;
     font-size: 0.85rem !important;
   }
-  .liv-slide-title { font-size: clamp(1.2rem, 4.5vw, 1.6rem); margin-bottom: 1rem; padding: 0 1rem; line-height: 1.3; }
+  .liv-slide-title { font-size: clamp(1.15rem, 4.5vw, 1.5rem); margin-bottom: 1rem; padding: 0; line-height: 1.3; }
   .liv-carousel-prev, .liv-carousel-next { width: 36px; height: 36px; font-size: 1.2rem; }
-  .liv-carousel-prev { left: 0.75rem; }
-  .liv-carousel-next { right: 0.75rem; }
+  .liv-carousel-prev { left: 0.5rem; }
+  .liv-carousel-next { right: 0.5rem; }
   
   /* Forms */
   .form-row { grid-template-columns: 1fr; gap: 1.25rem; }

@@ -101,9 +101,10 @@
     .liv-carousel {
       position: relative;
       width: 100%;
-      height: 480px;
+      min-height: 520px;
+      margin-top: 72px; /* Top offset matching fixed navbar height (72px) */
       overflow: hidden;
-      background: #d66d6d;
+      background: #b81d24;
     }
     .liv-slides {
       display: flex;
@@ -111,14 +112,16 @@
       height: 100%;
       transition: transform 0.5s ease-in-out;
     }
-    .liv-slide {
+    .liv-slide,
+    .hero-slide {
       position: relative;
       width: 33.333%;
-      height: 100%;
+      min-height: 520px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      text-align: center;
+      align-items: center;
+      box-sizing: border-box;
     }
     .liv-slide-img {
       position: absolute;
@@ -134,13 +137,15 @@
       color: var(--bg-white);
       padding: 0 1.5rem;
       max-width: 800px;
+      text-align: center;
     }
     .liv-slide-title {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(1.8rem, 4vw, 3rem);
       font-weight: 700;
       color: var(--bg-white);
-      margin-bottom: 1.5rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      margin-bottom: 1.75rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      line-height: 1.25;
     }
     .liv-carousel-prev,
     .liv-carousel-next {
@@ -149,7 +154,7 @@
       transform: translateY(-50%);
       width: 48px;
       height: 48px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.25);
       border-radius: 50%;
       color: var(--bg-white);
       display: flex;
@@ -158,6 +163,7 @@
       font-size: 1.5rem;
       z-index: 20;
       transition: var(--transition);
+      user-select: none;
     }
     .liv-carousel-prev:hover,
     .liv-carousel-next:hover {
@@ -168,24 +174,28 @@
 
     /* Hero Slide 1 Specifics */
     .liv-slide-hero {
-      background-color: #d66d6d;
-      align-items: flex-end;
+      background-color: #b81d24;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 44px;
     }
     .liv-slide-hero .liv-slide-hero-img {
-      position: absolute;
-      inset: 0;
+      position: relative;
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 440px;
+      aspect-ratio: 1774 / 887;
       object-fit: contain;
       opacity: 1;
-      background-color: #d66d6d;
+      background-color: #b81d24;
+      display: block;
     }
     .liv-slide-hero-content {
       position: relative;
       z-index: 10;
       text-align: center;
-      padding: 0 1.5rem;
-      margin-bottom: 2rem;
+      padding: 12px 1.5rem 0;
+      background-color: #b81d24;
     }
     .liv-slide-hero .liv-slide-title:empty {
       display: none;
@@ -193,27 +203,55 @@
     }
     .liv-slide-hero-btn {
       display: inline-block;
-      padding: 0.9rem 2.25rem;
+      padding: 0.85rem 2.25rem;
       font-size: 0.95rem;
+    }
+
+    /* Slides 2 and 3 padding and centering */
+    .hero-slide:not(.liv-slide-hero) {
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 44px;
+      box-sizing: border-box;
+    }
+    .hero-slide:not(.liv-slide-hero) .liv-slide-content {
+      max-width: 720px;
+      padding: 0;
     }
 
     @media (max-width: 768px) {
       .liv-carousel {
+        margin-top: 72px; /* Top offset matching fixed navbar height (72px) */
         height: auto;
-        background: #d66d6d;
+        min-height: 320px;
+        background: #b81d24;
       }
       .liv-slides {
         height: auto;
+        min-height: 320px;
       }
-      .liv-slide {
+      .liv-slide,
+      .hero-slide {
         height: auto;
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 44px;
+        box-sizing: border-box;
       }
       .liv-slide-hero {
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        background-color: #d66d6d;
+        background-color: #b81d24;
+        padding: 16px 20px 24px;
         height: auto;
+        min-height: 320px;
       }
       .liv-slide-hero .liv-slide-hero-img {
         position: relative;
@@ -222,31 +260,46 @@
         height: auto;
         aspect-ratio: 1774 / 887;
         object-fit: contain;
-        background-color: #d66d6d;
+        background-color: #b81d24;
         opacity: 1;
         display: block;
       }
       .liv-slide-hero-content {
         position: relative;
         width: 100%;
-        padding: 0.75rem 1rem 1.25rem;
+        padding: 12px 1rem 0;
         margin: 0;
         text-align: center;
-        background-color: #d66d6d;
+        background-color: #b81d24;
         z-index: 10;
       }
       .liv-slide-hero-btn {
         padding: 0.6rem 1.5rem !important;
         font-size: 0.85rem !important;
       }
+      .hero-slide:not(.liv-slide-hero) {
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 44px;
+        box-sizing: border-box;
+      }
+      .hero-slide:not(.liv-slide-hero) .liv-slide-content {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      .hero-slide:not(.liv-slide-hero) .btn,
       .liv-slide-content .btn {
         padding: 0.6rem 1.5rem !important;
         font-size: 0.85rem !important;
       }
       .liv-slide-title {
-        font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+        font-size: clamp(1.15rem, 4.5vw, 1.5rem);
         margin-bottom: 1rem;
-        padding: 0 1rem;
+        padding: 0;
         line-height: 1.3;
       }
       .liv-carousel-prev,
@@ -255,8 +308,8 @@
         height: 36px;
         font-size: 1.2rem;
       }
-      .liv-carousel-prev { left: 0.75rem; }
-      .liv-carousel-next { right: 0.75rem; }
+      .liv-carousel-prev { left: 0.5rem; }
+      .liv-carousel-next { right: 0.5rem; }
     }
 
     /* Cities dropdown specifically */
@@ -313,7 +366,7 @@
   <div class="liv-carousel">
     <div class="liv-slides" id="livSlides">
       <!-- Slide 1 -->
-      <div class="liv-slide liv-slide-hero">
+      <div class="liv-slide hero-slide liv-slide-hero">
         <img class="liv-slide-img liv-slide-hero-img" src="images/hero.png" alt="Space Edge Design Hero Banner">
         <div class="liv-slide-content liv-slide-hero-content">
           <h2 class="liv-slide-title"></h2>
@@ -322,20 +375,20 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="liv-slide">
+      <div class="liv-slide hero-slide">
         <img class="liv-slide-img" src="images/project-kitchen.png" alt="Kitchen interior cost estimates">
         <div class="liv-slide-content">
           <h2 class="liv-slide-title">Want to know how much your kitchen interiors will cost?</h2>
-          <a href="services.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 0.95rem;">Calculate now &rarr;</a>
+          <a href="services.html" class="btn btn-primary">Calculate now &rarr;</a>
         </div>
       </div>
 
       <!-- Slide 3 -->
-      <div class="liv-slide">
+      <div class="liv-slide hero-slide">
         <img class="liv-slide-img" src="images/project-bedroom.png" alt="Lifetime warranty on modular units">
         <div class="liv-slide-content">
           <h2 class="liv-slide-title">Introducing India's first lifetime warranty*</h2>
-          <a href="contact.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 0.95rem;">Book free consultation &rarr;</a>
+          <a href="contact.html" class="btn btn-primary">Book free consultation &rarr;</a>
         </div>
       </div>
     </div>
