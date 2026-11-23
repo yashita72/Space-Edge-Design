@@ -264,9 +264,9 @@ button {
 .liv-carousel {
   position: relative;
   width: 100%;
-  height: 520px;
+  height: 480px;
   overflow: hidden;
-  background: #111;
+  background: #d66d6d;
   margin-top: 0;
 }
 .liv-slides {
@@ -331,6 +331,37 @@ button {
 }
 .liv-carousel-prev { left: 1.5rem; }
 .liv-carousel-next { right: 1.5rem; }
+
+/* Slide 1 - Logo Banner specific styles (Desktop & default) */
+.liv-slide-hero {
+  background-color: #d66d6d;
+  align-items: flex-end;
+}
+.liv-slide-hero .liv-slide-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  background-color: #d66d6d;
+}
+.liv-slide-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+.liv-slide-hero .liv-slide-title:empty {
+  display: none;
+  margin: 0;
+}
+.liv-slide-hero-btn {
+  display: inline-block;
+  padding: 0.9rem 2.25rem;
+  font-size: 0.95rem;
+}
 
 /* --- Section Headers --- */
 .section-header {
@@ -863,8 +894,52 @@ button {
   .page-hero h1 { font-size: clamp(1.8rem, 6vw, 2.2rem) !important; }
   
   /* Carousel Slider mobile fixes */
-  .liv-carousel { height: 380px; }
-  .liv-slide-title { font-size: clamp(1.3rem, 5vw, 1.8rem); margin-bottom: 1.25rem; padding: 0 1rem; }
+  .liv-carousel {
+    height: auto;
+    background: #d66d6d;
+  }
+  .liv-slides {
+    height: auto;
+  }
+  .liv-slide {
+    height: auto;
+  }
+  .liv-slide-hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #d66d6d;
+    height: auto;
+  }
+  .liv-slide-hero .liv-slide-hero-img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1774 / 887;
+    object-fit: contain;
+    background-color: #d66d6d;
+    opacity: 1;
+    display: block;
+  }
+  .liv-slide-hero-content {
+    position: relative;
+    width: 100%;
+    padding: 0.75rem 1rem 1.25rem;
+    margin: 0;
+    text-align: center;
+    background-color: #d66d6d;
+    z-index: 10;
+  }
+  .liv-slide-hero-btn {
+    padding: 0.6rem 1.5rem !important;
+    font-size: 0.85rem !important;
+  }
+  .liv-slide-content .btn {
+    padding: 0.6rem 1.5rem !important;
+    font-size: 0.85rem !important;
+  }
+  .liv-slide-title { font-size: clamp(1.2rem, 4.5vw, 1.6rem); margin-bottom: 1rem; padding: 0 1rem; line-height: 1.3; }
   .liv-carousel-prev, .liv-carousel-next { width: 36px; height: 36px; font-size: 1.2rem; }
   .liv-carousel-prev { left: 0.75rem; }
   .liv-carousel-next { right: 0.75rem; }
