@@ -125,55 +125,9 @@
   <!-- --- REVIEWS LISTING --- -->
   <section class="section">
     <div class="container">
-      <div class="reviews-grid" id="reviewsContainer">
-        <!-- Review 1 -->
-        <div class="review-card reveal">
-          <div class="review-header">
-            <div>
-              <h3 class="review-name">Priya Morel</h3>
-              <span class="review-project">The Morel Residence</span>
-            </div>
-            <div class="review-avatar">PM</div>
-          </div>
-          <div class="testimonial-stars" style="margin-bottom: 0.8rem; justify-content: flex-start;">
-            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
-          </div>
-          <p class="review-text">"Space Edge Design transformed our home from a collection of rooms into a coherent, beautiful story. They listened deeply, challenged us in the best way, and delivered modular wood panels and finishes of the highest quality."</p>
-          <div class="review-date">March 2025</div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="review-card reveal reveal-delay-1">
-          <div class="review-header">
-            <div>
-              <h3 class="review-name">Sofia Fernandez</h3>
-              <span class="review-project">The Fernandez Kitchen</span>
-            </div>
-            <div class="review-avatar">SF</div>
-          </div>
-          <div class="testimonial-stars" style="margin-bottom: 0.8rem; justify-content: flex-start;">
-            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
-          </div>
-          <p class="review-text">"Our old kitchen was dark and small. The team configured a modular layout in beautiful sage green laminates. Soft close hinges, custom baskets, and delivery in 45 days. Absolutely seamless process."</p>
-          <div class="review-date">January 2025</div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="review-card reveal reveal-delay-2">
-          <div class="review-header">
-            <div>
-              <h3 class="review-name">Asha Mehta</h3>
-              <span class="review-project">Belvedere Master Suite</span>
-            </div>
-            <div class="review-avatar">AM</div>
-          </div>
-          <div class="testimonial-stars" style="margin-bottom: 0.8rem; justify-content: flex-start;">
-            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
-          </div>
-          <p class="review-text">"The wardrobe configurations and bedroom decor they delivered are incredibly restorative. Sourcing and coordination were managed professionally. Highly recommend their interior design services."</p>
-          <div class="review-date">November 2024</div>
-        </div>
-      </div>
+      <!-- Featurable Live Google Reviews Embed -->
+      <div id="featurable-145c3c03-139a-4e72-b146-2e96adb0dad5" data-featurable-async></div>
+      <script src="https://cdn.featurable.com/widget/v2/embed.js" defer charset="UTF-8"></script>
 
       <!-- Add Review Form -->
       <div class="hero-form-card reveal" style="max-width: 600px; margin: 4rem auto 0;">
@@ -309,6 +263,7 @@
       if (stored) {
         const approved = JSON.parse(stored);
         const container = document.getElementById('reviewsContainer');
+        if (!container) return;
         
         approved.forEach(rev => {
           if (document.getElementById(`rev-local-${rev.id}`)) return;
